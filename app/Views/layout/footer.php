@@ -19,12 +19,12 @@ $menu_layanan = $menu->layanan();
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3><?= $site['namaweb'] ?></h3>
+              <h3>Giới thiệu</h3>
               <p>
                 <?= nl2br(strip_tags($site['alamat'])) ?>
-                <br>
+                <!-- <br>
                 <strong>Phone:</strong> <?= $site['telepon'] ?><br>
-                <strong>Email:</strong> <?= $site['email'] ?><br>
+                <strong>Email:</strong> <?= $site['email'] ?><br> -->
               </p>
               <div class="social-links mt-3">
                 <a href="<?= $site['twitter'] ?>" class="twitter"><i class="fab fa-twitter"></i></a>
@@ -37,7 +37,7 @@ $menu_layanan = $menu->layanan();
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>About Us</h4>
+            <h3>Thông tin liên hệ</h3>
             <ul>
               <?php foreach ($menu_profil as $menu_profil) { ?>
               <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('berita/profil/' . $menu_profil['slug_berita']) ?>"><?= $menu_profil['judul_berita'] ?></a></li>
@@ -47,7 +47,7 @@ $menu_layanan = $menu->layanan();
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h3>Pháp lý & câu hỏi</h3>
             <ul>
               <?php foreach ($menu_layanan as $menu_layanan) { ?>
               <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('berita/layanan/' . $menu_layanan['slug_berita']) ?>"><?= $menu_layanan['judul_berita'] ?></a></li>
@@ -56,15 +56,7 @@ $menu_layanan = $menu->layanan();
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Find Us on Map</h4>
-            <style type="text/css" media="screen">
-              iframe {
-                width: 100%;
-                height: 200px;
-              }
-            </style>
-            <?= $site['google_map'] ?>
-
+            <h3>Thông tin</h3>
           </div>
 
         </div>
@@ -73,14 +65,7 @@ $menu_layanan = $menu->layanan();
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Java Web Media</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medicio-free-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        &copy; Copyright <strong><span>Chung193</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -104,10 +89,40 @@ $menu_layanan = $menu->layanan();
 <script src="<?= base_url() ?>/assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url() ?>/assets/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 
+<!-- owl carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
   $(function () {
     $('#example1').DataTable();
   });
+
+  $('#owl-partner-logo').owlCarousel({
+    items: 6,
+		loop: true,
+		autoplay : true,
+		slideTransition: 'linear',
+		autoplayTimeout : 3000,
+		autoplayHoverPause : true,
+		autoplaySpeed : 3000,
+		nav: false,
+		dots: false,
+		touchDrag: true,
+		responsive: {
+			0:{
+				items: 3,
+			},
+			768:{
+				items: 4,
+			},
+			992:{
+				items: 6,
+			},
+			1200:{
+				items: 6,
+			}
+		}
+})
   </script>
 </body>
 

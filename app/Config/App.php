@@ -69,7 +69,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $defaultLocale = 'en';
+    public $defaultLocale = 'vi';
 
     /**
      * --------------------------------------------------------------------------
@@ -108,7 +108,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $appTimezone = 'Asia/Jakarta';
+    public $appTimezone = 'Asia/Ho_Chi_Minh';
 
     /**
      * --------------------------------------------------------------------------
