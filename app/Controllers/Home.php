@@ -20,6 +20,7 @@ class Home extends BaseController
         $slider        = $m_galeri->slider();
         $client        = $m_client->testimoni();
         $berita2       = $m_berita->beranda();
+        $project       = $m_berita->beranda_project();
 
         $data = ['title'  => $konfigurasi['namaweb'] . ' | ' . $konfigurasi['tagline'],
             'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
@@ -28,6 +29,7 @@ class Home extends BaseController
             'konfigurasi' => $konfigurasi,
             'client'      => $client,
             'berita2'     => $berita2,
+            'project'     => $project,
             'content'     => 'home/index',
         ];
         echo view('layout/wrapper', $data);

@@ -11,67 +11,153 @@ $menu_berita  = $menu->berita();
 $menu_profil  = $menu->profil();
 $menu_layanan = $menu->layanan();
 ?>
-<!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
+
+  <footer class="main-footer">
+    <div class="main-footer--bottom">
+      <div class="container scroltop-to-bottom">
         <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>Giới thiệu</h3>
-              <p>
-                <?= nl2br(strip_tags($site['alamat'])) ?>
-                <!-- <br>
-                <strong>Phone:</strong> <?= $site['telepon'] ?><br>
-                <strong>Email:</strong> <?= $site['email'] ?><br> -->
-              </p>
-              <div class="social-links mt-3">
-                <a href="<?= $site['twitter'] ?>" class="twitter"><i class="fab fa-twitter"></i></a>
-                <a href="<?= $site['facebook'] ?>" class="facebook"><i class="fab fa-facebook"></i></a>
-                <a href="<?= $site['instagram'] ?>" class="instagram"><i class="fab fa-instagram"></i></a>
-                <a href="<?= $site['youtube'] ?>" class="google-plus"><i class="fab fa-youtube"></i></a>
-
+          
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg">
+            <div class="footer-col footer-block">
+              <h4 class="footer-title">
+                Giới thiệu
+              </h4>
+              <div class="footer-content">
+                
+                <?= $site['tagline'] ?>         
+                <div class="logo-footer">
+                  <a href="/" target="_blank" rel="noreferrer noopener" aria-label="Bộ công thương" class="fade-box">
+                    <img class=" lazyloaded" data-src="//theme.hstatic.net/1000387172/1000670825/14/logo_bct.png?v=138" src="//theme.hstatic.net/1000387172/1000670825/14/logo_bct.png?v=138" alt="Bộ Công Thương">
+                  </a>
+                </div>
+                
+                <div class="social-list">
+                  
+                  <a href="<?= $site['facebook'] ?>" target="_blank" rel="noreferrer" class="fa fa-facebook" aria-label="Facebook"></a>
+                  
+                  
+                  <a href="<?= $site['instagram'] ?>" target="_blank" rel="noreferrer" class="fa fa-instagram" aria-label="Google"></a>
+                  
+                  
+                  <a href="<?= $site['twitter'] ?>" target="_blank" rel="noreferrer" class="fa fa-twitter" aria-label="Twitter"></a>
+                  
+                  
+                  <a href="<?= $site['youtube'] ?>" target="_blank" rel="noreferrer" class="fa fa-youtube" aria-label="Youtobe"></a>
+                  
+                </div>
+                
               </div>
             </div>
           </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h3>Thông tin liên hệ</h3>
-            <ul>
-              <?php foreach ($menu_profil as $menu_profil) { ?>
-              <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('berita/profil/' . $menu_profil['slug_berita']) ?>"><?= $menu_profil['judul_berita'] ?></a></li>
-              <?php } ?>
-              <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('staff') ?>">Staff &amp; Team Kami</a></li>
-            </ul>
+          
+          
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg">
+            <div class="footer-col footer-block">
+              <h4 class="footer-title">
+                Thông tin liên hệ
+              </h4>
+              <div class="footer-content toggle-footer">
+                <ul>
+                  <li><span><strong>Địa chỉ:</strong></span> <?= $site['alamat'] ?></li>
+                  <li><span><strong>Điện thoại:</strong></span> <?= $site['telepon'] ?></li>
+                  <li><span><strong>Fax:</strong></span> <?= $site['hp'] ?></li>
+                  <li><span><strong>Email:</strong></span> <?= $site['email'] ?></li>							
+                </ul>	
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h3>Pháp lý & câu hỏi</h3>
-            <ul>
-              <?php foreach ($menu_layanan as $menu_layanan) { ?>
-              <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url('berita/layanan/' . $menu_layanan['slug_berita']) ?>"><?= $menu_layanan['judul_berita'] ?></a></li>
-              <?php } ?>
-            </ul>
+          
+          
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg">
+            <div class="footer-col footer-link">
+              <h4 class="footer-title">
+                PHÁP LÝ &amp; CÂU HỎI
+              </h4>
+              <div class="footer-content toggle-footer">
+                <ul>
+                  
+                  <li class="item">
+                    <a href="/search" title="Tìm kiếm">Tìm kiếm</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/pages/about-us" title="Giới thiệu">Giới thiệu</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/pages/chinh-sach-doi-tra" title="Chính sách đổi trả">Chính sách đổi trả</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/pages/chinh-sach-bao-mat" title="Chính sách bảo mật">Chính sách bảo mật</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/pages/dieu-khoan-dich-vu" title="Điều khoản dịch vụ">Điều khoản dịch vụ</a>
+                  </li>
+                    
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h3>Thông tin</h3>
+          
+          
+          <div class="col-xs-12 col-sm-6 col-md-3 col-lg">
+            <div class="footer-col footer-link">
+              <h4 class="footer-title">
+                Thông tin
+              </h4>
+              <div class="footer-content toggle-footer">
+                <ul>
+                  
+                  <li class="item">
+                    <a href="/" title="Trang chủ">Trang chủ</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/pages/about-us" title="Giới thiệu">Giới thiệu</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/collections/all" title="Dự án">Dự án</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="https://nextcompany.myharavan.com/products/sunshinecuty-nextcompany" title="Chi tiết dự án">Chi tiết dự án</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/blogs/news" title="Blog">Blog</a>
+                  </li>
+                  
+                  <li class="item">
+                    <a href="/pages/lien-he" title="Liên hệ">Liên hệ</a>
+                  </li>
+                    
+                </ul>
+              </div>
+            </div>
           </div>
-
+          
+        </div>	
+        <button class="scroltop" aria-label="icon scroll top">
+          <span class="fa fa-angle-up" id="btn-vibrate"></span>
+        </button>
+      </div>
+    </div>
+    <div class="main-footer--copyright">
+      <div class="container">
+        <div class="main-footer--border">
+          <p>Copyright © 2022 <a href="https://nextcompany.myharavan.com"> NextCompany</a>. <a target="_blank" rel="noreferrer" href="https://www.haravan.com">Powered by Haravan</a></p>
         </div>
       </div>
     </div>
+  </footer>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Chung193</span></strong>. All Rights Reserved
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 
   <!-- Vendor JS Files -->
   <script src="<?= base_url() ?>/assets/template/assets/vendor/aos/aos.js"></script>

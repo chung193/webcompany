@@ -82,7 +82,7 @@ echo csrf_field();
 <div class="form-group row">
 	<label class="col-3">Alamat</label>
 	<div class="col-9">
-		<textarea name="alamat" class="form-control summernote"><?= $konfigurasi['alamat'] ?></textarea>
+		<textarea name="alamat" class="form-control"><?= $konfigurasi['alamat'] ?></textarea>
 	</div>
 </div>
 

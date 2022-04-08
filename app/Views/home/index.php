@@ -306,98 +306,9 @@ foreach ($slider as $slider) {  ?>
     </section>
     <!-- end what we do -->
 
-    <!-- section blog -->
-    <section class="section section-blog lazyloaded">
-      <div class="container">
-        <div class="s-title">
-          <h2 class="hTitle">
-            <a href="/blogs/news">
-              
-              Bài viết mới nhất
-              
-            </a>
-          </h2>
-        </div>
-        <div class="s-content">
-          <div class="row">
-          
-            <div class="col-md-6 col-sm-6 col-xs-6 col-blog">
-              <div class="overlay-wraper latest-blog-dark-outer">
-                <a href="/blogs/news/can-ho-flora-apartments" title="Căn hộ Flora Apartments" class="fade-box">
-                  <picture>
-                    <source data-srcset="//file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29_medium.jpg" media="(max-width: 480px)" srcset="//file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29_medium.jpg">
-                    <source data-srcset="//file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29_large.jpg" media="(min-width: 481px) and (max-width: 767px)" srcset="//file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29_large.jpg">
-                    <source data-srcset="https://file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29.jpg" media="(min-width: 768px)" srcset="https://file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29.jpg">
-                    <img data-src="https://file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29.jpg" class=" lazyloaded" alt="Căn hộ Flora Apartments" src="https://file.hstatic.net/1000387172/article/sm_348_9cfb74895cdd4da598b70fe7cd69ca29.jpg">
-                  </picture>
-                </a>
-                <div class="latest-blog-dark">
-                  <h3><a href="/blogs/news/can-ho-flora-apartments">Căn hộ Flora Apartments</a></h3>
-                  <div class="v-date text-white"><span>Thứ Ba 10/09/2019</span></div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-6 col-sm-6 col-xs-6 col-blog">
-              <div class="overlay-wraper latest-blog-dark-outer">
-                <a href="/blogs/news/noi-cuoc-song-bat-dau-voi-thien-nhien" title="Nơi Cuộc Sống Bắt Đầu Với Thiên Nhiên" class="fade-box">
-                  <picture>
-                    <source data-srcset="//file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f_medium.jpg" media="(max-width: 480px)" srcset="//file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f_medium.jpg">
-                    <source data-srcset="//file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f_large.jpg" media="(min-width: 481px) and (max-width: 767px)" srcset="//file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f_large.jpg">
-                    <source data-srcset="https://file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f.jpg" media="(min-width: 768px)" srcset="https://file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f.jpg">
-                    <img data-src="https://file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f.jpg" class=" lazyloaded" alt="Nơi Cuộc Sống Bắt Đầu Với Thiên Nhiên" src="https://file.hstatic.net/1000387172/article/sm_343_7845a43010b847268c9619f94ab7145f.jpg">
-                  </picture>
-                </a>
-                <div class="latest-blog-dark">
-                  <h3><a href="/blogs/news/noi-cuoc-song-bat-dau-voi-thien-nhien">Nơi Cuộc Sống Bắt Đầu Với Thiên Nhiên</a></h3>
-                  <div class="v-date text-white"><span>Thứ Ba 10/09/2019</span></div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-md-6 col-sm-6 col-xs-6 col-blog">
-              <div class="overlay-wraper latest-blog-dark-outer">
-                <a href="/blogs/news/triangle-concrete-house-on-lake" title="Triangle Concrete House on lake" class="fade-box">
-                  <picture>
-                    <source data-srcset="//file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf_medium.jpg" media="(max-width: 480px)" srcset="//file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf_medium.jpg">
-                    <source data-srcset="//file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf_large.jpg" media="(min-width: 481px) and (max-width: 767px)" srcset="//file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf_large.jpg">
-                    <source data-srcset="https://file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf.jpg" media="(min-width: 768px)" srcset="https://file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf.jpg">
-                    <img data-src="https://file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf.jpg" class=" lazyloaded" alt="Triangle Concrete House on lake" src="https://file.hstatic.net/1000387172/article/sm_340_90d73689a1284ab29112b18e574191cf.jpg">
-                  </picture>
-                </a>
-                <div class="latest-blog-dark">
-                  <h3><a href="/blogs/news/triangle-concrete-house-on-lake">Triangle Concrete House on lake</a></h3>
-                  <div class="v-date text-white"><span>Thứ Ba 10/09/2019</span></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-sm-6 col-xs-6 col-blog">
-              <div class="overlay-wraper latest-blog-dark-outer">
-                <a href="/blogs/news/can-ho-dam-chat-phuong-tay" title="Căn Hộ Đậm Chất Phương Tây" class="fade-box">
-                  <picture>
-                    <source data-srcset="//file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65_medium.jpg" media="(max-width: 480px)" srcset="//file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65_medium.jpg">
-                    <source data-srcset="//file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65_large.jpg" media="(min-width: 481px) and (max-width: 767px)" srcset="//file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65_large.jpg">
-                    <source data-srcset="https://file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65.jpg" media="(min-width: 768px)" srcset="https://file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65.jpg">
-                    <img data-src="https://file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65.jpg" class=" lazyloaded" alt="Căn Hộ Đậm Chất Phương Tây" src="https://file.hstatic.net/1000387172/article/banner_blog-1_fd14682a832149bdb4b90b4b80287b65.jpg">
-                  </picture>
-                </a>
-                <div class="latest-blog-dark">
-                  <h3><a href="/blogs/news/can-ho-dam-chat-phuong-tay">Căn Hộ Đậm Chất Phương Tây</a></h3>
-                  <div class="v-date text-white"><span>Thứ Năm 08/08/2019</span></div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        <div class="hilite-title text-right bdr-gray bdr-right">
-          <strong>Tin tức </strong>
-          <span class="text-black">Phổ biến </span>
-        </div>
-      </div>
-    </section>
-    <!-- end section blog -->
+    
+    <?php include 'berita.php'?>
+    
 
     <!-- section video -->
 
@@ -464,296 +375,40 @@ foreach ($slider as $slider) {  ?>
 
 
 
+            <?php foreach($project as $item) {?>
 
 
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/incredible-house-in-scottish-highland" title="Incredible House In Scottish Highland" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_large.jpg" class=" lazyloaded" alt=" Incredible House In Scottish Highland ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/incredible-house-in-scottish-highland" title="Incredible House In Scottish Highland">Incredible House In Scottish Highland</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/incredible-house-in-scottish-highland">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+              <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
+                <div class="overlay">
+                  <a href="/products/incredible-house-in-scottish-highland" title="Incredible House In Scottish Highland" class="image-resize" style="height: 295px;">			
+                    <picture>
+                      <source media="(max-width: 480px)" data-srcset="<?= base_url('assets/upload/image/' . $item['gambar']) ?>" srcset="//product.hstatic.net/1000387172/product/project-preview10_4da8b8de4cc74dceb71e0df8b60ef2c0_medium.jpg">
+                      <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="<?= base_url('assets/upload/image/' . $item['gambar']) ?>" srcset="<?= base_url('assets/upload/image/' . $item['gambar']) ?>">
+                      <source media="(min-width: 768px)" data-srcset="<?= base_url('assets/upload/image/' . $item['gambar']) ?>" srcset="<?= base_url('assets/upload/image/' . $item['gambar']) ?>">
+                      <img data-src="<?= base_url('assets/upload/image/' . $item['gambar']) ?>" src="<?= base_url('assets/upload/image/' . $item['gambar']) ?>" class=" lazyloaded" alt=" Incredible House In Scottish Highland ">
+                    </picture>
+                  </a>
+                  <div class="hover-effect"></div>
+                  <div class="text-wrap-title">
+                    <h3 class="pro-title"><a href="/products/incredible-house-in-scottish-highland" title="Incredible House In Scottish Highland"><?= $item['judul_berita'] ?></a></h3>
+                    <div class="text-wrap-price">
+                      <p class="pro-price">
+                        <span class="pro-contact">Liên hệ</span>
+                      </p>
+                    </div>
+                    <div class="text-wrap-link">
+                      <a class="site-button black" href="/products/incredible-house-in-scottish-highland">
+                        <span>Xem chi tiết</span><em></em>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
             <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
 
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/contemporary-villa" title="Contemporary Villa" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview05_11cbcf418b46464aa361f31b4efea5c0_large.jpg" class=" lazyloaded" alt=" Contemporary Villa ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/contemporary-villa" title="Contemporary Villa">Contemporary Villa</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/contemporary-villa">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
-
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/rodney-livingroom" title="Rodney Livingroom" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview07_f699cc25ef5a465ebd1bbd4dcdad3c7a_large.jpg" class=" lazyloaded" alt=" Rodney Livingroom ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/rodney-livingroom" title="Rodney Livingroom">Rodney Livingroom</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/rodney-livingroom">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
-
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/westside-villa" title="Westside Villa" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview09_d167b3ff8daf4e89a9bff8f4233b32cf_large.jpg" class=" lazyloaded" alt=" Westside Villa ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/westside-villa" title="Westside Villa">Westside Villa</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/westside-villa">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
-
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/south-valley-apartment" title="South Valley Apartment" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview08_acd3d4563b7c4b3f961be64298a555ba_large.jpg" class=" lazyloaded" alt=" South Valley Apartment ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/south-valley-apartment" title="South Valley Apartment">South Valley Apartment</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/south-valley-apartment">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
-
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/silvermore-apartment" title="Silvermore Apartment" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview01_3bc576edde804c89a618c9bb7c5741a8_large.jpg" class=" lazyloaded" alt=" Silvermore Apartment ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/silvermore-apartment" title="Silvermore Apartment">Silvermore Apartment</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/silvermore-apartment">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
-
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/national-cold-war-exhibition" title="National Cold War Exhibition" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview02_20088724d56d4f2ca1e2d58853a00e82_large.jpg" class=" lazyloaded" alt=" National Cold War Exhibition ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/national-cold-war-exhibition" title="National Cold War Exhibition">National Cold War Exhibition</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span class="pro-contact">Liên hệ</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/national-cold-war-exhibition">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-6 pd-0 col-pj">
-
-
-
-
-
-
-    <div class="gallery-box fade-box product-resize fixheight" style="height: 295px;">
-      <div class="overlay">
-        <a href="/products/hangzhou-tower-501-plaza" title="Hangzhou Tower 501 Plaza" class="image-resize" style="height: 295px;">			
-          <picture>
-            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_medium.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_medium.jpg">
-            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg">
-            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg" srcset="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg">
-            <img data-src="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg" src="//product.hstatic.net/1000387172/product/project-preview04_939633dbffbf4dcfbd5c63fe8227c424_large.jpg" class=" lazyloaded" alt=" Hangzhou Tower 501 Plaza ">
-          </picture>
-        </a>
-        <div class="hover-effect"></div>
-        <div class="text-wrap-title">
-          <h3 class="pro-title"><a href="/products/hangzhou-tower-501-plaza" title="Hangzhou Tower 501 Plaza">Hangzhou Tower 501 Plaza</a></h3>
-          <div class="text-wrap-price">
-            <p class="pro-price">
-              <span>25,000,000₫</span>
-            </p>
-          </div>
-          <div class="text-wrap-link">
-            <a class="site-button black" href="/products/hangzhou-tower-501-plaza">
-              <span>Xem chi tiết</span><em></em>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
+            <?php }?>
 
             </div>
           </div>
@@ -799,79 +454,5 @@ foreach ($slider as $slider) {  ?>
     </section>
     <!-- end section clients -->
 
-
-    <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <?php $pr = 1;
-
-foreach ($profil as $profil) { ?>
-          <div class="col-md-6 col-lg-4 text-center d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="<?= $pr ?>00">
-              <div class="icon"><i class="<?= $profil['icon'] ?>"></i></div>
-              <h4 class="title"><a href="<?= base_url('berita/profil/' . $profil['slug_berita']) ?>"><?= $profil['judul_berita'] ?></a></h4>
-              <p class="description"><?= $profil['ringkasan'] ?></p>
-            </div>
-          </div>
-          <?php $pr++; } ?>
-</div>
-      </div>
-    </section><!-- End Featured Services Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          <h3>Selamat datang di <?= $konfigurasi['namaweb'] ?></h3>
-          <p><?= $konfigurasi['tagline'] ?></p>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
     
-
-
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Layanan Kami</h2>
-          <p>Yuk gunakan layanan yang ada di <?= namaweb() ?>. <?= tagline() ?></p>
-        </div>
-
-        <div class="row">
-          <?php $ml = 1;
-
-foreach ($layanan as $layanan) { ?>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="<?= $ml; ?>00">
-            <div class="icon"><i class="<?= $layanan['icon'] ?>"></i></div>
-            <h4 class="title"><a href="<?= base_url('berita/layanan/' . $layanan['slug_berita']) ?>"><?= $layanan['judul_berita'] ?></a></h4>
-            <p class="description"><?= $layanan['ringkasan'] ?></p>
-          </div>
-          <?php $ml++; } ?>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <?php include 'berita.php'?>
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div>
-        <style type="text/css" media="screen">
-          iframe {
-            min-height: 300px;
-            width: 100%;
-          }
-        </style>
-        <?= google_map() ?>
-      </div>
-    </section><!-- End Contact Section -->
 </main><!-- End #main -->
