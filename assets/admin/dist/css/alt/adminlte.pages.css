@@ -779,7 +779,7 @@ body.iframe-mode-fullscreen {
   right: .125rem;
   top: .125rem;
   z-index: 10;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .content-wrapper.iframe-mode .btn-iframe-close:hover, .content-wrapper.iframe-mode .btn-iframe-close:focus {
@@ -789,12 +789,12 @@ body.iframe-mode-fullscreen {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 @media (hover: none) and (pointer: coarse) {
   .content-wrapper.iframe-mode .btn-iframe-close {
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
 }
 
@@ -818,12 +818,12 @@ body.iframe-mode-fullscreen {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 @media (hover: none) and (pointer: coarse) {
   .content-wrapper.iframe-mode .navbar-nav .nav-item:hover .btn-iframe-close, .content-wrapper.iframe-mode .navbar-nav .nav-item:focus .btn-iframe-close {
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
 }
 
@@ -897,7 +897,7 @@ body.iframe-mode-fullscreen .content-wrapper.iframe-mode {
 .permanent-btn-iframe-close .btn-iframe-close {
   -webkit-animation: none !important;
   animation: none !important;
-  visibility: visible !important;
+  vcontentbility: vcontentble !important;
   opacity: 1;
 }
 

@@ -10,7 +10,7 @@ class User_model extends Model
     protected $primaryKey         = 'id_user';
     protected $returnType         = 'array';
     protected $useSoftDeletes     = false;
-    protected $allowedFields      = ['id_user', 'nama', 'email', 'username', 'password', 'akses_level', 'kode_rahasia', 'gambar', 'keterangan', 'tanggal_post'];
+    protected $allowedFields      = ['id_user', 'name', 'email', 'username', 'password', 'access_level', 'code_secrect', 'picture', 'summary', 'date_post'];
     protected $useTimestamps      = false;
     protected $createdField       = 'created_at';
     protected $updatedField       = 'updated_at';
@@ -60,7 +60,7 @@ class User_model extends Model
         return $query->getRowArray();
     }
 
-    // tambah  log
+    // add  log
     public function user_log($data)
     {
         $builder = $this->db->table('user_logs');

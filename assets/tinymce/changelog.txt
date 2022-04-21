@@ -98,7 +98,7 @@ Version 5.6.0 (2020-11-18)
     Fixed a regression that caused the selection to be difficult to see in tables with backgrounds #TINY-6495
     Fixed content pasted multiple times in the editor when using Microsoft Internet Explorer 11. Patch contributed by mattford #GH-4905
 Version 5.5.1 (2020-10-01)
-    Fixed pressing the down key near the end of a document incorrectly raising an exception #TINY-6471
+    Fixed pressing the down key near the end of a document incorrectly racontentng an exception #TINY-6471
     Fixed incorrect Typescript types for the `Tools` API #TINY-6475
 Version 5.5.0 (2020-09-29)
     Added a TypeScript declaration file to the bundle output for TinyMCE core #TINY-3785
@@ -111,8 +111,8 @@ Version 5.5.0 (2020-09-29)
     Added the ability to delete and navigate HTML media elements without the `media` plugin #TINY-4211
     Added `fullscreen_native` setting to the `fullscreen` plugin to enable use of the entire monitor #TINY-6284
     Added table related oxide variables to the Style API for more granular control over table cell selection appearance #TINY-6311
-    Added new `toolbar_persist` setting to control the visibility of the inline toolbar #TINY-4847
-    Added new APIs to allow for programmatic control of the inline toolbar visibility #TINY-4847
+    Added new `toolbar_persist` setting to control the vcontentbility of the inline toolbar #TINY-4847
+    Added new APIs to allow for programmatic control of the inline toolbar vcontentbility #TINY-4847
     Added the `origin` property to the `ObjectResized` and `ObjectResizeStart` events, to specify which handle the resize was performed on #TINY-6242
     Added new StyleSheetLoader `unload` and `unloadAll` APIs to allow loaded stylesheets to be removed #TINY-3926
     Added the `LineHeight` query command and action to the editor #TINY-4843
@@ -497,7 +497,7 @@ Version 5.0.8 (2019-06-18)
     Added back support for multiple toolbars #TINY-2195
     Added support for .m4a files to the media plugin #TINY-3750
     Added new base_url and suffix editor init options #TINY-3681
-    Fixed incorrect padding for select boxes with visible values #TINY-3780
+    Fixed incorrect padding for select boxes with vcontentble values #TINY-3780
     Fixed selection incorrectly changing when programmatically setting selection on contenteditable false elements #TINY-3766
     Fixed sidebar background being transparent #TINY-3727
     Fixed the build to remove duplicate iife wrappers #TINY-3689
@@ -510,7 +510,7 @@ Version 5.0.8 (2019-06-18)
     Fixed the print plugin printing from the wrong window in IE11 #TINY-3762
     Fixed content CSS loaded over CORS not loading in the preview plugin with content_css_cors enabled #TINY-3769
     Fixed the link plugin missing the default "None" option for link list #TINY-3738
-    Fixed small dot visible with menubar and toolbar disabled in inline mode #TINY-3623
+    Fixed small dot vcontentble with menubar and toolbar disabled in inline mode #TINY-3623
     Fixed space key properly inserts a nbsp before/after block elements #TINY-3745
     Fixed native context menu not showing with images in IE11 #TINY-3392
     Fixed inconsistent browser context menu image selection #TINY-3789
@@ -537,7 +537,7 @@ Version 5.0.7 (2019-06-05)
     Fixed an exception being thrown when a file or number input has focus during initialization. Patch contributed by t00 #GH-2194
 Version 5.0.6 (2019-05-22)
     Added `icons_url` editor settings to enable icon packs to be loaded from a custom url #TINY-3585
-    Added `image_uploadtab` editor setting to control the visibility of the upload tab in the image dialog #TINY-3606
+    Added `image_uploadtab` editor setting to control the vcontentbility of the upload tab in the image dialog #TINY-3606
     Added new api endpoints to the wordcount plugin and improved character count logic #TINY-3578
     Changed plugin, language and icon loading errors to log in the console instead of a notification #TINY-3585
     Fixed the textpattern plugin not working with fragmented text #TINY-3089
@@ -797,7 +797,7 @@ Version 4.8.4 (2018-10-23)
     Fixed a bug where content css could not be loaded from another domain. #TINY-1891
     Fixed a bug on FireFox where the cursor would get stuck between two contenteditable false inline elements located inside of the same block element divided by a BR. #TINY-1878
     Fixed a bug with the insertContent method where nonbreaking spaces would be inserted incorrectly. #TINY-1868
-    Fixed a bug where the toolbar of the inline editor would not be visible in some scenarios. #TINY-1862
+    Fixed a bug where the toolbar of the inline editor would not be vcontentble in some scenarios. #TINY-1862
     Fixed a bug where removing the editor while more than one notification was open would throw an error. #TINY-1845
     Fixed a bug where the menubutton would be rendered on top of the menu if the viewport didn't have enough height. #TINY-1678
     Fixed a bug with the annotations api where annotating collapsed selections caused problems. #TBS-2449
@@ -953,8 +953,8 @@ Version 4.7.4 (2017-12-05)
     Fixed bug in the Table Plugin where keyboard navigation was not normalized between browsers.
     Fixed bug in the Table Plugin where the colorpicker button would show even without defining the colorpicker_callback.
     Fixed bug in the Table Plugin where it wasn't possible to set the cell background color.
-    Fixed bug where Firefox would throw an error when intialising an editor on an element that is hidden or not yet added to the DOM.
-    Fixed bug where Firefox would throw an error when intialising an editor inside of a hidden iframe.
+    Fixed bug where Firefox would throw an error when intialcontentng an editor on an element that is hidden or not yet added to the DOM.
+    Fixed bug where Firefox would throw an error when intialcontentng an editor inside of a hidden iframe.
 Version 4.7.3 (2017-11-23)
     Added functionality to open the Codesample Plugin dialog when double clicking on a codesample. Patch contributed by dakuzen.
     Fixed bug where undo/redo didn't work correctly with some formats and caret positions.
@@ -1190,7 +1190,7 @@ Version 4.6.0 (2017-05-04)
     Fixed bug with paste on Edge where character encoding wasn't handled properly due to a browser bug.
     Fixed bug with paste on Edge where extra fragment data was inserted into the contents when pasting.
     Fixed bug with pasting contents when having a whole block element selected on WebKit could cause WebKit spans to appear.
-    Fixed bug where the visualchars plugin wasn't working correctly showing invisible nbsp characters.
+    Fixed bug where the visualchars plugin wasn't working correctly showing invcontentble nbsp characters.
     Fixed bug where browsers would hang if you tried to load some malformed html contents.
     Fixed bug where the init call promise wouldn't resolve if the specified selector didn't find any matching elements.
     Fixed bug where the Schema isValidChild function was case sensitive.
@@ -1279,7 +1279,7 @@ Version 4.5.0 (2016-11-23)
     Fixed bug where some browsers would toggle of formats applied to the caret when clicking in the editor toolbar.
     Fixed bug where the custom theme function wasn't working correctly.
     Fixed bug where image option for custom buttons required you to have icon specified as well.
-    Fixed bug where the context menu and contextual toolbars would be visible at the same time and sometimes overlapping.
+    Fixed bug where the context menu and contextual toolbars would be vcontentble at the same time and sometimes overlapping.
     Fixed bug where the noneditable plugin would double wrap elements when using the noneditable_regexp option.
     Fixed bug where tables would get padding instead of margin when you used the indent button.
     Fixed bug where the charmap plugin wouldn't properly insert non breaking spaces.
@@ -1386,7 +1386,7 @@ Version 4.3.9 (2016-04-12)
     Fixed so toolbars for tables or other larger elements get better positioned below the scrollable viewport.
     Fixed bug where it was possible to click links inside cE=false blocks.
     Fixed bug where event targets wasn't properly handled in Safari Technical Preview.
-    Fixed bug where drag/drop text in FF 45 would make the editor caret invisible.
+    Fixed bug where drag/drop text in FF 45 would make the editor caret invcontentble.
     Fixed bug where the remove state wasn't properly set on editor instances when detected as clobbered.
     Fixed bug where offscreen selection of some cE=false elements would render onscreen. Patch contributed by Steven Bufton
     Fixed bug where enter would clone styles out side the root on editors inside a span. Patch contributed by ChristophKaser.
@@ -1562,7 +1562,7 @@ Version 4.2.3 (2015-07-30)
     Fixed bug where image selection wasn't possible on Edge due to incompatible setBaseAndExtend API.
     Fixed bug where image blobs urls where not properly destroyed by the imagetools plugin.
     Fixed bug where keyboard shortcuts wasn't working correctly on IE 8.
-    Fixed skin issue where the borders of panels where not visible on IE 8.
+    Fixed skin issue where the borders of panels where not vcontentble on IE 8.
 Version 4.2.2 (2015-07-22)
     Fixed bug where float panels were not being hidden on inline editor blur when fixed_toolbar_container config option was in use.
     Fixed bug where combobox states wasn't properly updated if contents where updated without keyboard.
@@ -1738,7 +1738,7 @@ Version 4.1.3 (2014-07-29)
     Fixed bug where selecting the contents of table cells using the selection.select method wouldn't place the caret properly.
     Fixed bug where the selection state for images wasn't removed when placing the caret right after an image on WebKit/Blink.
     Fixed bug where all events wasn't properly unbound when and editor instance was removed or destroyed by some external innerHTML call.
-    Fixed bug where it wasn't possible or very hard to select images on iOS when the onscreen keyboard was visible.
+    Fixed bug where it wasn't possible or very hard to select images on iOS when the onscreen keyboard was vcontentble.
     Fixed so auto_focus can take a boolean argument this will auto focus the last initialized editor might be useful for single inits.
     Fixed so word auto detect lists logic works better for faked lists that doesn't have specific markup.
     Fixed so nodeChange gets fired on mouseup as it used to before 4.1.1 we optimized that event to fire less often.

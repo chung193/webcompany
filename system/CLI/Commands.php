@@ -105,7 +105,7 @@ class Commands
             try {
                 $class = new ReflectionClass($className);
 
-                if (! $class->isInstantiable() || ! $class->isSubclassOf(BaseCommand::class)) {
+                if (! $class->contentnstantiable() || ! $class->isSubclassOf(BaseCommand::class)) {
                     continue;
                 }
 

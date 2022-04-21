@@ -2,7 +2,7 @@
 
 $session = \Config\Services::session();
 if ($session->get('username') === '') {
-    $session->setFlashdata('sukses', 'Ooops... Anda belum login');
+    $session->setFlashdata('Success', 'Ooops...Bạn chưa đăng nhập');
 
     return redirect()->to(base_url('login'));
 }

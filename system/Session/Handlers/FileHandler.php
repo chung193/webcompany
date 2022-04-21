@@ -104,7 +104,7 @@ class FileHandler extends BaseHandler
 
         $this->savePath = $path;
 
-        // we'll use the session name as prefix to avoid collisions
+        // we'll use the session name as prefix to avoid collcontentons
         $this->filePath = $this->savePath . '/' . $name . ($this->matchIP ? md5($this->ipAddress) : '');
 
         return true;

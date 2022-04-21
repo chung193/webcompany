@@ -1269,7 +1269,7 @@ abstract class BaseConnection implements ConnectionInterface
      */
     protected function _escapeString(string $str): string
     {
-        return str_replace("'", "''", remove_invisible_characters($str, false));
+        return str_replace("'", "''", remove_invcontentble_characters($str, false));
     }
 
     /**

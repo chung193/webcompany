@@ -1,96 +1,96 @@
 <?php
 
-use App\Models\Konfigurasi_model;
+use App\Models\Config_model;
 use App\Models\User_model;
 
-// namaweb
-function namaweb()
+// nameweb
+function nameweb()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['namaweb'];
+    return $Config['nameweb'];
 }
 
 // title
 function title()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['namaweb'] . ' | ' . $konfigurasi->tagline;
+    return $Config['nameweb'] . ' | ' . $Config->tagline;
 }
 
 // tagline
 function tagline()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['tagline'];
+    return $Config['tagline'];
 }
 
 // logo
 function logo()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return base_url('assets/upload/image/' . $konfigurasi['logo']);
+    return base_url('assets/upload/image/' . $Config['logo']);
 }
 
 // icon
 function icon()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return base_url('assets/upload/image/' . $konfigurasi['icon']);
+    return base_url('assets/upload/image/' . $Config['icon']);
 }
 
 // metatext
 function metatext()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['metatext'];
+    return $Config['metatext'];
 }
 
 // keywords
 function keywords()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['keywords'];
+    return $Config['keywords'];
 }
 
 // telepon
-function telepon()
+function phone()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['telepon'];
+    return $Config['phone'];
 }
 
 // google_map
 function google_map()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['google_map'];
+    return $Config['google_map'];
 }
 
 // hp
 function hp()
 {
-    $m_konfigurasi = new Konfigurasi_model();
-    $konfigurasi   = $m_konfigurasi->listing();
+    $m_Config = new Config_model();
+    $Config   = $m_Config->listing();
 
-    return $konfigurasi['hp'];
+    return $Config['hp'];
 }
 
 // cheklogin
@@ -139,52 +139,52 @@ function checksiswa()
     }
 }
 
-// tanggal_bulan
-     function tanggal_id($tanggal)
+// date_month
+     function date_id($date)
      {
-         if ($tanggal === '' || $tanggal === null || $tanggal === '0000-00-00' || $tanggal === '1970-01-01') {
+         if ($date === '' || $date === null || $date === '0000-00-00' || $date === '1970-01-01') {
              return false;
          }
 
-         return date('d-m-Y', strtotime($tanggal));
+         return date('d-m-Y', strtotime($date));
      }
 
-    // Tanggal input
-     function tanggal_input($tanggal)
+    // date input
+     function date_input($date)
      {
-         if ($tanggal === '' || $tanggal === null || $tanggal === '0000-00-00' || $tanggal === '1970-01-01') {
+         if ($date === '' || $date === null || $date === '0000-00-00' || $date === '1970-01-01') {
              return false;
          }
 
-         return date('Y-m-d', strtotime($tanggal));
+         return date('Y-m-d', strtotime($date));
      }
 
     // Romawi
-     function romawi($bulan)
+     function romawi($month)
      {
-         if ($bulan === '01') {
+         if ($month === '01') {
              $romawi = 'I';
-         } elseif ($bulan === '02') {
+         } elseif ($month === '02') {
              $romawi = 'II';
-         } elseif ($bulan === '03') {
+         } elseif ($month === '03') {
              $romawi = 'III';
-         } elseif ($bulan === '04') {
+         } elseif ($month === '04') {
              $romawi = 'IV';
-         } elseif ($bulan === '05') {
+         } elseif ($month === '05') {
              $romawi = 'V';
-         } elseif ($bulan === '06') {
+         } elseif ($month === '06') {
              $romawi = 'VI';
-         } elseif ($bulan === '07') {
+         } elseif ($month === '07') {
              $romawi = 'VII';
-         } elseif ($bulan === '08') {
+         } elseif ($month === '08') {
              $romawi = 'VIII';
-         } elseif ($bulan === '09') {
+         } elseif ($month === '09') {
              $romawi = 'IX';
-         } elseif ($bulan === '10') {
+         } elseif ($month === '10') {
              $romawi = 'X';
-         } elseif ($bulan === '11') {
+         } elseif ($month === '11') {
              $romawi = 'XI';
-         } elseif ($bulan === '12') {
+         } elseif ($month === '12') {
              $romawi = 'XII';
          }
 
@@ -192,271 +192,271 @@ function checksiswa()
      }
 
     // Romawi
-     function bulan($bulan)
+     function month($month)
      {
-         if ($bulan === '01') {
-             $nama_bulan = 'Januari';
-         } elseif ($bulan === '02') {
-             $nama_bulan = 'Februari';
-         } elseif ($bulan === '03') {
-             $nama_bulan = 'Maret';
-         } elseif ($bulan === '04') {
-             $nama_bulan = 'April';
-         } elseif ($bulan === '05') {
-             $nama_bulan = 'Mei';
-         } elseif ($bulan === '06') {
-             $nama_bulan = 'Juni';
-         } elseif ($bulan === '07') {
-             $nama_bulan = 'Juli';
-         } elseif ($bulan === '08') {
-             $nama_bulan = 'Agustus';
-         } elseif ($bulan === '09') {
-             $nama_bulan = 'September';
-         } elseif ($bulan === '10') {
-             $nama_bulan = 'Oktober';
-         } elseif ($bulan === '11') {
-             $nama_bulan = 'November';
-         } elseif ($bulan === '12') {
-             $nama_bulan = 'Desember';
+         if ($month === '01') {
+             $name_month = 'January';
+         } elseif ($month === '02') {
+             $name_month = 'February';
+         } elseif ($month === '03') {
+             $name_month = 'March';
+         } elseif ($month === '04') {
+             $name_month = 'April';
+         } elseif ($month === '05') {
+             $name_month = 'May';
+         } elseif ($month === '06') {
+             $name_month = 'June';
+         } elseif ($month === '07') {
+             $name_month = 'July';
+         } elseif ($month === '08') {
+             $name_month = 'August';
+         } elseif ($month === '09') {
+             $name_month = 'September';
+         } elseif ($month === '10') {
+             $name_month = 'October';
+         } elseif ($month === '11') {
+             $name_month = 'November';
+         } elseif ($month === '12') {
+             $name_month = 'December';
          }
 
-         return $nama_bulan;
+         return $name_month;
      }
 
     // Romawi
-     function bulan_pendek($bulan)
+     function month_pendek($month)
      {
-         if ($bulan === '01') {
-             $nama_bulan_pendek = 'Jan';
-         } elseif ($bulan === '02') {
-             $nama_bulan_pendek = 'Feb';
-         } elseif ($bulan === '03') {
-             $nama_bulan_pendek = 'Mar';
-         } elseif ($bulan === '04') {
-             $nama_bulan_pendek = 'Apr';
-         } elseif ($bulan === '05') {
-             $nama_bulan_pendek = 'Mei';
-         } elseif ($bulan === '06') {
-             $nama_bulan_pendek = 'Jun';
-         } elseif ($bulan === '07') {
-             $nama_bulan_pendek = 'Jul';
-         } elseif ($bulan === '08') {
-             $nama_bulan_pendek = 'Agus';
-         } elseif ($bulan === '09') {
-             $nama_bulan_pendek = 'Sep';
-         } elseif ($bulan === '10') {
-             $nama_bulan_pendek = 'Okt';
-         } elseif ($bulan === '11') {
-             $nama_bulan_pendek = 'Nov';
-         } elseif ($bulan === '12') {
-             $nama_bulan_pendek = 'Des';
+         if ($month === '01') {
+             $name_month_pendek = 'Jan';
+         } elseif ($month === '02') {
+             $name_month_pendek = 'Feb';
+         } elseif ($month === '03') {
+             $name_month_pendek = 'Mar';
+         } elseif ($month === '04') {
+             $name_month_pendek = 'Apr';
+         } elseif ($month === '05') {
+             $name_month_pendek = 'May';
+         } elseif ($month === '06') {
+             $name_month_pendek = 'Jun';
+         } elseif ($month === '07') {
+             $name_month_pendek = 'Jul';
+         } elseif ($month === '08') {
+             $name_month_pendek = 'Agus';
+         } elseif ($month === '09') {
+             $name_month_pendek = 'Sep';
+         } elseif ($month === '10') {
+             $name_month_pendek = 'Oct';
+         } elseif ($month === '11') {
+             $name_month_pendek = 'Nov';
+         } elseif ($month === '12') {
+             $name_month_pendek = 'Dec';
          }
 
-         return $nama_bulan_pendek;
+         return $name_month_pendek;
      }
 
     // Romawi
-     function hari($tanggal)
+     function day($date)
      {
-         $bulan = date('m', strtotime($tanggal));
-         $hari  = date('l', strtotime($tanggal));
+         $month = date('m', strtotime($date));
+         $day  = date('l', strtotime($date));
 
-         if ($hari === 'Sunday') {
-             $nama_hari = 'Minggu';
-         } elseif ($hari === 'Monday') {
-             $nama_hari = 'Senin';
-         } elseif ($hari === 'Tuesday') {
-             $nama_hari = 'Selasa';
-         } elseif ($hari === 'Wednesday') {
-             $nama_hari = 'Rabu';
-         } elseif ($hari === 'Thursday') {
-             $nama_hari = 'Kamis';
-         } elseif ($hari === 'Friday') {
-             $nama_hari = 'Jumat';
-         } elseif ($hari === 'Saturday') {
-             $nama_hari = 'Sabtu';
+         if ($day === 'Sunday') {
+             $name_day = 'Sunday';
+         } elseif ($day === 'Monday') {
+             $name_day = 'Monday';
+         } elseif ($day === 'Tuesday') {
+             $name_day = 'Tuesday';
+         } elseif ($day === 'Wednesday') {
+             $name_day = 'Wednesday';
+         } elseif ($day === 'Thursday') {
+             $name_day = 'Thursday';
+         } elseif ($day === 'Friday') {
+             $name_day = 'Friday';
+         } elseif ($day === 'Saturday') {
+             $name_day = 'Saturday';
          }
 
-         if ($bulan === '01') {
-             $nama_bulan = 'Januari';
-         } elseif ($bulan === '02') {
-             $nama_bulan = 'Februari';
-         } elseif ($bulan === '03') {
-             $nama_bulan = 'Maret';
-         } elseif ($bulan === '04') {
-             $nama_bulan = 'April';
-         } elseif ($bulan === '05') {
-             $nama_bulan = 'Mei';
-         } elseif ($bulan === '06') {
-             $nama_bulan = 'Juni';
-         } elseif ($bulan === '07') {
-             $nama_bulan = 'Juli';
-         } elseif ($bulan === '08') {
-             $nama_bulan = 'Agustus';
-         } elseif ($bulan === '09') {
-             $nama_bulan = 'September';
-         } elseif ($bulan === '10') {
-             $nama_bulan = 'Oktober';
-         } elseif ($bulan === '11') {
-             $nama_bulan = 'November';
-         } elseif ($bulan === '12') {
-             $nama_bulan = 'Desember';
+         if ($month === '01') {
+             $name_month = 'January';
+         } elseif ($month === '02') {
+             $name_month = 'February';
+         } elseif ($month === '03') {
+             $name_month = 'March';
+         } elseif ($month === '04') {
+             $name_month = 'April';
+         } elseif ($month === '05') {
+             $name_month = 'May';
+         } elseif ($month === '06') {
+             $name_month = 'June';
+         } elseif ($month === '07') {
+             $name_month = 'July';
+         } elseif ($month === '08') {
+             $name_month = 'August';
+         } elseif ($month === '09') {
+             $name_month = 'September';
+         } elseif ($month === '10') {
+             $name_month = 'October';
+         } elseif ($month === '11') {
+             $name_month = 'November';
+         } elseif ($month === '12') {
+             $name_month = 'December';
          }
 
-         return $nama_hari . ', ' . date('d', strtotime($tanggal)) . ' ' . $nama_bulan . ' ' . date('Y', strtotime($tanggal));
+         return $name_day . ', ' . date('d', strtotime($date)) . ' ' . $name_month . ' ' . date('Y', strtotime($date));
      }
 
-    // tanggal_bulan
-    function tanggal_bulan($tanggal)
+    // date_month
+    function date_month($date)
     {
-        $bulan = date('m', strtotime($tanggal));
-        $hari  = date('l', strtotime($tanggal));
+        $month = date('m', strtotime($date));
+        $day  = date('l', strtotime($date));
 
-        if ($hari === 'Sunday') {
-            $nama_hari = 'Minggu';
-        } elseif ($hari === 'Monday') {
-            $nama_hari = 'Senin';
-        } elseif ($hari === 'Tuesday') {
-            $nama_hari = 'Selasa';
-        } elseif ($hari === 'Wednesday') {
-            $nama_hari = 'Rabu';
-        } elseif ($hari === 'Thursday') {
-            $nama_hari = 'Kamis';
-        } elseif ($hari === 'Friday') {
-            $nama_hari = 'Jumat';
-        } elseif ($hari === 'Saturday') {
-            $nama_hari = 'Sabtu';
+        if ($day === 'Sunday') {
+            $name_day = 'Sunday';
+        } elseif ($day === 'Monday') {
+            $name_day = 'Monday';
+        } elseif ($day === 'Tuesday') {
+            $name_day = 'Tuesday';
+        } elseif ($day === 'Wednesday') {
+            $name_day = 'Wednesday';
+        } elseif ($day === 'Thursday') {
+            $name_day = 'Thursday';
+        } elseif ($day === 'Friday') {
+            $name_day = 'Friday';
+        } elseif ($day === 'Saturday') {
+            $name_day = 'Saturday';
         }
 
-        if ($bulan === '01') {
-            $nama_bulan = 'Januari';
-        } elseif ($bulan === '02') {
-            $nama_bulan = 'Februari';
-        } elseif ($bulan === '03') {
-            $nama_bulan = 'Maret';
-        } elseif ($bulan === '04') {
-            $nama_bulan = 'April';
-        } elseif ($bulan === '05') {
-            $nama_bulan = 'Mei';
-        } elseif ($bulan === '06') {
-            $nama_bulan = 'Juni';
-        } elseif ($bulan === '07') {
-            $nama_bulan = 'Juli';
-        } elseif ($bulan === '08') {
-            $nama_bulan = 'Agustus';
-        } elseif ($bulan === '09') {
-            $nama_bulan = 'September';
-        } elseif ($bulan === '10') {
-            $nama_bulan = 'Oktober';
-        } elseif ($bulan === '11') {
-            $nama_bulan = 'November';
-        } elseif ($bulan === '12') {
-            $nama_bulan = 'Desember';
+        if ($month === '01') {
+            $name_month = 'January';
+        } elseif ($month === '02') {
+            $name_month = 'February';
+        } elseif ($month === '03') {
+            $name_month = 'March';
+        } elseif ($month === '04') {
+            $name_month = 'April';
+        } elseif ($month === '05') {
+            $name_month = 'May';
+        } elseif ($month === '06') {
+            $name_month = 'June';
+        } elseif ($month === '07') {
+            $name_month = 'July';
+        } elseif ($month === '08') {
+            $name_month = 'August';
+        } elseif ($month === '09') {
+            $name_month = 'September';
+        } elseif ($month === '10') {
+            $name_month = 'October';
+        } elseif ($month === '11') {
+            $name_month = 'November';
+        } elseif ($month === '12') {
+            $name_month = 'December';
         }
 
-        return date('d', strtotime($tanggal)) . ' ' . $nama_bulan . ' ' . date('Y', strtotime($tanggal));
+        return date('d', strtotime($date)) . ' ' . $name_month . ' ' . date('Y', strtotime($date));
     }
 
-    // tanggal_bulan
-    function tanggal_bulan_menit($tanggal)
+    // date_month
+    function date_month_minute($date)
     {
-        $bulan = date('m', strtotime($tanggal));
-        $hari  = date('l', strtotime($tanggal));
+        $month = date('m', strtotime($date));
+        $day  = date('l', strtotime($date));
 
-        if ($hari === 'Sunday') {
-            $nama_hari = 'Minggu';
-        } elseif ($hari === 'Monday') {
-            $nama_hari = 'Senin';
-        } elseif ($hari === 'Tuesday') {
-            $nama_hari = 'Selasa';
-        } elseif ($hari === 'Wednesday') {
-            $nama_hari = 'Rabu';
-        } elseif ($hari === 'Thursday') {
-            $nama_hari = 'Kamis';
-        } elseif ($hari === 'Friday') {
-            $nama_hari = 'Jumat';
-        } elseif ($hari === 'Saturday') {
-            $nama_hari = 'Sabtu';
+        if ($day === 'Sunday') {
+            $name_day = 'Sunday';
+        } elseif ($day === 'Monday') {
+            $name_day = 'Monday';
+        } elseif ($day === 'Tuesday') {
+            $name_day = 'Tuesday';
+        } elseif ($day === 'Wednesday') {
+            $name_day = 'Wednesday';
+        } elseif ($day === 'Thursday') {
+            $name_day = 'Thursday';
+        } elseif ($day === 'Friday') {
+            $name_day = 'Friday';
+        } elseif ($day === 'Saturday') {
+            $name_day = 'Saturday';
         }
 
-        if ($bulan === '01') {
-            $nama_bulan = 'Januari';
-        } elseif ($bulan === '02') {
-            $nama_bulan = 'Februari';
-        } elseif ($bulan === '03') {
-            $nama_bulan = 'Maret';
-        } elseif ($bulan === '04') {
-            $nama_bulan = 'April';
-        } elseif ($bulan === '05') {
-            $nama_bulan = 'Mei';
-        } elseif ($bulan === '06') {
-            $nama_bulan = 'Juni';
-        } elseif ($bulan === '07') {
-            $nama_bulan = 'Juli';
-        } elseif ($bulan === '08') {
-            $nama_bulan = 'Agustus';
-        } elseif ($bulan === '09') {
-            $nama_bulan = 'September';
-        } elseif ($bulan === '10') {
-            $nama_bulan = 'Oktober';
-        } elseif ($bulan === '11') {
-            $nama_bulan = 'November';
-        } elseif ($bulan === '12') {
-            $nama_bulan = 'Desember';
+        if ($month === '01') {
+            $name_month = 'January';
+        } elseif ($month === '02') {
+            $name_month = 'February';
+        } elseif ($month === '03') {
+            $name_month = 'March';
+        } elseif ($month === '04') {
+            $name_month = 'April';
+        } elseif ($month === '05') {
+            $name_month = 'May';
+        } elseif ($month === '06') {
+            $name_month = 'June';
+        } elseif ($month === '07') {
+            $name_month = 'July';
+        } elseif ($month === '08') {
+            $name_month = 'August';
+        } elseif ($month === '09') {
+            $name_month = 'September';
+        } elseif ($month === '10') {
+            $name_month = 'October';
+        } elseif ($month === '11') {
+            $name_month = 'November';
+        } elseif ($month === '12') {
+            $name_month = 'December';
         }
 
-        return date('d', strtotime($tanggal)) . ' ' . $nama_bulan . ' ' . date('Y', strtotime($tanggal)) . ' jam ' . date('H:i:s', strtotime($tanggal));
+        return date('d', strtotime($date)) . ' ' . $name_month . ' ' . date('Y', strtotime($date)) . ' jam ' . date('H:i:s', strtotime($date));
     }
 
-    // tanggal_bulan
-    function tanggal_singkat($tanggal)
+    // date_month
+    function date_short($date)
     {
-        $bulan = date('m', strtotime($tanggal));
-        $hari  = date('l', strtotime($tanggal));
+        $month = date('m', strtotime($date));
+        $day  = date('l', strtotime($date));
 
-        if ($hari === 'Sunday') {
-            $nama_hari = 'Minggu';
-        } elseif ($hari === 'Monday') {
-            $nama_hari = 'Senin';
-        } elseif ($hari === 'Tuesday') {
-            $nama_hari = 'Selasa';
-        } elseif ($hari === 'Wednesday') {
-            $nama_hari = 'Rabu';
-        } elseif ($hari === 'Thursday') {
-            $nama_hari = 'Kamis';
-        } elseif ($hari === 'Friday') {
-            $nama_hari = 'Jumat';
-        } elseif ($hari === 'Saturday') {
-            $nama_hari = 'Sabtu';
+        if ($day === 'Sunday') {
+            $name_day = 'Sunday';
+        } elseif ($day === 'Monday') {
+            $name_day = 'Monday';
+        } elseif ($day === 'Tuesday') {
+            $name_day = 'Tuesday';
+        } elseif ($day === 'Wednesday') {
+            $name_day = 'Wednesday';
+        } elseif ($day === 'Thursday') {
+            $name_day = 'Thursday';
+        } elseif ($day === 'Friday') {
+            $name_day = 'Friday';
+        } elseif ($day === 'Saturday') {
+            $name_day = 'Saturday';
         }
 
-        if ($bulan === '01') {
-            $nama_bulan = 'Jan';
-        } elseif ($bulan === '02') {
-            $nama_bulan = 'Feb';
-        } elseif ($bulan === '03') {
-            $nama_bulan = 'Mar';
-        } elseif ($bulan === '04') {
-            $nama_bulan = 'Apr';
-        } elseif ($bulan === '05') {
-            $nama_bulan = 'Mei';
-        } elseif ($bulan === '06') {
-            $nama_bulan = 'Jun';
-        } elseif ($bulan === '07') {
-            $nama_bulan = 'Jul';
-        } elseif ($bulan === '08') {
-            $nama_bulan = 'Agus';
-        } elseif ($bulan === '09') {
-            $nama_bulan = 'Sep';
-        } elseif ($bulan === '10') {
-            $nama_bulan = 'Okt';
-        } elseif ($bulan === '11') {
-            $nama_bulan = 'Nov';
-        } elseif ($bulan === '12') {
-            $nama_bulan = 'Des';
+        if ($month === '01') {
+            $name_month = 'Jan';
+        } elseif ($month === '02') {
+            $name_month = 'Feb';
+        } elseif ($month === '03') {
+            $name_month = 'Mar';
+        } elseif ($month === '04') {
+            $name_month = 'Apr';
+        } elseif ($month === '05') {
+            $name_month = 'Mei';
+        } elseif ($month === '06') {
+            $name_month = 'Jun';
+        } elseif ($month === '07') {
+            $name_month = 'Jul';
+        } elseif ($month === '08') {
+            $name_month = 'Agus';
+        } elseif ($month === '09') {
+            $name_month = 'Sep';
+        } elseif ($month === '10') {
+            $name_month = 'Okt';
+        } elseif ($month === '11') {
+            $name_month = 'Nov';
+        } elseif ($month === '12') {
+            $name_month = 'Des';
         }
 
-        return date('d', strtotime($tanggal)) . ' ' . $nama_bulan . ' ' . date('Y', strtotime($tanggal));
+        return date('d', strtotime($date)) . ' ' . $name_month . ' ' . date('Y', strtotime($date));
     }
 
     // Nomor
@@ -464,3 +464,53 @@ function checksiswa()
      {
          return number_format($angka, '0', ',', '.');
      }
+
+    /**
+     * Chuyển đổi chuỗi kí tự thành dạng slug dùng cho việc tạo friendly url.
+     * @access    public
+     * @param string
+     * @return    string
+     */
+    if (!function_exists('create_slug')) {
+        function create_slug($string)
+        {
+            $search = array(
+                '#(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)#',
+                '#(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)#',
+                '#(ì|í|ị|ỉ|ĩ)#',
+                '#(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)#',
+                '#(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)#',
+                '#(ỳ|ý|ỵ|ỷ|ỹ)#',
+                '#(đ)#',
+                '#(À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ)#',
+                '#(È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ)#',
+                '#(Ì|Í|Ị|Ỉ|Ĩ)#',
+                '#(Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ)#',
+                '#(Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ)#',
+                '#(Ỳ|Ý|Ỵ|Ỷ|Ỹ)#',
+                '#(Đ)#',
+                "/[^a-zA-Z0-9\-\_]/",
+            );
+            $replace = array(
+                'a',
+                'e',
+                'i',
+                'o',
+                'u',
+                'y',
+                'd',
+                'A',
+                'E',
+                'I',
+                'O',
+                'U',
+                'Y',
+                'D',
+                '-',
+            );
+            $string = preg_replace($search, $replace, $string);
+            $string = preg_replace('/(-)+/', '-', $string);
+            $string = strtolower($string);
+            return $string;
+        }
+    }

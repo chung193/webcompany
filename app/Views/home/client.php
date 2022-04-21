@@ -4,7 +4,7 @@
 
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Berikut ini adalah data-data client kami. <?= namaweb() ?> selalu berusaha menjaga kepuasan pelanggan. Tetap rajin belajar dan berkembang bersama.</p>
+          <p>Berikut ini adalah data-data client kami. <?= nameweb() ?> selalu berusaha menjaga kepuasan pelanggan. Tetap rajin belajar dan berkembang bersama.</p>
         </div>
 
         <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
@@ -15,11 +15,11 @@
               <div class="testimonial-item">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 <?= $client['isi_testimoni'] ?>
+                 <?= $client['content_testimoni'] ?>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="<?= base_url('assets/upload/client/thumbs/' . $client['gambar']) ?>" class="testimonial-img" alt="">
-                <h3><?= $client['nama'] ?></h3>
+                <img src="<?= base_url('assets/upload/client/thumbs/' . $client['picture']) ?>" class="testimonial-img" alt="">
+                <h3><?= $client['name'] ?></h3>
                 <h4><?= $client['pimpinan'] ?></h4>
               </div>
             </div><!-- End testimonial item -->

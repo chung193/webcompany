@@ -30,11 +30,11 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="<?= base_url('assets/upload/client/' . $client['gambar']) ?>" class="img-fluid" alt="">
+                <img src="<?= base_url('assets/upload/client/' . $client['picture']) ?>" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4><?= $client['nama'] ?></h4>
-                <span><?= $client['jenis_client'] ?></span>
+                <h4><?= $client['name'] ?></h4>
+                <span><?= $client['type_client'] ?></span>
               </div>
             </div>
           </div>

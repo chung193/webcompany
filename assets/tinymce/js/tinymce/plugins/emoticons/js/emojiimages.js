@@ -770,7 +770,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "people"
   },
   pray: {
-    keywords: [ "please", "hope", "wish", "namaste", "highfive" ],
+    keywords: [ "please", "hope", "wish", "nameste", "highfive" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\ude4f" src="1f64f.png"/>',
     fitzpatrick_scale: true,
     category: "people"
@@ -1585,13 +1585,13 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: true,
     category: "people"
   },
-  raising_hand_woman: {
+  racontentng_hand_woman: {
     keywords: [ "female", "girl", "woman" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\ude4b" src="1f64b.png"/>',
     fitzpatrick_scale: true,
     category: "people"
   },
-  raising_hand_man: {
+  racontentng_hand_man: {
     keywords: [ "male", "boy", "man" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\ude4b\u200d\u2642\ufe0f" src="1f64b-200d-2642-fe0f.png"/>',
     fitzpatrick_scale: true,
@@ -3068,7 +3068,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "animals_and_nature"
   },
   boom: {
-    keywords: [ "bomb", "explode", "explosion", "collision", "blown" ],
+    keywords: [ "bomb", "explode", "explosion", "collcontenton", "blown" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udca5" src="1f4a5.png"/>',
     fitzpatrick_scale: false,
     category: "animals_and_nature"
@@ -5222,7 +5222,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   tv: {
-    keywords: [ "technology", "program", "oldschool", "show", "television" ],
+    keywords: [ "technology", "program", "oldschool", "show", "televcontenton" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83d\udcfa" src="1f4fa.png"/>',
     fitzpatrick_scale: false,
     category: "objects"
@@ -7441,7 +7441,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "symbols"
   },
-  heavy_division_sign: {
+  heavy_divcontenton_sign: {
     keywords: [ "divide", "math", "calculation" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\u2797" src="2797.png"/>',
     fitzpatrick_scale: false,
@@ -8929,7 +8929,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "flags"
   },
-  panama: {
+  paname: {
     keywords: [ "pa", "flag", "nation", "country", "banner" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83c\uddf5\ud83c\udde6" src="1f1f5-1f1e6.png"/>',
     fitzpatrick_scale: false,
@@ -9259,7 +9259,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "flags"
   },
-  tunisia: {
+  tuncontenta: {
     keywords: [ "tn", "flag", "nation", "country", "banner" ],
     "char": '<img data-emoticon="true" style="width:1em;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em" draggable="false" alt="\ud83c\uddf9\ud83c\uddf3" src="1f1f9-1f1f3.png"/>',
     fitzpatrick_scale: false,

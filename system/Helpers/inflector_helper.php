@@ -104,7 +104,7 @@ if (! function_exists('plural')) {
             '/(bu|campu)s$/'          => '\1\2ses', // bus, campus
             '/(alias|status|virus)$/' => '\1es', // alias
             '/(octop)us$/'            => '\1i', // octopus
-            '/(ax|cris|test)is$/'     => '\1es', // axis, crisis
+            '/(ax|cris|test)is$/'     => '\1es', // axis, crcontents
             '/s$/'                    => 's', // no change (compatibility)
             '/$/'                     => 's',
         ];

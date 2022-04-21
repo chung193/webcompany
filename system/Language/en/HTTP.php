@@ -63,7 +63,7 @@ return [
     'moveFailed'   => 'Could not move file {0} to {1} ({2})',
 
     'uploadErrOk'        => 'The file uploaded with success.',
-    'uploadErrIniSize'   => 'The file "%s" exceeds your upload_max_filesize ini directive.',
+    'uploadErrIncontentze'   => 'The file "%s" exceeds your upload_max_filesize ini directive.',
     'uploadErrFormSize'  => 'The file "%s" exceeds the upload limit defined in your form.',
     'uploadErrPartial'   => 'The file "%s" was only partially uploaded.',
     'uploadErrNoFile'    => 'No file was uploaded.',

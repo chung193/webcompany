@@ -1,12 +1,12 @@
-<?php include 'tambah.php'; ?>
+<?php include 'add.php'; ?>
 <table class="table table-bordered" id="example1">
 	<thead>
 		<tr>
 			<th width="5%">No</th>
-			<th width="5%">Logo</th>
-			<th width="20%">Nama</th>
-			<th width="20%">Jabatan</th>
-			<th width="30%">Kontak</th>
+			<th width="5%">Ảnh</th>
+			<th width="20%">Tên</th>
+			<th width="20%">Vị trí</th>
+			<th width="30%">Liên hệ</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -16,23 +16,22 @@
 foreach ($staff as $staff) { ?>
 		<tr>
 			<td><?= $no ?></td>
-			<td><?php if ($staff['gambar'] === '') {
+			<td><?php if ($staff['picture'] === '') {
     echo '-';
 } else { ?>
-				<img src="<?= base_url('assets/upload/staff/thumbs/' . $staff['gambar']) ?>" class="img img-thumbnail">
+				<img src="<?= base_url('assets/upload/staff/thumbs/' . $staff['picture']) ?>" class="img img-thumbnail">
 			<?php } ?>
 			</td>
-			<td><?= $staff['nama'] ?>
+			<td><?= $staff['name'] ?>
 				<small>
-					<br><i class="fa fa-sitemap"></i> Jenis: <?= $staff['nama_kategori_staff'] ?>
-					<br><i class="fa fa-home"></i> Urut: <?= $staff['urutan'] ?>
+					<br><i class="fa fa-sitemap"></i> type: <?= $staff['name_category_staff'] ?>
 				</small>
 			</td>
-			<td><?= $staff['jabatan'] ?></td>
-			<td><small><i class="fa fa-phone"></i> <?= $staff['telepon'] ?>
+			<td><?= $staff['position'] ?></td>
+			<td><small><i class="fa fa-phone"></i> <?= $staff['phone'] ?>
 				<br><i class="fa fa-envelope"></i> <?= $staff['email'] ?>
 				<br><i class="fa fa-globe"></i> <?= $staff['website'] ?>
-				<br><i class="fa fa-map"></i> <?= $staff['alamat'] ?>
+				<br><i class="fa fa-map"></i> <?= $staff['address'] ?>
 				</small>
 			</td>
 			<td>

@@ -216,7 +216,7 @@ class UploadedFile extends File implements UploadedFileInterface
     {
         $errors = [
             UPLOAD_ERR_OK         => lang('HTTP.uploadErrOk'),
-            UPLOAD_ERR_INI_SIZE   => lang('HTTP.uploadErrIniSize'),
+            UPLOAD_ERR_INI_SIZE   => lang('HTTP.uploadErrIncontentze'),
             UPLOAD_ERR_FORM_SIZE  => lang('HTTP.uploadErrFormSize'),
             UPLOAD_ERR_PARTIAL    => lang('HTTP.uploadErrPartial'),
             UPLOAD_ERR_NO_FILE    => lang('HTTP.uploadErrNoFile'),

@@ -143,7 +143,7 @@ class Filters
      *
      * @param float|int $value
      */
-    public static function local_number($value, string $type = 'decimal', int $precision = 4, ?string $locale = null): string
+    public static function local_number($value, string $type = 'decimal', int $preccontenton = 4, ?string $locale = null): string
     {
         helper('number');
 
@@ -157,7 +157,7 @@ class Filters
             'duration'   => NumberFormatter::DURATION,
         ];
 
-        return format_number($value, $precision, $locale, ['type' => $types[$type]]);
+        return format_number($value, $preccontenton, $locale, ['type' => $types[$type]]);
     }
 
     /**
@@ -208,20 +208,20 @@ class Filters
      *  - ceil      always rounds up
      *  - floor     always rounds down
      *
-     * @param mixed $precision
+     * @param mixed $preccontenton
      *
      * @return float|string
      */
-    public static function round(string $value, $precision = 2, string $type = 'common')
+    public static function round(string $value, $preccontenton = 2, string $type = 'common')
     {
-        if (! is_numeric($precision)) {
-            $type      = $precision;
-            $precision = 2;
+        if (! is_numeric($preccontenton)) {
+            $type      = $preccontenton;
+            $preccontenton = 2;
         }
 
         switch ($type) {
             case 'common':
-                return round((float) $value, $precision);
+                return round((float) $value, $preccontenton);
 
             case 'ceil':
                 return ceil((float) $value);

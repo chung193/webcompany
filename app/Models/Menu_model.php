@@ -6,14 +6,14 @@ use CodeIgniter\Model;
 
 class Menu_model extends Model
 {
-    // Menu berita
-    public function berita()
+    // Menu news
+    public function news()
     {
-        $builder = $this->db->table('berita');
-        $builder->select('berita.id_kategori,berita.icon, berita.ringkasan, berita.gambar, kategori.nama_kategori, kategori.slug_kategori');
-        $builder->join('kategori', 'kategori.id_kategori = berita.id_kategori');
-        $builder->where(['status_berita' => 'Publish', 'jenis_berita' => 'Berita']);
-        $builder->groupBy('berita.id_kategori');
+        $builder = $this->db->table('news');
+        $builder->select('news.id_category,news.icon, news.summary, news.picture, category.name_category, category.slug_category');
+        $builder->join('category', 'category.id_category = news.id_category');
+        $builder->where(['status_news' => 'Publish', 'type_news' => 'news']);
+        $builder->groupBy('news.id_category');
         $query = $builder->get();
 
         return $query->getResultArray();
@@ -22,20 +22,20 @@ class Menu_model extends Model
     // Menu profil
     public function profil()
     {
-        $builder = $this->db->table('berita');
-        $builder->select('berita.judul_berita, berita.icon, berita.ringkasan, berita.gambar, berita.slug_berita, berita.id_berita');
-        $builder->where(['status_berita' => 'Publish', 'jenis_berita' => 'Profil']);
+        $builder = $this->db->table('news');
+        $builder->select('news.title_news, news.icon, news.summary, news.picture, news.slug_news, news.id_news');
+        $builder->where(['status_news' => 'Publish', 'type_news' => 'Profil']);
         $query = $builder->get();
 
         return $query->getResultArray();
     }
 
-    // Menu layanan
-    public function layanan()
+    // Menu Dịch vụ
+    public function service()
     {
-        $builder = $this->db->table('berita');
-        $builder->select('berita.judul_berita, berita.icon, berita.ringkasan, berita.gambar, berita.slug_berita, berita.id_berita');
-        $builder->where(['status_berita' => 'Publish', 'jenis_berita' => 'Layanan']);
+        $builder = $this->db->table('news');
+        $builder->select('news.title_news, news.icon, news.summary, news.picture, news.slug_news, news.id_news');
+        $builder->where(['status_news' => 'Publish', 'type_news' => 'Services']);
         $query = $builder->get();
 
         return $query->getResultArray();

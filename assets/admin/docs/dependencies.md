@@ -16,7 +16,7 @@ AdminLTE depends on two main frameworks. The downloadable package contains both 
 #### Plugins
 {: .mt-4 .anchor}
 
-AdminLTE makes use of the following plugins. For documentation, updates or license information, please visit the provided links.
+AdminLTE makes use of the following plugins. For documentation, updates or license information, please vcontentt the provided links.
 {: .lead}
 
 > Note!

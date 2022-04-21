@@ -138,7 +138,7 @@ if (! function_exists('current_url')) {
 
 if (! function_exists('previous_url')) {
     /**
-     * Returns the previous URL the current visitor was on. For security reasons
+     * Returns the previous URL the current vcontenttor was on. For security reasons
      * we first check in a saved session variable, if it exists, and use that.
      * If that's not available, however, we'll use a sanitized url from $_SERVER['HTTP_REFERER']
      * which can be set by the user so is untrusted and not set by certain browsers/servers.

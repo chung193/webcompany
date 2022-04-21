@@ -844,14 +844,14 @@ if (! function_exists('redirect')) {
     }
 }
 
-if (! function_exists('remove_invisible_characters')) {
+if (! function_exists('remove_invcontentble_characters')) {
     /**
-     * Remove Invisible Characters
+     * Remove Invcontentble Characters
      *
      * This prevents sandwiching null characters
      * between ascii characters, like Java\0script.
      */
-    function remove_invisible_characters(string $str, bool $urlEncoded = true): string
+    function remove_invcontentble_characters(string $str, bool $urlEncoded = true): string
     {
         $nonDisplayables = [];
 

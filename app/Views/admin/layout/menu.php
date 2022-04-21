@@ -1,9 +1,9 @@
 <?php
-use App\Models\Konfigurasi_model;
+use App\Models\Config_model;
 
 $session     = \Config\Services::session();
-$konfigurasi = new Konfigurasi_model();
-$site        = $konfigurasi->listing();
+$Config = new Config_model();
+$site        = $Config->listing();
 ?>
 <style type="text/css" media="screen">
   .nav-item a:hover {
@@ -15,7 +15,7 @@ $site        = $konfigurasi->listing();
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="<?= base_url('assets/upload/image/' . $site['icon']) ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light"><?= $site['namaweb'] ?></span>
+      <span class="brand-text font-weight-light"><?= $site['nameweb'] ?></span>
     </a>
 
     <!-- Sidebar -->
@@ -26,7 +26,7 @@ $site        = $konfigurasi->listing();
           <img src="<?= base_url() ?>/assets/admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('admin/akun') ?>" class="d-block"><?= $session->get('nama') ?></a>
+          <a href="<?= base_url('admin/akun') ?>" class="d-block"><?= $session->get('name') ?></a>
         </div>
       </div>
 
@@ -35,12 +35,12 @@ $site        = $konfigurasi->listing();
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Dahboard -->
           <li class="nav-item">
-            <a href="<?= base_url('admin/dasbor') ?>" class="nav-link">
+            <a href="<?= base_url('admin/dashboard') ?>" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          <!-- Berita -->
+          <!-- news -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-newspaper"></i>
@@ -50,26 +50,74 @@ $site        = $konfigurasi->listing();
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('admin/berita') ?>" class="nav-link">
+                <a href="<?= base_url('admin/news') ?>" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
                   <p>Tin tức / Dữ liệu hồ sơ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/berita/tambah') ?>" class="nav-link">
+                <a href="<?= base_url('admin/news/add') ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Thêm Tin tức / Hồ sơ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/kategori') ?>" class="nav-link">
+                <a href="<?= base_url('admin/category') ?>" class="nav-link">
                   <i class="fas fa-tags nav-icon"></i>
                   <p>Thể loại Tin tức / Hồ sơ</p>
                 </a>
               </li>
             </ul>
           </li>
-          <!-- Galeri -->
+
+          <!-- pages -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>Các trang tĩnh
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url('admin/pages') ?>" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Danh sách trang</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('admin/pages/add') ?>" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Thêm mới trang</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- page giới thiệu-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>Trang giới thiệu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= base_url('admin/activity') ?>" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Danh mục hoạt động</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('admin/history') ?>" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Lịch sử công ty</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Gallery -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-image"></i>
@@ -79,19 +127,19 @@ $site        = $konfigurasi->listing();
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('admin/galeri') ?>" class="nav-link">
+                <a href="<?= base_url('admin/gallery') ?>" class="nav-link">
                   <i class="fas fa-table nav-icon"></i>
                   <p>Data Galery/Banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/galeri/tambah') ?>" class="nav-link">
+                <a href="<?= base_url('admin/gallery/add') ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
-                  <p>Thêm Galeri/Banner</p>
+                  <p>Thêm Gallery/Banner</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/kategori_galeri') ?>" class="nav-link">
+                <a href="<?= base_url('admin/category_gallery') ?>" class="nav-link">
                   <i class="fas fa-tags nav-icon"></i>
                   <p>Danh mục Galery/Banner</p>
                 </a>
@@ -99,7 +147,7 @@ $site        = $konfigurasi->listing();
             </ul>
           </li>
           <!-- Download -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-download"></i>
               <p>Data File Download
@@ -114,21 +162,21 @@ $site        = $konfigurasi->listing();
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/download/tambah') ?>" class="nav-link">
+                <a href="<?= base_url('admin/download/add') ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Thêm File Download</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/kategori_download') ?>" class="nav-link">
+                <a href="<?= base_url('admin/category_download') ?>" class="nav-link">
                   <i class="fas fa-tags nav-icon"></i>
                   <p>Danh mục File Download</p>
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <!-- Video -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fab fa-youtube"></i>
               <p>Data Video Youtube
@@ -143,13 +191,13 @@ $site        = $konfigurasi->listing();
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/video/tambah') ?>" class="nav-link">
+                <a href="<?= base_url('admin/video/add') ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Thêm Video Youtube</p>
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
           <!-- pengguna -->
           <li class="nav-item">
             <a href="<?= base_url('admin/client') ?>" class="nav-link">
@@ -173,13 +221,13 @@ $site        = $konfigurasi->listing();
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/staff/tambah') ?>" class="nav-link">
+                <a href="<?= base_url('admin/staff/add') ?>" class="nav-link">
                   <i class="fas fa-plus nav-icon"></i>
                   <p>Thêm Staff/Team</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/kategori_staff') ?>" class="nav-link">
+                <a href="<?= base_url('admin/category_staff') ?>" class="nav-link">
                   <i class="fas fa-tags nav-icon"></i>
                   <p>Danh mục Staff/Team</p>
                 </a>
@@ -193,7 +241,7 @@ $site        = $konfigurasi->listing();
               <p>Người sử dụng Website</p>
             </a>
           </li>
-          <!-- Konfigurasi -->
+          <!-- Config -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-wrench"></i>
@@ -203,25 +251,25 @@ $site        = $konfigurasi->listing();
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('admin/konfigurasi') ?>" class="nav-link">
+                <a href="<?= base_url('admin/Config') ?>" class="nav-link">
                   <i class="fas fa-tasks nav-icon"></i>
                   <p>Cấu hình chung</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/konfigurasi/logo') ?>" class="nav-link">
+                <a href="<?= base_url('admin/Config/logo') ?>" class="nav-link">
                   <i class="fas fa-image nav-icon"></i>
                   <p>Update Logo</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/konfigurasi/icon') ?>" class="nav-link">
+                <a href="<?= base_url('admin/Config/icon') ?>" class="nav-link">
                   <i class="fas fa-leaf nav-icon"></i>
                   <p>Update Icon</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('admin/konfigurasi/seo') ?>" class="nav-link">
+                <a href="<?= base_url('admin/Config/seo') ?>" class="nav-link">
                   <i class="fab fa-google nav-icon"></i>
                   <p>Setting SEO &amp; Metatext</p>
                 </a>
@@ -229,19 +277,19 @@ $site        = $konfigurasi->listing();
             </ul>
           </li>
           <!-- panduan -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="<?= base_url('admin/panduan') ?>" class="nav-link">
               <i class="nav-icon fas fa-file-pdf"></i>
               <p>Hướng dẫn &amp; Manual Book</p>
             </a>
-          </li>
+          </li> -->
           <!-- logout -->
           <li class="nav-item">
             <a href="<?= base_url('login/logout') ?>" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Logout</p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

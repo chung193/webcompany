@@ -36,8 +36,8 @@ class Signin extends BaseController
                 $this->session->set('username_siswa', $username);
                 $this->session->set('id_siswa', $siswa['id_siswa']);
                 $this->session->set('nisn', $siswa['nisn']);
-                $this->session->set('nama_lengkap', $siswa['nama_lengkap']);
-                $this->session->setFlashdata('sukses', 'Hai ' . $siswa['nama_lengkap'] . ', Anda berhasil login');
+                $this->session->set('name_lengkap', $siswa['name_lengkap']);
+                $this->session->setFlashdata('sukses', 'Hai ' . $siswa['name_lengkap'] . ', Anda Thành công login');
 
                 return redirect()->to(base_url('siswa/dasbor'));
             }
@@ -48,8 +48,8 @@ class Signin extends BaseController
         }
         // End validasi
         $data = ['title'  => 'Login Siswa',
-            'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
+            'description' => $konfigurasi['nameweb'] . ', ' . $konfigurasi['tentang'],
+            'keywords'    => $konfigurasi['nameweb'] . ', ' . $konfigurasi['keywords'],
             'session'     => $session,
         ];
         echo view('signin/index', $data);
@@ -66,8 +66,8 @@ class Signin extends BaseController
         $konfigurasi   = $m_konfigurasi->listing();
 
         $data = ['title'  => 'Lupa Password',
-            'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
+            'description' => $konfigurasi['nameweb'] . ', ' . $konfigurasi['tentang'],
+            'keywords'    => $konfigurasi['nameweb'] . ', ' . $konfigurasi['keywords'],
             'session'     => $session,
         ];
         echo view('signin/lupa', $data);

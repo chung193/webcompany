@@ -690,11 +690,11 @@
       }
     };
 
-    _proto.nextWhenVisible = function nextWhenVisible() {
-      var $element = $__default['default'](this._element); // Don't call next when the page isn't visible
-      // or the carousel or its parent isn't visible
+    _proto.nextWhenVcontentble = function nextWhenVcontentble() {
+      var $element = $__default['default'](this._element); // Don't call next when the page isn't vcontentble
+      // or the carousel or its parent isn't vcontentble
 
-      if (!document.hidden && $element.is(':visible') && $element.css('visibility') !== 'hidden') {
+      if (!document.hidden && $element.is(':vcontentble') && $element.css('vcontentbility') !== 'hidden') {
         this.next();
       }
     };
@@ -732,7 +732,7 @@
       if (this._config.interval && !this._isPaused) {
         this._updateInterval();
 
-        this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
+        this._interval = setInterval((document.vcontentbilityState ? this.nextWhenVcontentble : this.next).bind(this), this._config.interval);
       }
     };
 
@@ -1575,7 +1575,7 @@
   var SELECTOR_FORM_CHILD = '.dropdown form';
   var SELECTOR_MENU = '.dropdown-menu';
   var SELECTOR_NAVBAR_NAV = '.navbar-nav';
-  var SELECTOR_VISIBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
+  var SELECTOR_VcontentBLE_ITEMS = '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)';
   var PLACEMENT_TOP = 'top-start';
   var PLACEMENT_TOPEND = 'top-end';
   var PLACEMENT_BOTTOM = 'bottom-start';
@@ -1970,8 +1970,8 @@
         return;
       }
 
-      var items = [].slice.call(parent.querySelectorAll(SELECTOR_VISIBLE_ITEMS)).filter(function (item) {
-        return $__default['default'](item).is(':visible');
+      var items = [].slice.call(parent.querySelectorAll(SELECTOR_VcontentBLE_ITEMS)).filter(function (item) {
+        return $__default['default'](item).is(':vcontentble');
       });
 
       if (items.length === 0) {
@@ -2638,7 +2638,7 @@
       }
 
       $target.one(EVENT_HIDDEN$2, function () {
-        if ($__default['default'](_this11).is(':visible')) {
+        if ($__default['default'](_this11).is(':vcontentble')) {
           _this11.focus();
         }
       });
@@ -2965,7 +2965,7 @@
       var _this = this;
 
       if ($__default['default'](this.element).css('display') === 'none') {
-        throw new Error('Please use show on visible elements');
+        throw new Error('Please use show on vcontentble elements');
       }
 
       var showEvent = $__default['default'].Event(this.constructor.Event.SHOW);
@@ -2973,9 +2973,9 @@
       if (this.isWithContent() && this._isEnabled) {
         $__default['default'](this.element).trigger(showEvent);
         var shadowRoot = Util.findShadowRoot(this.element);
-        var isInTheDom = $__default['default'].contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
+        var contentnTheDom = $__default['default'].contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
 
-        if (showEvent.isDefaultPrevented() || !isInTheDom) {
+        if (showEvent.isDefaultPrevented() || !contentnTheDom) {
           return;
         }
 

@@ -1,8 +1,8 @@
-<?php use App\Models\Konfigurasi_model;
+<?php use App\Models\Config_model;
 
 $session     = \Config\Services::session();
-$konfigurasi = new Konfigurasi_model();
-$site        = $konfigurasi->listing();
+$Config = new Config_model();
+$site        = $Config->listing();
 ?>
 <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -35,7 +35,7 @@ $site        = $konfigurasi->listing();
       </li>
       <li class="nav-item">
         <a href="<?= base_url('admin/akun') ?>" class="nav-link">
-          <i class="fa fa-user"></i> <?= $session->get('nama') ?> (<?= $session->get('akses_level') ?>)</a>
+          <i class="fa fa-user"></i> <?= $session->get('name') ?> (<?= $session->get('akses_level') ?>)</a>
       </li>
       <li class="nav-item">
         <a href="<?= base_url('login/logout') ?>" class="nav-link text-danger">

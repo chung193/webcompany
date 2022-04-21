@@ -839,14 +839,14 @@
 
       var offset = $element.offset();
       var width = $element.width();
-      var visiblePart = $__default['default'](window).width() - offset.left;
+      var vcontentblePart = $__default['default'](window).width() - offset.left;
 
       if (offset.left < 0) {
         $element.css({
           left: 'inherit',
           right: offset.left - 5
         });
-      } else if (visiblePart < width) {
+      } else if (vcontentblePart < width) {
         $element.css({
           left: 'inherit',
           right: 0

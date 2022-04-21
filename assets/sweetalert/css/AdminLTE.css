@@ -4,7 +4,7 @@
  *   Author: Almsaeed Studio
  *	 Website: Almsaeed Studio <http://almsaeedstudio.com>
  *   License: Open source - MIT
- *           Please visit http://opensource.org/licenses/MIT for more information
+ *           Please vcontentt http://opensource.org/licenses/MIT for more information
 !*/
 /*
  * Core: General Layout Style
@@ -661,7 +661,7 @@ a:focus {
   overflow: hidden;
 }
 .sidebar-menu:hover {
-  overflow: visible;
+  overflow: vcontentble;
 }
 .sidebar-form,
 .sidebar-menu > li.header {
@@ -1158,7 +1158,7 @@ a:focus {
 /* Add fade animation to dropdown menus by appending
  the class .animated-dropdown-menu to the .dropdown-menu ul (or ol)*/
 .open:not(.dropup) > .animated-dropdown-menu {
-  backface-visibility: visible !important;
+  backface-vcontentbility: vcontentble !important;
   -webkit-animation: flipInX 0.7s both;
   -o-animation: flipInX 0.7s both;
   animation: flipInX 0.7s both;

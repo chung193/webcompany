@@ -62,7 +62,7 @@ class App extends BaseConfig
      * Default Locale
      * --------------------------------------------------------------------------
      *
-     * The Locale roughly represents the language and location that your visitor
+     * The Locale roughly represents the language and location that your vcontenttor
      * is viewing the site from. It affects the language strings and other
      * strings (like currency markers, numbers, etc), that your program
      * should run under for this request.
@@ -238,7 +238,7 @@ class App extends BaseConfig
      * Cookie Prefix
      * --------------------------------------------------------------------------
      *
-     * Set a cookie name prefix if you need to avoid collisions.
+     * Set a cookie name prefix if you need to avoid collcontentons.
      *
      * @var string
      *
@@ -332,7 +332,7 @@ class App extends BaseConfig
      * If your server is behind a reverse proxy, you must whitelist the proxy
      * IP addresses from which CodeIgniter should trust headers such as
      * HTTP_X_FORWARDED_FOR and HTTP_CLIENT_IP in order to properly identify
-     * the visitor's IP address.
+     * the vcontenttor's IP address.
      *
      * You can use both an array or a comma-separated list of proxy addresses,
      * as well as specifying whole subnets. Here are a few examples:

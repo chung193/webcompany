@@ -1,8 +1,8 @@
-<?php use App\Models\Konfigurasi_model;
+<?php use App\Models\Config_model;
 
 $session     = \Config\Services::session();
-$konfigurasi = new Konfigurasi_model();
-$site        = $konfigurasi->listing();
+$Config = new Config_model();
+$site        = $Config->listing();
 ?>
 <?php $sek = date('Y');
 $awal      = $sek - 100;
@@ -16,7 +16,7 @@ $awal      = $sek - 100;
     yearRange: "<?= $awal ?>:<?php $tahundepan = date('Y') + 2; echo $tahundepan; ?>"
   });
 
-  $( ".tanggal" ).datepicker({
+  $( ".date" ).datepicker({
     inline: true,
     changeYear: true,
     changeMonth: true,
@@ -24,7 +24,7 @@ $awal      = $sek - 100;
     yearRange: "<?= $awal ?>:<?php $tahundepan = date('Y') + 2; echo $tahundepan; ?>"
   });
 
-  $( ".tanggalan" ).datepicker({
+  $( ".daymonth" ).datepicker({
     inline: true,
     changeYear: true,
     changeMonth: true,
@@ -34,9 +34,9 @@ $awal      = $sek - 100;
 
 </script>
 <!-- SWEETALERT -->
-<?php if ($session->getFlashdata('sukses')) { ?>
+<?php if ($session->getFlashdata('success')) { ?>
 <script>
-  swal("Berhasil", "<?= $session->getFlashdata('sukses'); ?>","success")
+  swal("Thành công", "<?= $session->getFlashdata('success'); ?>","success")
 </script>
 <?php } ?>
 
@@ -59,8 +59,8 @@ ev.preventDefault();
 var urlToRedirect = ev.currentTarget.getAttribute('href'); //use currentTarget because the click may be on the nested i tag and not a tag causing the href to be empty
 console.log(urlToRedirect); // verify if this is the right URL
 swal({
-  title: "Yakin ingin menghapus data ini?",
-  text: "Data yang sudah dihapus tidak dapat dikembalikan",
+  title: "Bạn có chắc chắn muốn xóa dữ liệu này không?",
+  text: "Không thể khôi phục dữ liệu đã xóa",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -80,8 +80,8 @@ ev.preventDefault();
 var urlToRedirect = ev.currentTarget.getAttribute('href'); //use currentTarget because the click may be on the nested i tag and not a tag causing the href to be empty
 console.log(urlToRedirect); // verify if this is the right URL
 swal({
-  title: "Yakin Ingin Mengirim Surat Ini?",
-  text: "Pengiriman Surat Sebaiknya Kurang dari 200 Kali/jam agar tidak terkena Blokir Server. Klik CANCEL untuk membatalkan. Klik OK untuk mengirim surat.",
+  title: "Chắc chắn bạn muốn gửi bức thư này?",
+  text: "Gửi Thư Nên Dưới 200 Lần / giờ để không bị Server chặn. Bấm HỦY để hủy. Bấm OK để gửi thư.",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -101,8 +101,8 @@ ev.preventDefault();
 var urlToRedirect = ev.currentTarget.getAttribute('href'); //use currentTarget because the click may be on the nested i tag and not a tag causing the href to be empty
 console.log(urlToRedirect); // verify if this is the right URL
 swal({
-  title: "Yakin ingin memberi akses?",
-  text: "Data yang diberi akses akan bisa login",
+  title: "Chắc chắn muốn cấp quyền truy cập?",
+  text: "Dữ liệu được cấp quyền truy cập sẽ có thể đăng nhập",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -119,7 +119,7 @@ swal({
 // Tinymce
 
 tinymce.init({
-  selector: '.konten',
+  selector: '.editor',
   menubar: true,
   plugins: [
     'advlist autolink lists link image charmap print preview anchor',
@@ -130,6 +130,7 @@ tinymce.init({
   content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
 });
 </script>
+
 </div>
               <!-- /.card-body -->
             </div>
@@ -231,7 +232,7 @@ $(document).ready(function(){
       maxHeight: null,             // set maximum height of editor
     })
   })
-  // tanggal dan select
+  // date dan select
   $(function () {
     //Initialize Select2 Elements
     $('.select2').select2()
@@ -365,5 +366,6 @@ $(document).ready(function(){
   }
   // DropzoneJS Demo Code End
 </script>
+
 </body>
 </html>

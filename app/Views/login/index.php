@@ -1,7 +1,7 @@
-<?php use App\Models\Konfigurasi_model;
+<?php use App\Models\Config_model;
 
-$konfigurasi = new Konfigurasi_model();
-$site        = $konfigurasi->listing();
+$config = new Config_model();
+$site        = $config->listing();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,13 +43,13 @@ $site        = $konfigurasi->listing();
             <img src="<?= base_url('assets/upload/image/' . $site['icon']) ?>" class="img img-fluid">
           </div>
           <div class="col-md-9 text-left">
-            <h1><?= $site['namaweb'] ?></h1>
+            <h1><?= $site['nameweb'] ?></h1>
             <p style="font-size: 12px; font-weight: bold;"><?= $site['tagline'] ?></p>
           </div>
         </div>
       </div>
       <hr>
-      <p class="login-box-msg">Masukkan username dan password</p>
+      <p class="login-box-msg">Nhập username và mật khẩu</p>
 
        <?= '<span class="text-danger">' . \Config\Services::validation()->listErrors() . '</span>'; ?>
 <?= form_open(base_url('login')); ?>
@@ -76,20 +76,20 @@ $site        = $konfigurasi->listing();
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                Remember Me
+                Lưu mật khẩu
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
           </div>
           <!-- /.col -->
         </div>
       <?= form_close(); ?>
       <hr>
       <p class="mb-1 text-center">
-        <a href="<?= base_url('login/lupa') ?>">Lupa Password?</a> | <a href="<?= base_url() ?>" class="text-center">Home</a>
+        <a href="<?= base_url('login/lupa') ?>">Quên Password?</a> | <a href="<?= base_url() ?>" class="text-center">Trang chủ</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -98,14 +98,14 @@ $site        = $konfigurasi->listing();
 <!-- /.login-box -->
 
 <script>
-<?php if ($session->getFlashdata('sukses')) { ?>
+<?php if ($session->getFlashdata('success')) { ?>
 // Notifikasi
-swal ( "Berhasil" ,  "<?= $session->getFlashdata('sukses'); ?>" ,  "success" )
+swal ( "Thành công" ,  "<?= $session->getFlashdata('success'); ?>" ,  "success" )
 <?php } ?>
 
 <?php if (isset($_GET['logout'])) { ?>
 // Notifikasi
-swal ( "Berhasil" ,  "Anda berhasil logout." ,  "success" )
+swal ( "Thành công" ,  "Anda Thành công logout." ,  "success" )
 <?php } ?>
 
 <?php if (isset($_GET['login'])) { ?>

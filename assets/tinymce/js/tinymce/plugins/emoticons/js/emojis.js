@@ -757,7 +757,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "people"
   },
   pray: {
-    keywords: [ "please", "hope", "wish", "namaste", "highfive" ],
+    keywords: [ "please", "hope", "wish", "nameste", "highfive" ],
     "char": "\ud83d\ude4f",
     fitzpatrick_scale: true,
     category: "people"
@@ -1572,13 +1572,13 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: true,
     category: "people"
   },
-  raising_hand_woman: {
+  racontentng_hand_woman: {
     keywords: [ "female", "girl", "woman" ],
     "char": "\ud83d\ude4b",
     fitzpatrick_scale: true,
     category: "people"
   },
-  raising_hand_man: {
+  racontentng_hand_man: {
     keywords: [ "male", "boy", "man" ],
     "char": "\ud83d\ude4b\u200d\u2642\ufe0f",
     fitzpatrick_scale: true,
@@ -3055,7 +3055,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "animals_and_nature"
   },
   boom: {
-    keywords: [ "bomb", "explode", "explosion", "collision", "blown" ],
+    keywords: [ "bomb", "explode", "explosion", "collcontenton", "blown" ],
     "char": "\ud83d\udca5",
     fitzpatrick_scale: false,
     category: "animals_and_nature"
@@ -5209,7 +5209,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     category: "objects"
   },
   tv: {
-    keywords: [ "technology", "program", "oldschool", "show", "television" ],
+    keywords: [ "technology", "program", "oldschool", "show", "televcontenton" ],
     "char": "\ud83d\udcfa",
     fitzpatrick_scale: false,
     category: "objects"
@@ -7440,7 +7440,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "symbols"
   },
-  heavy_division_sign: {
+  heavy_divcontenton_sign: {
     keywords: [ "divide", "math", "calculation" ],
     "char": "\u2797",
     fitzpatrick_scale: false,
@@ -8928,7 +8928,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "flags"
   },
-  panama: {
+  paname: {
     keywords: [ "pa", "flag", "nation", "country", "banner" ],
     "char": "\ud83c\uddf5\ud83c\udde6",
     fitzpatrick_scale: false,
@@ -9258,7 +9258,7 @@ window.tinymce.Resource.add("tinymce.plugins.emoticons", {
     fitzpatrick_scale: false,
     category: "flags"
   },
-  tunisia: {
+  tuncontenta: {
     keywords: [ "tn", "flag", "nation", "country", "banner" ],
     "char": "\ud83c\uddf9\ud83c\uddf3",
     fitzpatrick_scale: false,

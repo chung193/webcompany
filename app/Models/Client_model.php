@@ -12,8 +12,8 @@ class Client_model extends Model
     protected $useSoftDeletes     = false;
     protected $allowedFields      = [''];
     protected $useTimestamps      = false;
-    protected $createdField       = 'tanggal_post';
-    protected $updatedField       = 'tanggal';
+    protected $createdField       = 'date_post';
+    protected $updatedField       = 'date';
     protected $deletedField       = 'deleted_at';
     protected $validationRules    = [];
     protected $validationMessages = [];
@@ -85,14 +85,14 @@ class Client_model extends Model
         return $query->getRowArray();
     }
 
-    // tambah
-    public function tambah($data)
+    // add
+    public function add($data)
     {
         $builder = $this->db->table('client');
         $builder->insert($data);
     }
 
-    // tambah
+    // add
     public function edit($data)
     {
         $builder = $this->db->table('client');

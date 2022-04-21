@@ -92,7 +92,7 @@ p.lead {
 	display: inline;
 }
 .tabs a:link,
-.tabs a:visited {
+.tabs a:vcontentted {
 	padding: 0rem 1rem;
 	line-height: 2.7;
 	text-decoration: none;

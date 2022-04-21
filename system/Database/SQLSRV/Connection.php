@@ -166,7 +166,7 @@ class Connection extends BaseConnection
      */
     protected function _escapeString(string $str): string
     {
-        return str_replace("'", "''", remove_invisible_characters($str, false));
+        return str_replace("'", "''", remove_invcontentble_characters($str, false));
     }
 
     /**
@@ -323,7 +323,7 @@ class Connection extends BaseConnection
      */
     protected function _fieldData(string $table): array
     {
-        $sql = 'SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, NUMERIC_PRECISION, COLUMN_DEFAULT
+        $sql = 'SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, NUMERIC_PRECcontentON, COLUMN_DEFAULT
 			FROM INFORMATION_SCHEMA.COLUMNS
 			WHERE TABLE_NAME= ' . $this->escape(($table));
 
@@ -343,7 +343,7 @@ class Connection extends BaseConnection
 
             $retVal[$i]->max_length = $query[$i]->CHARACTER_MAXIMUM_LENGTH > 0
                 ? $query[$i]->CHARACTER_MAXIMUM_LENGTH
-                : $query[$i]->NUMERIC_PRECISION;
+                : $query[$i]->NUMERIC_PRECcontentON;
         }
 
         return $retVal;

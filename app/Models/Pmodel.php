@@ -6,15 +6,15 @@ use CodeIgniter\Model;
 
 class Pmodel extends Model
 {
-    protected $table              = 'berita';
-    protected $primaryKey         = 'id_berita';
+    protected $table              = 'news';
+    protected $primaryKey         = 'id_news';
     protected $returnType         = 'array';
     protected $useSoftDeletes     = true;
-    protected $allowedFields      = ['judul_berita'];
+    protected $allowedFields      = ['title_news'];
     protected $useTimestamps      = false;
-    protected $createdField       = 'tanggal';
-    protected $updatedField       = 'tanggal';
-    protected $deletedField       = 'tanggal';
+    protected $createdField       = 'date';
+    protected $updatedField       = 'date';
+    protected $deletedField       = 'date';
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;

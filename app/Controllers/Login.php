@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Models\Konfigurasi_model;
+use App\Models\Config_model;
 use App\Models\User_model;
 
 class Login extends BaseController
@@ -16,11 +16,11 @@ class Login extends BaseController
     public function index()
     {
         $session       = \Config\Services::session();
-        $m_konfigurasi = new Konfigurasi_model();
+        $m_config = new config_model();
         $m_user        = new User_model();
-        $konfigurasi   = $m_konfigurasi->listing();
+        $config   = $m_config->listing();
 
-        // Start validasi
+        // Start validate
         if ($this->request->getMethod() === 'post' && $this->validate(
             [
                 'username' => 'required|min_length[3]',
@@ -32,24 +32,24 @@ class Login extends BaseController
             $user     = $m_user->login($username, $password);
             // Proses login
             if ($user) {
-                // Jika username password benar
+                //  username password 
                 $this->session->set('username', $username);
                 $this->session->set('id_user', $user['id_user']);
-                $this->session->set('akses_level', $user['akses_level']);
-                $this->session->set('nama', $user['nama']);
-                $this->session->setFlashdata('sukses', 'Hai ' . $user['nama'] . ', Anda berhasil login');
+                $this->session->set('access_level', $user['access_level']);
+                $this->session->set('name', $user['name']);
+                $this->session->setFlashdata('success', 'Hi ' . $user['name'] . ', Bạn đã đăng nhập');
 
-                return redirect()->to(base_url('admin/dasbor'));
+                return redirect()->to(base_url('admin/dashboard'));
             }
-            // jika username password salah
-            $this->session->setFlashdata('warning', 'Username atau password salah');
+            //  username password 
+            $this->session->setFlashdata('warning', 'Username hoặc password chưa đúng');
 
             return redirect()->to(base_url('login'));
         }
-        // End validasi
+        // End validate
         $data = ['title'  => 'Login Administrator',
-            'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
+            'description' => $config['nameweb'] . ', ' . $config['description'],
+            'keywords'    => $config['nameweb'] . ', ' . $config['keywords'],
             'session'     => $session,
         ];
         echo view('login/index', $data);
@@ -57,20 +57,20 @@ class Login extends BaseController
         // End proses
     }
 
-    // lupa
-    public function lupa()
+    // quên mật khẩu
+    public function forgot()
     {
         $session       = \Config\Services::session();
-        $m_konfigurasi = new Konfigurasi_model();
+        $m_config = new config_model();
         $m_user        = new User_model();
-        $konfigurasi   = $m_konfigurasi->listing();
+        $config   = $m_config->listing();
 
-        $data = ['title'  => 'Lupa Password',
-            'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
+        $data = ['title'  => 'Quên Password',
+            'description' => $config['nameweb'] . ', ' . $config['description'],
+            'keywords'    => $config['nameweb'] . ', ' . $config['keywords'],
             'session'     => $session,
         ];
-        echo view('login/lupa', $data);
+        echo view('login/forgot', $data);
     }
 
     // Logout
@@ -78,6 +78,6 @@ class Login extends BaseController
     {
         $this->session->destroy();
 
-        return redirect()->to(base_url('login?logout=sukses'));
+        return redirect()->to(base_url('login?logout=success'));
     }
 }

@@ -63,7 +63,7 @@
 	}
 	a:active,
 	a:link,
-	a:visited {
+	a:vcontentted {
 		color: #dd4814;
 	}
 </style>

@@ -501,7 +501,7 @@ the object with extra database fields above without actually touching the databa
 <div class="section" id="specifying-test-data">
 <h2>Specifying Test Data<a class="headerlink" href="#specifying-test-data" title="Permalink to this headline">¶</a></h2>
 <p>Generated data is great, but sometimes you may want to supply a specific field for a test without
-compromising your formatters configuration. Rather then creating a new fabricator for each variant
+compromcontentng your formatters configuration. Rather then creating a new fabricator for each variant
 you can use <code class="docutils literal notranslate"><span class="pre">setOverrides()</span></code> to specify the value for any fields:</p>
 <div class="highlight-html+php notranslate"><div class="highlight"><pre><span></span><span class="nv">$fabricator</span><span class="o">-&gt;</span><span class="na">setOverrides</span><span class="p">([</span><span class="s1">&#39;first&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Bobby&#39;</span><span class="p">]);</span>
 <span class="nv">$bobbyUser</span> <span class="o">=</span> <span class="nv">$fabricator</span><span class="o">-&gt;</span><span class="na">make</span><span class="p">();</span>

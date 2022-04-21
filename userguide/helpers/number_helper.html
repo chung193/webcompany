@@ -375,14 +375,14 @@ a value provided, for the given locale and options, then a
 <p>The following functions are available:</p>
 <dl class="function">
 <dt id="number_to_size">
-<code class="descname">number_to_size</code><span class="sig-paren">(</span><em>$num[, $precision = 1[, $locale = null]</em><span class="sig-paren">)</span><a class="headerlink" href="#number_to_size" title="Permalink to this definition">¶</a></dt>
+<code class="descname">number_to_size</code><span class="sig-paren">(</span><em>$num[, $preccontenton = 1[, $locale = null]</em><span class="sig-paren">)</span><a class="headerlink" href="#number_to_size" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>$num</strong> (<em>mixed</em>) – Number of bytes</li>
-<li><strong>$precision</strong> (<em>int</em>) – Floating point precision</li>
+<li><strong>$preccontenton</strong> (<em>int</em>) – Floating point preccontenton</li>
 </ul>
 </td>
 </tr>
@@ -405,7 +405,7 @@ suffix. Examples:</p>
 <span class="k">echo</span> <span class="nx">number_to_size</span><span class="p">(</span><span class="mi">123456789123456789</span><span class="p">);</span> <span class="c1">// Returns 11,228.3 TB</span>
 </pre></div>
 </div>
-<p>An optional second parameter allows you to set the precision of the result:</p>
+<p>An optional second parameter allows you to set the preccontenton of the result:</p>
 <div class="highlight-html+php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">number_to_size</span><span class="p">(</span><span class="mi">45678</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Returns 44.61 KB</span>
 </pre></div>
 </div>
@@ -428,14 +428,14 @@ language file: <em>language/&lt;your_lang&gt;/Number.php</em></p>
 
 <dl class="function">
 <dt id="number_to_amount">
-<code class="descname">number_to_amount</code><span class="sig-paren">(</span><em>$num[, $precision = 1[, $locale = null]</em><span class="sig-paren">)</span><a class="headerlink" href="#number_to_amount" title="Permalink to this definition">¶</a></dt>
+<code class="descname">number_to_amount</code><span class="sig-paren">(</span><em>$num[, $preccontenton = 1[, $locale = null]</em><span class="sig-paren">)</span><a class="headerlink" href="#number_to_amount" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>$num</strong> (<em>mixed</em>) – Number to format</li>
-<li><strong>$precision</strong> (<em>int</em>) – Floating point precision</li>
+<li><strong>$preccontenton</strong> (<em>int</em>) – Floating point preccontenton</li>
 <li><strong>$locale</strong> (<em>string</em>) – The locale to use for formatting</li>
 </ul>
 </td>
@@ -456,7 +456,7 @@ for numbers up to the quadrillions. Examples:</p>
 <span class="k">echo</span> <span class="nx">number_to_amount</span><span class="p">(</span><span class="s1">&#39;123,456,789,012&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Returns 123.46 billion</span>
 </pre></div>
 </div>
-<p>An optional second parameter allows you to set the precision of the result:</p>
+<p>An optional second parameter allows you to set the preccontenton of the result:</p>
 <div class="highlight-html+php notranslate"><div class="highlight"><pre><span></span><span class="k">echo</span> <span class="nx">number_to_amount</span><span class="p">(</span><span class="mi">45678</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Returns 45.68 thousand</span>
 </pre></div>
 </div>

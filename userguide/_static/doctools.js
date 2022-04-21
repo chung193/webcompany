@@ -74,8 +74,8 @@ jQuery.fn.highlightText = function(text, className) {
           !jQuery(node.parentNode).hasClass(className) &&
           !jQuery(node.parentNode).hasClass("nohighlight")) {
         var span;
-        var isInSVG = jQuery(node).closest("body, svg, foreignObject").is("svg");
-        if (isInSVG) {
+        var contentnSVG = jQuery(node).closest("body, svg, foreignObject").is("svg");
+        if (contentnSVG) {
           span = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
         } else {
           span = document.createElement("span");
@@ -86,7 +86,7 @@ jQuery.fn.highlightText = function(text, className) {
           document.createTextNode(val.substr(pos + text.length)),
           node.nextSibling));
         node.nodeValue = val.substr(0, pos);
-        if (isInSVG) {
+        if (contentnSVG) {
           var bbox = span.getBBox();
           var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
        	  rect.x.baseVal.value = bbox.x;

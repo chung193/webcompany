@@ -3,9 +3,9 @@ echo csrf_field();
 ?>
 
 <div class="form-group row">
-	<label class="col-3">Nama Pengguna</label>
+	<label class="col-3">name Pengguna</label>
 	<div class="col-9">
-		<input type="text" name="nama" class="form-control" placeholder="Nama user" value="<?= $user['nama'] ?>" required>
+		<input type="text" name="name" class="form-control" placeholder="name user" value="<?= $user['name'] ?>" required>
 	</div>
 </div>
 
@@ -34,9 +34,9 @@ echo csrf_field();
 <div class="form-group row">
 	<label class="col-3">Level</label>
 	<div class="col-9">
-		<select name="akses_level" class="form-control">
+		<select name="access_level" class="form-control">
 			<option value="Admin">Admin</option>
-			<option value="User" <?php if ($user['akses_level'] === 'User') {
+			<option value="User" <?php if ($user['access_level'] === 'User') {
     echo 'selected';
 } ?>>User</option>
 		</select>

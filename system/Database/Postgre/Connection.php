@@ -235,7 +235,7 @@ class Connection extends BaseConnection
      */
     protected function _fieldData(string $table): array
     {
-        $sql = 'SELECT "column_name", "data_type", "character_maximum_length", "numeric_precision", "column_default"
+        $sql = 'SELECT "column_name", "data_type", "character_maximum_length", "numeric_preccontenton", "column_default"
 			FROM "information_schema"."columns"
 			WHERE LOWER("table_name") = '
                 . $this->escape(strtolower($table))
@@ -254,7 +254,7 @@ class Connection extends BaseConnection
             $retVal[$i]->name       = $query[$i]->column_name;
             $retVal[$i]->type       = $query[$i]->data_type;
             $retVal[$i]->default    = $query[$i]->column_default;
-            $retVal[$i]->max_length = $query[$i]->character_maximum_length > 0 ? $query[$i]->character_maximum_length : $query[$i]->numeric_precision;
+            $retVal[$i]->max_length = $query[$i]->character_maximum_length > 0 ? $query[$i]->character_maximum_length : $query[$i]->numeric_preccontenton;
         }
 
         return $retVal;

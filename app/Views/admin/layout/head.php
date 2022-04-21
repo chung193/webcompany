@@ -1,7 +1,7 @@
-<?php use App\Models\Konfigurasi_model;
+<?php use App\Models\Config_model;
 
-$konfigurasi = new Konfigurasi_model();
-$site        = $konfigurasi->listing();
+$Config = new Config_model();
+$site        = $Config->listing();
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -60,7 +60,6 @@ $site        = $konfigurasi->listing();
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  <!-- Preloader -->
-  <!-- <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="<?= base_url('assets/upload/image/' . $site['icon']) ?>" alt="AdminLTELogo" height="60" width="60">
-  </div> -->
+
+
+

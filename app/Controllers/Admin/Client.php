@@ -17,65 +17,65 @@ class Client extends BaseController
         // Start validasi
         if ($this->request->getMethod() === 'post' && $this->validate(
             [
-                'nama' => 'required',
-                'gambar' => [
-                    'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-                    'max_size[gambar,4096]',
+                'name' => 'required',
+                'picture' => [
+                    'mime_in[picture,image/jpg,image/jpeg,image/gif,image/png]',
+                    'max_size[picture,4096]',
                 ],
             ]
         )) {
-            if (! empty($_FILES['gambar']['name'])) {
+            if (! empty($_FILES['picture']['name'])) {
                 // Image upload
-                $avatar   = $this->request->getFile('gambar');
-                $namabaru = str_replace(' ', '-', $avatar->getName());
-                $avatar->move(WRITEPATH . '../assets/upload/client/', $namabaru);
+                $avatar   = $this->request->getFile('picture');
+                $namebaru = str_replace(' ', '-', $avatar->getName());
+                $avatar->move(WRITEPATH . '../assets/upload/client/', $namebaru);
                 // Create thumb
                 $image = \Config\Services::image()
-                    ->withFile(WRITEPATH . '../assets/upload/client/' . $namabaru)
+                    ->withFile(WRITEPATH . '../assets/upload/client/' . $namebaru)
                     ->fit(100, 100, 'center')
-                    ->save(WRITEPATH . '../assets/upload/client/thumbs/' . $namabaru);
+                    ->save(WRITEPATH . '../assets/upload/client/thumbs/' . $namebaru);
                 // masuk database
                 // masuk database
                 $data = ['id_user'  => $this->session->get('id_user'),
-                    'jenis_client'  => $this->request->getPost('jenis_client'),
-                    'nama'          => $this->request->getPost('nama'),
-                    'pimpinan'      => $this->request->getPost('pimpinan'),
-                    'alamat'        => $this->request->getPost('alamat'),
-                    'telepon'       => $this->request->getPost('telepon'),
+                    'type_client'  => $this->request->getPost('type_client'),
+                    'name'          => $this->request->getPost('name'),
+                    'leader'      => $this->request->getPost('leader'),
+                    'address'        => $this->request->getPost('address'),
+                    'phone'       => $this->request->getPost('phone'),
                     'website'       => $this->request->getPost('website'),
                     'email'         => $this->request->getPost('email'),
-                    'isi_testimoni' => $this->request->getPost('isi_testimoni'),
-                    'gambar'        => $namabaru,
+                    'testimonial' => $this->request->getPost('testimonial'),
+                    'picture'        => $namebaru,
                     'status_client' => $this->request->getPost('status_client'),
-                    'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
-                    'tanggal_lahir' => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
-                    'tanggal_post'  => date('Y-m-d H:i:s'),
+                    'country'  => $this->request->getPost('country'),
+                    'date_of_birth' => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
+                    'date_post'  => date('Y-m-d H:i:s'),
                 ];
-                $m_client->tambah($data);
+                $m_client->add($data);
                 // masuk database
-                $this->session->setFlashdata('sukses', 'Data telah ditambah');
+                $this->session->setFlashdata('sukses', 'Lưu thay đổi');
 
                 return redirect()->to(base_url('admin/client'));
             }
             // masuk database
             $data = ['id_user'  => $this->session->get('id_user'),
-                'jenis_client'  => $this->request->getPost('jenis_client'),
-                'nama'          => $this->request->getPost('nama'),
-                'pimpinan'      => $this->request->getPost('pimpinan'),
-                'alamat'        => $this->request->getPost('alamat'),
-                'telepon'       => $this->request->getPost('telepon'),
+                'type_client'  => $this->request->getPost('type_client'),
+                'name'          => $this->request->getPost('name'),
+                'leader'      => $this->request->getPost('leader'),
+                'address'        => $this->request->getPost('address'),
+                'phone'       => $this->request->getPost('phone'),
                 'website'       => $this->request->getPost('website'),
                 'email'         => $this->request->getPost('email'),
-                'isi_testimoni' => $this->request->getPost('isi_testimoni'),
-                // 'gambar'		=> $namabaru,
+                'testimonial' => $this->request->getPost('testimonial'),
+                // 'picture'		=> $namebaru,
                 'status_client' => $this->request->getPost('status_client'),
-                'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
-                'tanggal_lahir' => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
-                'tanggal_post'  => date('Y-m-d H:i:s'),
+                'country'  => $this->request->getPost('country'),
+                'date_of_birth' => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
+                'date_post'  => date('Y-m-d H:i:s'),
             ];
-            $m_client->tambah($data);
+            $m_client->add($data);
             // masuk database
-            $this->session->setFlashdata('sukses', 'Data telah ditambah');
+            $this->session->setFlashdata('sukses', 'Lưu thay đổi');
 
             return redirect()->to(base_url('admin/client'));
         }
@@ -96,69 +96,69 @@ class Client extends BaseController
         // Start validasi
         if ($this->request->getMethod() === 'post' && $this->validate(
             [
-                'nama' => 'required',
-                'gambar' => [
-                    'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-                    'max_size[gambar,4096]',
+                'name' => 'required',
+                'picture' => [
+                    'mime_in[picture,image/jpg,image/jpeg,image/gif,image/png]',
+                    'max_size[picture,4096]',
                 ],
             ]
         )) {
-            if (! empty($_FILES['gambar']['name'])) {
+            if (! empty($_FILES['picture']['name'])) {
                 // Image upload
-                $avatar   = $this->request->getFile('gambar');
-                $namabaru = str_replace(' ', '-', $avatar->getName());
-                $avatar->move(WRITEPATH . '../assets/upload/client/', $namabaru);
+                $avatar   = $this->request->getFile('picture');
+                $namebaru = str_replace(' ', '-', $avatar->getName());
+                $avatar->move(WRITEPATH . '../assets/upload/client/', $namebaru);
                 // Create thumb
                 $image = \Config\Services::image()
-                    ->withFile(WRITEPATH . '../assets/upload/client/' . $namabaru)
+                    ->withFile(WRITEPATH . '../assets/upload/client/' . $namebaru)
                     ->fit(100, 100, 'center')
-                    ->save(WRITEPATH . '../assets/upload/client/thumbs/' . $namabaru);
+                    ->save(WRITEPATH . '../assets/upload/client/thumbs/' . $namebaru);
                 // masuk database
                 // masuk database
                 $data = ['id_client' => $id_client,
                     'id_user'        => $this->session->get('id_user'),
-                    'jenis_client'   => $this->request->getPost('jenis_client'),
-                    'nama'           => $this->request->getPost('nama'),
-                    'pimpinan'       => $this->request->getPost('pimpinan'),
-                    'alamat'         => $this->request->getPost('alamat'),
-                    'telepon'        => $this->request->getPost('telepon'),
+                    'type_client'   => $this->request->getPost('type_client'),
+                    'name'           => $this->request->getPost('name'),
+                    'leader'       => $this->request->getPost('leader'),
+                    'address'         => $this->request->getPost('address'),
+                    'phone'        => $this->request->getPost('phone'),
                     'website'        => $this->request->getPost('website'),
                     'email'          => $this->request->getPost('email'),
-                    'isi_testimoni'  => $this->request->getPost('isi_testimoni'),
-                    'gambar'         => $namabaru,
+                    'testimonial'  => $this->request->getPost('testimonial'),
+                    'picture'         => $namebaru,
                     'status_client'  => $this->request->getPost('status_client'),
-                    'tempat_lahir'   => $this->request->getPost('tempat_lahir'),
-                    'tanggal_lahir'  => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
+                    'country'   => $this->request->getPost('country'),
+                    'date_of_birth'  => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
                 ];
                 $m_client->edit($data);
                 // masuk database
-                $this->session->setFlashdata('sukses', 'Data telah disimpan');
+                $this->session->setFlashdata('sukses', 'Data telah dcontentmpan');
 
                 return redirect()->to(base_url('admin/client'));
             }
             // masuk database
             $data = ['id_client' => $id_client,
                 'id_user'        => $this->session->get('id_user'),
-                'jenis_client'   => $this->request->getPost('jenis_client'),
-                'nama'           => $this->request->getPost('nama'),
-                'pimpinan'       => $this->request->getPost('pimpinan'),
-                'alamat'         => $this->request->getPost('alamat'),
-                'telepon'        => $this->request->getPost('telepon'),
+                'type_client'   => $this->request->getPost('type_client'),
+                'name'           => $this->request->getPost('name'),
+                'leader'       => $this->request->getPost('leader'),
+                'address'         => $this->request->getPost('address'),
+                'phone'        => $this->request->getPost('phone'),
                 'website'        => $this->request->getPost('website'),
                 'email'          => $this->request->getPost('email'),
-                'isi_testimoni'  => $this->request->getPost('isi_testimoni'),
-                // 'gambar'		=> $namabaru,
+                'testimonial'  => $this->request->getPost('testimonial'),
+                // 'picture'		=> $namebaru,
                 'status_client' => $this->request->getPost('status_client'),
-                'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
-                'tanggal_lahir' => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
+                'country'  => $this->request->getPost('country'),
+                'date_of_birth' => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
             ];
             $m_client->edit($data);
             // masuk database
-            $this->session->setFlashdata('sukses', 'Data telah disimpan');
+            $this->session->setFlashdata('sukses', 'Data telah dcontentmpan');
 
             return redirect()->to(base_url('admin/client'));
         }
-        $data = ['title' => 'Edit Data Client: ' . $client['nama'],
+        $data = ['title' => 'Edit Data Client: ' . $client['name'],
             'client'     => $client,
             'content'    => 'admin/client/edit',
         ];
@@ -173,7 +173,7 @@ class Client extends BaseController
         $data     = ['id_client' => $id_client];
         $m_client->delete($data);
         // masuk database
-        $this->session->setFlashdata('sukses', 'Data telah dihapus');
+        $this->session->setFlashdata('sukses', 'Data đã xóa thành công');
 
         return redirect()->to(base_url('admin/client'));
     }

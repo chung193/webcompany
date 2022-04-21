@@ -10,10 +10,10 @@ class Video_model extends Model
     protected $primaryKey         = 'id_video';
     protected $returnType         = 'array';
     protected $useSoftDeletes     = false;
-    protected $allowedFields      = ['id_video', 'judul', 'video', 'keterangan'];
+    protected $allowedFields      = ['id_video', 'title', 'video', 'summary'];
     protected $useTimestamps      = false;
-    protected $createdField       = 'tanggal_post';
-    protected $updatedField       = 'tanggal';
+    protected $createdField       = 'date_post';
+    protected $updatedField       = 'date';
     protected $deletedField       = 'deleted_at';
     protected $validationRules    = [];
     protected $validationMessages = [];

@@ -19,7 +19,7 @@
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARcontentNG FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
@@ -80,7 +80,7 @@ class RichRenderer extends Renderer
      * up one quarter of the output HTML size.
      *
      * If this is an unacceptably large amount and your browser is groaning
-     * under the weight of the access paths - your first order of buisiness
+     * under the weight of the access paths - your first order of bucontentness
      * should be to get a new browser. Failing that, use this to turn them off.
      *
      * @var bool
@@ -338,7 +338,7 @@ class RichRenderer extends Renderer
 
         $output = '<dd>';
 
-        if (1 === \count($tabs) && $tabs[0]->labelIsImplicit()) {
+        if (1 === \count($tabs) && $tabs[0]->labelcontentmplicit()) {
             $output .= \reset($contents);
         } else {
             $output .= '<ul class="kint-tabs">';

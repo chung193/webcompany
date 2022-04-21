@@ -19,7 +19,7 @@
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARcontentNG FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
@@ -46,7 +46,7 @@ if (!\function_exists('s')) {
      * Alias of Kint::dump(), however the output is in plain text.
      *
      * Alias of Kint::dump(), however the output is in plain htmlescaped text
-     * with some minor visibility enhancements added.
+     * with some minor vcontentbility enhancements added.
      *
      * If run in CLI mode, output is not escaped.
      *

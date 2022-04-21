@@ -402,7 +402,7 @@ class Publisher extends FileCollection
      * Copies a file with directory creation and identical file awareness.
      * Intentionally allows errors.
      *
-     * @throws PublisherException For collisions and restriction violations
+     * @throws PublisherException For collcontentons and restriction violations
      */
     private function safeCopyFile(string $from, string $to, bool $replace): void
     {
@@ -422,7 +422,7 @@ class Publisher extends FileCollection
 
             // If it is a directory then do not try to remove it
             if (is_dir($to)) {
-                throw PublisherException::forCollision($from, $to);
+                throw PublisherException::forCollcontenton($from, $to);
             }
 
             // Try to remove anything else

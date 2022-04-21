@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Admin;
 
-use App\Models\Kategori_staff_model;
+use App\Models\category_staff_model;
 use App\Models\Staff_model;
 
 class Staff extends BaseController
@@ -12,81 +12,77 @@ class Staff extends BaseController
     {
         checklogin();
         $m_staff          = new Staff_model();
-        $m_kategori_staff = new Kategori_staff_model();
+        $m_category_staff = new category_staff_model();
         $staff            = $m_staff->listing();
         $total            = $m_staff->total();
-        $kategori_staff   = $m_kategori_staff->listing();
+        $category_staff   = $m_category_staff->listing();
 
         // Start validasi
         if ($this->request->getMethod() === 'post' && $this->validate(
             [
-                'nama' => 'required',
-                'gambar' => [
-                    'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-                    'max_size[gambar,4096]',
+                'name' => 'required',
+                'picture' => [
+                    'mime_in[picture,image/jpg,image/jpeg,image/gif,image/png]',
+                    'max_size[picture,4096]',
                 ],
             ]
         )) {
-            if (! empty($_FILES['gambar']['name'])) {
+            if (! empty($_FILES['picture']['name'])) {
                 // Image upload
-                $avatar   = $this->request->getFile('gambar');
-                $namabaru = str_replace(' ', '-', $avatar->getName());
-                $avatar->move(WRITEPATH . '../assets/upload/staff/', $namabaru);
+                $avatar   = $this->request->getFile('picture');
+                $namebaru = str_replace(' ', '-', $avatar->getName());
+                $avatar->move(WRITEPATH . '../assets/upload/staff/', $namebaru);
                 // Create thumb
                 $image = \Config\Services::image()
-                    ->withFile(WRITEPATH . '../assets/upload/staff/' . $namabaru)
+                    ->withFile(WRITEPATH . '../assets/upload/staff/' . $namebaru)
                     ->fit(100, 100, 'center')
-                    ->save(WRITEPATH . '../assets/upload/staff/thumbs/' . $namabaru);
+                    ->save(WRITEPATH . '../assets/upload/staff/thumbs/' . $namebaru);
                 // masuk database
                 // masuk database
                 $data = ['id_user'      => $this->session->get('id_user'),
-                    'id_kategori_staff' => $this->request->getPost('id_kategori_staff'),
-                    'urutan'            => $this->request->getPost('urutan'),
-                    'nama'              => $this->request->getPost('nama'),
-                    'jabatan'           => $this->request->getPost('jabatan'),
-                    'alamat'            => $this->request->getPost('alamat'),
-                    'telepon'           => $this->request->getPost('telepon'),
+                    'id_category_staff' => $this->request->getPost('id_category_staff'),
+                    'name'              => $this->request->getPost('name'),
+                    'position'           => $this->request->getPost('position'),
+                    'address'            => $this->request->getPost('address'),
+                    'phone'           => $this->request->getPost('phone'),
                     'website'           => $this->request->getPost('website'),
                     'email'             => $this->request->getPost('email'),
-                    'keahlian'          => $this->request->getPost('keahlian'),
-                    'gambar'            => $namabaru,
+                    'skill'          => $this->request->getPost('skill'),
+                    'picture'            => $namebaru,
                     'status_staff'      => $this->request->getPost('status_staff'),
-                    'tempat_lahir'      => $this->request->getPost('tempat_lahir'),
-                    'tanggal_lahir'     => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
-                    'tanggal_post'      => date('Y-m-d H:i:s'),
+                    'country'      => $this->request->getPost('country'),
+                    'date_of_birth'     => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
                 ];
-                $m_staff->tambah($data);
+                $m_staff->add($data);
                 // masuk database
-                $this->session->setFlashdata('sukses', 'Data telah ditambah');
+                $this->session->setFlashdata('success', 'Lưu thay đổi');
 
                 return redirect()->to(base_url('admin/staff'));
             }
             // masuk database
             $data = ['id_user'      => $this->session->get('id_user'),
-                'id_kategori_staff' => $this->request->getPost('id_kategori_staff'),
-                'urutan'            => $this->request->getPost('urutan'),
-                'nama'              => $this->request->getPost('nama'),
-                'jabatan'           => $this->request->getPost('jabatan'),
-                'alamat'            => $this->request->getPost('alamat'),
-                'telepon'           => $this->request->getPost('telepon'),
+                'id_category_staff' => $this->request->getPost('id_category_staff'),
+                'name'              => $this->request->getPost('name'),
+                'position'           => $this->request->getPost('position'),
+                'address'            => $this->request->getPost('address'),
+                'phone'           => $this->request->getPost('phone'),
                 'website'           => $this->request->getPost('website'),
                 'email'             => $this->request->getPost('email'),
-                'keahlian'          => $this->request->getPost('keahlian'),
-                // 'gambar'		=> $namabaru,
+                'skill'          => $this->request->getPost('skill'),
+                // 'picture'		=> $namebaru,
                 'status_staff'  => $this->request->getPost('status_staff'),
-                'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
-                'tanggal_lahir' => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
-                'tanggal_post'  => date('Y-m-d H:i:s'),
+                'country'  => $this->request->getPost('country'),
+                'date_of_birth' => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
             ];
-            $m_staff->tambah($data);
+            $m_staff->add($data);
             // masuk database
-            $this->session->setFlashdata('sukses', 'Data telah ditambah');
+            $this->session->setFlashdata('success', 'Lưu thay đổi');
 
             return redirect()->to(base_url('admin/staff'));
         }
         $data = ['title'     => 'Data Staff: ' . $total['total'],
             'staff'          => $staff,
-            'kategori_staff' => $kategori_staff,
+            'category_staff' => $category_staff,
             'content'        => 'admin/staff/index',
         ];
         echo view('admin/layout/wrapper', $data);
@@ -96,81 +92,79 @@ class Staff extends BaseController
     public function edit($id_staff)
     {
         checklogin();
-        $m_kategori_staff = new Kategori_staff_model();
+        $m_category_staff = new category_staff_model();
         $m_staff          = new Staff_model();
         $staff            = $m_staff->detail($id_staff);
-        $kategori_staff   = $m_kategori_staff->listing();
+        $category_staff   = $m_category_staff->listing();
 
         // Start validasi
         if ($this->request->getMethod() === 'post' && $this->validate(
             [
-                'nama' => 'required',
-                'gambar' => [
-                    'mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]',
-                    'max_size[gambar,4096]',
+                'name' => 'required',
+                'picture' => [
+                    'mime_in[picture,image/jpg,image/jpeg,image/gif,image/png]',
+                    'max_size[picture,4096]',
                 ],
             ]
         )) {
-            if (! empty($_FILES['gambar']['name'])) {
+            if (! empty($_FILES['picture']['name'])) {
                 // Image upload
-                $avatar   = $this->request->getFile('gambar');
-                $namabaru = str_replace(' ', '-', $avatar->getName());
-                $avatar->move(WRITEPATH . '../assets/upload/staff/', $namabaru);
+                $avatar   = $this->request->getFile('picture');
+                $namebaru = str_replace(' ', '-', $avatar->getName());
+                $avatar->move(WRITEPATH . '../assets/upload/staff/', $namebaru);
                 // Create thumb
                 $image = \Config\Services::image()
-                    ->withFile(WRITEPATH . '../assets/upload/staff/' . $namabaru)
+                    ->withFile(WRITEPATH . '../assets/upload/staff/' . $namebaru)
                     ->fit(100, 100, 'center')
-                    ->save(WRITEPATH . '../assets/upload/staff/thumbs/' . $namabaru);
+                    ->save(WRITEPATH . '../assets/upload/staff/thumbs/' . $namebaru);
                 // masuk database
                 // masuk database
                 $data = ['id_staff'     => $id_staff,
                     'id_user'           => $this->session->get('id_user'),
-                    'id_kategori_staff' => $this->request->getPost('id_kategori_staff'),
-                    'urutan'            => $this->request->getPost('urutan'),
-                    'nama'              => $this->request->getPost('nama'),
-                    'jabatan'           => $this->request->getPost('jabatan'),
-                    'alamat'            => $this->request->getPost('alamat'),
-                    'telepon'           => $this->request->getPost('telepon'),
+                    'id_category_staff' => $this->request->getPost('id_category_staff'),
+                    'name'              => $this->request->getPost('name'),
+                    'position'           => $this->request->getPost('position'),
+                    'address'            => $this->request->getPost('address'),
+                    'phone'           => $this->request->getPost('phone'),
                     'website'           => $this->request->getPost('website'),
                     'email'             => $this->request->getPost('email'),
-                    'keahlian'          => $this->request->getPost('keahlian'),
-                    'gambar'            => $namabaru,
+                    'skill'          => $this->request->getPost('skill'),
+                    'picture'            => $namebaru,
                     'status_staff'      => $this->request->getPost('status_staff'),
-                    'tempat_lahir'      => $this->request->getPost('tempat_lahir'),
-                    'tanggal_lahir'     => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
+                    'country'      => $this->request->getPost('country'),
+                    'date_of_birth'     => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
                 ];
                 $m_staff->edit($data);
                 // masuk database
-                $this->session->setFlashdata('sukses', 'Data telah disimpan');
+                $this->session->setFlashdata('success', 'Lưu thay đổi');
 
                 return redirect()->to(base_url('admin/staff'));
             }
             // masuk database
             $data = ['id_staff'     => $id_staff,
                 'id_user'           => $this->session->get('id_user'),
-                'id_kategori_staff' => $this->request->getPost('id_kategori_staff'),
-                'urutan'            => $this->request->getPost('urutan'),
-                'nama'              => $this->request->getPost('nama'),
-                'jabatan'           => $this->request->getPost('jabatan'),
-                'alamat'            => $this->request->getPost('alamat'),
-                'telepon'           => $this->request->getPost('telepon'),
+                'id_category_staff' => $this->request->getPost('id_category_staff'),
+                'name'              => $this->request->getPost('name'),
+                'position'           => $this->request->getPost('position'),
+                'address'            => $this->request->getPost('address'),
+                'phone'           => $this->request->getPost('phone'),
                 'website'           => $this->request->getPost('website'),
                 'email'             => $this->request->getPost('email'),
-                'keahlian'          => $this->request->getPost('keahlian'),
-                // 'gambar'		=> $namabaru,
+                'skill'          => $this->request->getPost('skill'),
+                // 'picture'		=> $namebaru,
                 'status_staff'  => $this->request->getPost('status_staff'),
-                'tempat_lahir'  => $this->request->getPost('tempat_lahir'),
-                'tanggal_lahir' => date('Y-m-d', strtotime($this->request->getPost('tanggal_lahir'))),
+                'country'  => $this->request->getPost('country'),
+                'date_of_birth' => date('Y-m-d', strtotime($this->request->getPost('date_of_birth'))),
             ];
             $m_staff->edit($data);
             // masuk database
-            $this->session->setFlashdata('sukses', 'Data telah disimpan');
+            $this->session->setFlashdata('success', 'Lưu thay đổi');
 
             return redirect()->to(base_url('admin/staff'));
         }
-        $data = ['title'     => 'Edit Data Staff: ' . $staff['nama'],
+        $data = ['title'     => 'Edit Data Staff: ' . $staff['name'],
             'staff'          => $staff,
-            'kategori_staff' => $kategori_staff,
+            'category_staff' => $category_staff,
             'content'        => 'admin/staff/edit',
         ];
         echo view('admin/layout/wrapper', $data);
@@ -184,7 +178,7 @@ class Staff extends BaseController
         $data    = ['id_staff' => $id_staff];
         $m_staff->delete($data);
         // masuk database
-        $this->session->setFlashdata('sukses', 'Data telah dihapus');
+        $this->session->setFlashdata('success', 'Dữ liệu đã xóa');
 
         return redirect()->to(base_url('admin/staff'));
     }

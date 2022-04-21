@@ -171,7 +171,7 @@ $(function () {
   if (o.navbarMenuSlimscroll && typeof $.fn.slimscroll != 'undefined') {
     $(".navbar .menu").slimscroll({
       height: o.navbarMenuHeight,
-      alwaysVisible: false,
+      alwaysVcontentble: false,
       size: o.navbarMenuSlimscrollWidth
     }).css("width", "100%");
   }
@@ -393,8 +393,8 @@ function _init() {
       var $this = $(this);
       var checkElement = $this.next();
 
-      //Check if the next element is a menu and is visible
-      if ((checkElement.is('.treeview-menu')) && (checkElement.is(':visible'))) {
+      //Check if the next element is a menu and is vcontentble
+      if ((checkElement.is('.treeview-menu')) && (checkElement.is(':vcontentble'))) {
         //Close the menu
         checkElement.slideUp(animationSpeed, function () {
           checkElement.removeClass('menu-open');
@@ -403,12 +403,12 @@ function _init() {
         });
         checkElement.parent("li").removeClass("active");
       }
-      //If the menu is not visible
-      else if ((checkElement.is('.treeview-menu')) && (!checkElement.is(':visible'))) {
+      //If the menu is not vcontentble
+      else if ((checkElement.is('.treeview-menu')) && (!checkElement.is(':vcontentble'))) {
         //Get the parent menu
         var parent = $this.parents('ul').first();
         //Close all open menus within the parent
-        var ul = parent.find('ul:visible').slideUp(animationSpeed);
+        var ul = parent.find('ul:vcontentble').slideUp(animationSpeed);
         //Remove the menu-open class from the parent
         ul.removeClass('menu-open');
         //Get the parent li

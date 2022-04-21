@@ -269,7 +269,7 @@
   -webkit-box-shadow: 0 0 4px #DFDFDF; }
   #debug-icon a:active,
   #debug-icon a:link,
-  #debug-icon a:visited {
+  #debug-icon a:vcontentted {
     color: #DD8615; }
 
 #debug-bar {
@@ -357,7 +357,7 @@
     -webkit-box-shadow: 0 0 4px #DFDFDF; }
     #debug-icon a:active,
     #debug-icon a:link,
-    #debug-icon a:visited {
+    #debug-icon a:vcontentted {
       color: #DD8615; }
   #debug-bar {
     background-color: #252525;
@@ -443,7 +443,7 @@
   -webkit-box-shadow: 0 0 4px #DFDFDF; }
   #toolbarContainer.dark #debug-icon a:active,
   #toolbarContainer.dark #debug-icon a:link,
-  #toolbarContainer.dark #debug-icon a:visited {
+  #toolbarContainer.dark #debug-icon a:vcontentted {
     color: #DD8615; }
 
 #toolbarContainer.dark #debug-bar {
@@ -538,7 +538,7 @@
   -webkit-box-shadow: 0 0 4px #DFDFDF; }
   #toolbarContainer.light #debug-icon a:active,
   #toolbarContainer.light #debug-icon a:link,
-  #toolbarContainer.light #debug-icon a:visited {
+  #toolbarContainer.light #debug-icon a:vcontentted {
     color: #DD8615; }
 
 #toolbarContainer.light #debug-bar {

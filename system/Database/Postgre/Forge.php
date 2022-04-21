@@ -52,8 +52,8 @@ class Forge extends BaseForge
         'INTEGER'  => 'BIGINT',
         'INT8'     => 'NUMERIC',
         'BIGINT'   => 'NUMERIC',
-        'REAL'     => 'DOUBLE PRECISION',
-        'FLOAT'    => 'DOUBLE PRECISION',
+        'REAL'     => 'DOUBLE PRECcontentON',
+        'FLOAT'    => 'DOUBLE PRECcontentON',
     ];
 
     /**

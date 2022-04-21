@@ -18,7 +18,7 @@
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARcontentNG FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
@@ -158,24 +158,24 @@ function getReferenceNode(reference) {
   return reference && reference.referenceNode ? reference.referenceNode : reference;
 }
 
-const isIE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
-const isIE10 = isBrowser && /MSIE 10/.test(navigator.userAgent);
+const contentE11 = isBrowser && !!(window.MSInputMethodContext && document.documentMode);
+const contentE10 = isBrowser && /MSIE 10/.test(navigator.userAgent);
 
 /**
  * Determines if the browser is Internet Explorer
  * @method
  * @memberof Popper.Utils
  * @param {Number} version to check
- * @returns {Boolean} isIE
+ * @returns {Boolean} contentE
  */
-function isIE(version) {
+function contentE(version) {
   if (version === 11) {
-    return isIE11;
+    return contentE11;
   }
   if (version === 10) {
-    return isIE10;
+    return contentE10;
   }
-  return isIE11 || isIE10;
+  return contentE11 || contentE10;
 }
 
 /**
@@ -190,7 +190,7 @@ function getOffsetParent(element) {
     return document.documentElement;
   }
 
-  const noOffsetParent = isIE(10) ? document.body : null;
+  const noOffsetParent = contentE(10) ? document.body : null;
 
   // NOTE: 1 DOM access here
   let offsetParent = element.offsetParent || null;
@@ -339,13 +339,13 @@ function getBordersSize(styles, axis) {
 }
 
 function getSize(axis, body, html, computedStyle) {
-  return Math.max(body[`offset${axis}`], body[`scroll${axis}`], html[`client${axis}`], html[`offset${axis}`], html[`scroll${axis}`], isIE(10) ? parseInt(html[`offset${axis}`]) + parseInt(computedStyle[`margin${axis === 'Height' ? 'Top' : 'Left'}`]) + parseInt(computedStyle[`margin${axis === 'Height' ? 'Bottom' : 'Right'}`]) : 0);
+  return Math.max(body[`offset${axis}`], body[`scroll${axis}`], html[`client${axis}`], html[`offset${axis}`], html[`scroll${axis}`], contentE(10) ? parseInt(html[`offset${axis}`]) + parseInt(computedStyle[`margin${axis === 'Height' ? 'Top' : 'Left'}`]) + parseInt(computedStyle[`margin${axis === 'Height' ? 'Bottom' : 'Right'}`]) : 0);
 }
 
 function getWindowSizes(document) {
   const body = document.body;
   const html = document.documentElement;
-  const computedStyle = isIE(10) && getComputedStyle(html);
+  const computedStyle = contentE(10) && getComputedStyle(html);
 
   return {
     height: getSize('Height', body, html, computedStyle),
@@ -395,7 +395,7 @@ function getBoundingClientRect(element) {
   // considered in DOM in some circumstances...
   // This isn't reproducible in IE10 compatibility mode of IE11
   try {
-    if (isIE(10)) {
+    if (contentE(10)) {
       rect = element.getBoundingClientRect();
       const scrollTop = getScroll(element, 'top');
       const scrollLeft = getScroll(element, 'left');
@@ -438,7 +438,7 @@ function getBoundingClientRect(element) {
 }
 
 function getOffsetRectRelativeToArbitraryNode(children, parent, fixedPosition = false) {
-  const isIE10 = isIE(10);
+  const contentE10 = contentE(10);
   const isHTML = parent.nodeName === 'HTML';
   const childrenRect = getBoundingClientRect(children);
   const parentRect = getBoundingClientRect(parent);
@@ -466,7 +466,7 @@ function getOffsetRectRelativeToArbitraryNode(children, parent, fixedPosition = 
   // we do this only on HTML because it's the only element that behaves
   // differently when margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
-  if (!isIE10 && isHTML) {
+  if (!contentE10 && isHTML) {
     const marginTop = parseFloat(styles.marginTop);
     const marginLeft = parseFloat(styles.marginLeft);
 
@@ -480,7 +480,7 @@ function getOffsetRectRelativeToArbitraryNode(children, parent, fixedPosition = 
     offsets.marginLeft = marginLeft;
   }
 
-  if (isIE10 && !fixedPosition ? parent.contains(scrollParent) : parent === scrollParent && scrollParent.nodeName !== 'BODY') {
+  if (contentE10 && !fixedPosition ? parent.contains(scrollParent) : parent === scrollParent && scrollParent.nodeName !== 'BODY') {
     offsets = includeScroll(offsets, parent);
   }
 
@@ -539,7 +539,7 @@ function isFixed(element) {
 
 function getFixedPositionOffsetParent(element) {
   // This check is needed to avoid errors in case one of the elements isn't defined for any reason
-  if (!element || !element.parentElement || isIE()) {
+  if (!element || !element.parentElement || contentE()) {
     return document.documentElement;
   }
   let el = element.parentElement;
@@ -1848,7 +1848,7 @@ function hide(data) {
   const bound = find(data.instance.modifiers, modifier => modifier.name === 'preventOverflow').boundaries;
 
   if (refRect.bottom < bound.top || refRect.left > bound.right || refRect.top > bound.bottom || refRect.right < bound.left) {
-    // Avoid unnecessary DOM access if visibility hasn't changed
+    // Avoid unnecessary DOM access if vcontentbility hasn't changed
     if (data.hide === true) {
       return data;
     }
@@ -1856,7 +1856,7 @@ function hide(data) {
     data.hide = true;
     data.attributes['x-out-of-boundaries'] = '';
   } else {
-    // Avoid unnecessary DOM access if visibility hasn't changed
+    // Avoid unnecessary DOM access if vcontentbility hasn't changed
     if (data.hide === false) {
       return data;
     }
@@ -1949,7 +1949,7 @@ var modifiers = {
    * The latter is a deprecated method because it leads to confusion and will be
    * removed in v2.<br />
    * Additionally, it accepts additions and subtractions between different units.
-   * Note that multiplications and divisions aren't supported.
+   * Note that multiplications and divcontentons aren't supported.
    *
    * Valid examples are:
    * ```

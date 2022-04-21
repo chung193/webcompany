@@ -292,7 +292,7 @@ jQuery.extend( {
 		return ( type === "number" || type === "string" ) &&
 
 			// parseFloat NaNs numeric-cast false positives ("")
-			// ...but misinterprets leading-number strings, particularly hex literals ("0x...")
+			// ...but mcontentnterprets leading-number strings, particularly hex literals ("0x...")
 			// subtraction forces infinities to NaN
 			!isNaN( obj - parseFloat( obj ) );
 	},
@@ -894,7 +894,7 @@ function createCache() {
 	var keys = [];
 
 	function cache( key, value ) {
-		// Use (key + " ") to avoid collision with native prototype properties (see Issue #157)
+		// Use (key + " ") to avoid collcontenton with native prototype properties (see Issue #157)
 		if ( keys.push( key + " " ) > Expr.cacheLength ) {
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ];
@@ -2558,13 +2558,13 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				}
 			}
 
-			// `i` is now the count of elements visited above, and adding it to `matchedCount`
+			// `i` is now the count of elements vcontentted above, and adding it to `matchedCount`
 			// makes the latter nonnegative.
 			matchedCount += i;
 
 			// Apply set filters to unmatched elements
 			// NOTE: This can be skipped if there are no unmatched elements (i.e., `matchedCount`
-			// equals `i`), unless we didn't visit _any_ elements in the above loop because we have
+			// equals `i`), unless we didn't vcontentt _any_ elements in the above loop because we have
 			// no element matchers and no seed.
 			// Incrementing an initially-string "0" `i` allows `i` to remain a string only in that
 			// case, which will result in a "00" `matchedCount` that differs from `i` but is also
@@ -4637,7 +4637,7 @@ function showHide( elements, show ) {
 		display = elem.style.display;
 		if ( show ) {
 
-			// Since we force visibility upon cascade-hidden elements, an immediate (and slow)
+			// Since we force vcontentbility upon cascade-hidden elements, an immediate (and slow)
 			// check is required in this first loop unless we have a nonempty display value (either
 			// inline or about-to-be-restored)
 			if ( display === "none" ) {
@@ -5193,7 +5193,7 @@ jQuery.event = {
 
 			j = 0;
 			while ( ( handleObj = matched.handlers[ j++ ] ) &&
-				!event.isImmediatePropagationStopped() ) {
+				!event.contentmmediatePropagationStopped() ) {
 
 				// Triggered event must either 1) have no namespace, or 2) have namespace(s)
 				// a subset or equal to those in the bound event (both can have no namespace).
@@ -5433,7 +5433,7 @@ jQuery.Event.prototype = {
 	constructor: jQuery.Event,
 	isDefaultPrevented: returnFalse,
 	isPropagationStopped: returnFalse,
-	isImmediatePropagationStopped: returnFalse,
+	contentmmediatePropagationStopped: returnFalse,
 	isSimulated: false,
 
 	preventDefault: function() {
@@ -5457,7 +5457,7 @@ jQuery.Event.prototype = {
 	stopImmediatePropagation: function() {
 		var e = this.originalEvent;
 
-		this.isImmediatePropagationStopped = returnTrue;
+		this.contentmmediatePropagationStopped = returnTrue;
 
 		if ( e && !this.isSimulated ) {
 			e.stopImmediatePropagation();
@@ -6243,7 +6243,7 @@ var
 	// See here for display values: https://developer.mozilla.org/en-US/docs/CSS/display
 	rdisplayswap = /^(none|table(?!-c[ea]).+)/,
 	rcustomProp = /^--/,
-	cssShow = { position: "absolute", visibility: "hidden", display: "block" },
+	cssShow = { position: "absolute", vcontentbility: "hidden", display: "block" },
 	cssNormalTransform = {
 		letterSpacing: "0",
 		fontWeight: "400"
@@ -6540,7 +6540,7 @@ jQuery.each( [ "height", "width" ], function( i, name ) {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
 
-				// Certain elements can have dimension info if we invisibly show them
+				// Certain elements can have dimension info if we invcontentbly show them
 				// but it must have a current display style that would benefit
 				return rdisplayswap.test( jQuery.css( elem, "display" ) ) &&
 
@@ -6909,7 +6909,7 @@ function defaultPrefilter( elem, props, opts ) {
 				display = restoreDisplay;
 			} else {
 
-				// Get nonempty value(s) by temporarily forcing visibility
+				// Get nonempty value(s) by temporarily forcing vcontentbility
 				showHide( [ elem ], true );
 				restoreDisplay = elem.style.display || restoreDisplay;
 				display = jQuery.css( elem, "display" );
@@ -6959,7 +6959,7 @@ function defaultPrefilter( elem, props, opts ) {
 				dataShow = dataPriv.access( elem, "fxshow", { display: restoreDisplay } );
 			}
 
-			// Store hidden/visible for toggle so `.stop().toggle()` "reverses"
+			// Store hidden/vcontentble for toggle so `.stop().toggle()` "reverses"
 			if ( toggle ) {
 				dataShow.hidden = !hidden;
 			}
@@ -9413,9 +9413,9 @@ jQuery.fn.extend( {
 
 
 jQuery.expr.pseudos.hidden = function( elem ) {
-	return !jQuery.expr.pseudos.visible( elem );
+	return !jQuery.expr.pseudos.vcontentble( elem );
 };
-jQuery.expr.pseudos.visible = function( elem ) {
+jQuery.expr.pseudos.vcontentble = function( elem ) {
 	return !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
 };
 

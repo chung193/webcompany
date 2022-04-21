@@ -29,7 +29,7 @@ $('#chat-pane-toggle').DirectChat('toggle')
 |---
 | Method | Description
 |-|-
-|toggle | Toggles the state of the chat pane between hidden and visible.
+|toggle | Toggles the state of the chat pane between hidden and vcontentble.
 {: .table .table-bordered .bg-light}
 
 Example: `$('#chat-pane-toggle').DirectChat('toggle')`

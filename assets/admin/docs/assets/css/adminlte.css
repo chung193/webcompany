@@ -69,14 +69,14 @@ body {
   background-color: #fff;
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex="-1"]:focus:not(:focus-vcontentble) {
   outline: 0 !important;
 }
 
 hr {
   box-sizing: content-box;
   height: 0;
-  overflow: visible;
+  overflow: vcontentble;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -234,7 +234,7 @@ button {
   border-radius: 0;
 }
 
-button:focus:not(:focus-visible) {
+button:focus:not(:focus-vcontentble) {
   outline: 0;
 }
 
@@ -251,7 +251,7 @@ textarea {
 
 button,
 input {
-  overflow: visible;
+  overflow: vcontentble;
 }
 
 button,
@@ -4745,7 +4745,7 @@ input[type="button"].btn-block {
     flex-wrap: nowrap;
   }
   .navbar-expand-sm .navbar-nav-scroll {
-    overflow: visible;
+    overflow: vcontentble;
   }
   .navbar-expand-sm .navbar-collapse {
     display: -webkit-flex !important;
@@ -4796,7 +4796,7 @@ input[type="button"].btn-block {
     flex-wrap: nowrap;
   }
   .navbar-expand-md .navbar-nav-scroll {
-    overflow: visible;
+    overflow: vcontentble;
   }
   .navbar-expand-md .navbar-collapse {
     display: -webkit-flex !important;
@@ -4847,7 +4847,7 @@ input[type="button"].btn-block {
     flex-wrap: nowrap;
   }
   .navbar-expand-lg .navbar-nav-scroll {
-    overflow: visible;
+    overflow: vcontentble;
   }
   .navbar-expand-lg .navbar-collapse {
     display: -webkit-flex !important;
@@ -4898,7 +4898,7 @@ input[type="button"].btn-block {
     flex-wrap: nowrap;
   }
   .navbar-expand-xl .navbar-nav-scroll {
-    overflow: visible;
+    overflow: vcontentble;
   }
   .navbar-expand-xl .navbar-collapse {
     display: -webkit-flex !important;
@@ -4951,7 +4951,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-expand .navbar-nav-scroll {
-  overflow: visible;
+  overflow: vcontentble;
 }
 
 .navbar-expand .navbar-collapse {
@@ -6835,8 +6835,8 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -webkit-backface-vcontentbility: hidden;
+  backface-vcontentbility: hidden;
   transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
   transition: transform 0.6s ease, -webkit-transform 0.6s ease;
@@ -8633,7 +8633,7 @@ button.bg-dark:focus {
   position: static;
   width: auto;
   height: auto;
-  overflow: visible;
+  overflow: vcontentble;
   clip: auto;
   white-space: normal;
 }
@@ -10765,12 +10765,12 @@ a.text-dark:hover, a.text-dark:focus {
   color: inherit !important;
 }
 
-.visible {
-  visibility: visible !important;
+.vcontentble {
+  vcontentbility: vcontentble !important;
 }
 
-.invisible {
-  visibility: hidden !important;
+.invcontentble {
+  vcontentbility: hidden !important;
 }
 
 @media print {
@@ -14700,7 +14700,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .logo-xl {
   opacity: 1;
   position: absolute;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 .logo-xs.brand-image-xs,
@@ -14717,7 +14717,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .logo-xs {
   opacity: 0;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .logo-xs.brand-image-xl {
@@ -14760,7 +14760,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: hidden;
+    vcontentbility: hidden;
   }
   .sidebar-mini.sidebar-collapse .logo-xl {
     -webkit-animation-name: fadeOut;
@@ -14769,7 +14769,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: hidden;
+    vcontentbility: hidden;
   }
   .sidebar-mini.sidebar-collapse .logo-xs {
     display: inline-block;
@@ -14779,7 +14779,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
   .sidebar-mini.sidebar-collapse .main-sidebar {
     overflow-x: hidden;
@@ -14818,7 +14818,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
   .sidebar-mini.sidebar-collapse .main-sidebar:hover .logo-xs, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .logo-xs {
     -webkit-animation-name: fadeOut;
@@ -14827,7 +14827,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: hidden;
+    vcontentbility: hidden;
   }
   .sidebar-mini.sidebar-collapse .main-sidebar:hover .brand-image, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .brand-image {
     margin-right: .5rem;
@@ -14842,7 +14842,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   .sidebar-mini.sidebar-collapse .main-sidebar:hover .nav-sidebar > .nav-item > .nav-link > span, .sidebar-mini.sidebar-collapse .main-sidebar.sidebar-focused .nav-sidebar > .nav-item > .nav-link > span {
     display: inline-block !important;
   }
-  .sidebar-mini.sidebar-collapse .visible-sidebar-mini {
+  .sidebar-mini.sidebar-collapse .vcontentble-sidebar-mini {
     display: block !important;
   }
   .sidebar-mini.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
@@ -14890,7 +14890,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: hidden;
+    vcontentbility: hidden;
   }
   .sidebar-mini-md.sidebar-collapse .logo-xl {
     -webkit-animation-name: fadeOut;
@@ -14899,7 +14899,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: hidden;
+    vcontentbility: hidden;
   }
   .sidebar-mini-md.sidebar-collapse .logo-xs {
     display: inline-block;
@@ -14909,7 +14909,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
   .sidebar-mini-md.sidebar-collapse .main-sidebar {
     overflow-x: hidden;
@@ -14948,7 +14948,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
   .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .logo-xs, .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .logo-xs {
     -webkit-animation-name: fadeOut;
@@ -14957,7 +14957,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
     animation-duration: 0.3s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    visibility: hidden;
+    vcontentbility: hidden;
   }
   .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .brand-image, .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .brand-image {
     margin-right: .5rem;
@@ -14972,7 +14972,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   .sidebar-mini-md.sidebar-collapse .main-sidebar:hover .nav-sidebar > .nav-item > .nav-link > span, .sidebar-mini-md.sidebar-collapse .main-sidebar.sidebar-focused .nav-sidebar > .nav-item > .nav-link > span {
     display: inline-block !important;
   }
-  .sidebar-mini-md.sidebar-collapse .visible-sidebar-mini {
+  .sidebar-mini-md.sidebar-collapse .vcontentble-sidebar-mini {
     display: block !important;
   }
   .sidebar-mini-md.sidebar-collapse.layout-fixed .main-sidebar:hover .brand-link {
@@ -15024,7 +15024,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .sidebar-mini-xs.sidebar-collapse .logo-xl {
@@ -15034,7 +15034,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .sidebar-mini-xs.sidebar-collapse .logo-xs {
@@ -15045,7 +15045,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 .sidebar-mini-xs.sidebar-collapse .main-sidebar {
@@ -15092,7 +15092,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 .sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .logo-xs, .sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .logo-xs {
@@ -15102,7 +15102,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .sidebar-mini-xs.sidebar-collapse .main-sidebar:hover .brand-image, .sidebar-mini-xs.sidebar-collapse .main-sidebar.sidebar-focused .brand-image {
@@ -15121,7 +15121,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   display: inline-block !important;
 }
 
-.sidebar-mini-xs.sidebar-collapse .visible-sidebar-mini {
+.sidebar-mini-xs.sidebar-collapse .vcontentble-sidebar-mini {
   display: block !important;
 }
 
@@ -15492,7 +15492,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 .sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .logo-xl,
@@ -15505,7 +15505,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .sidebar-collapse.sidebar-mini .sidebar-no-expand.main-sidebar.sidebar-focused .nav-sidebar.nav-child-indent .nav-treeview,
@@ -15538,7 +15538,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: hidden;
+  vcontentbility: hidden;
   width: 0;
 }
 
@@ -15554,7 +15554,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 }
 
 .nav-sidebar:hover {
-  overflow: visible;
+  overflow: vcontentble;
 }
 
 .sidebar-form,
@@ -15579,7 +15579,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .main-sidebar .logo-xs,
 .main-sidebar .logo-xl,
 .sidebar .user-panel .info {
-  transition: margin-left 0.3s linear, opacity 0.3s ease, visibility 0.3s ease;
+  transition: margin-left 0.3s linear, opacity 0.3s ease, vcontentbility 0.3s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15843,8 +15843,8 @@ body.text-sm .control-sidebar {
 .open:not(.dropup) > .animated-dropdown-menu {
   -webkit-animation: flipInX 0.7s both;
   animation: flipInX 0.7s both;
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+  -webkit-backface-vcontentbility: vcontentble !important;
+  backface-vcontentbility: vcontentble !important;
 }
 
 .navbar-custom-menu > .navbar-nav > li {
@@ -35715,7 +35715,7 @@ body.iframe-mode-fullscreen {
   right: .125rem;
   top: .125rem;
   z-index: 10;
-  visibility: hidden;
+  vcontentbility: hidden;
 }
 
 .content-wrapper.iframe-mode .btn-iframe-close:hover, .content-wrapper.iframe-mode .btn-iframe-close:focus {
@@ -35725,12 +35725,12 @@ body.iframe-mode-fullscreen {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 @media (hover: none) and (pointer: coarse) {
   .content-wrapper.iframe-mode .btn-iframe-close {
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
 }
 
@@ -35754,12 +35754,12 @@ body.iframe-mode-fullscreen {
   animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  visibility: visible;
+  vcontentbility: vcontentble;
 }
 
 @media (hover: none) and (pointer: coarse) {
   .content-wrapper.iframe-mode .navbar-nav .nav-item:hover .btn-iframe-close, .content-wrapper.iframe-mode .navbar-nav .nav-item:focus .btn-iframe-close {
-    visibility: visible;
+    vcontentbility: vcontentble;
   }
 }
 
@@ -35833,7 +35833,7 @@ body.iframe-mode-fullscreen .content-wrapper.iframe-mode {
 .permanent-btn-iframe-close .btn-iframe-close {
   -webkit-animation: none !important;
   animation: none !important;
-  visibility: visible !important;
+  vcontentbility: vcontentble !important;
   opacity: 1;
 }
 
@@ -44436,7 +44436,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   opacity: 0;
   position: absolute;
   top: 0;
-  visibility: hidden;
+  vcontentbility: hidden;
   z-index: -1;
 }
 

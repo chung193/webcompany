@@ -55,7 +55,7 @@ trait ResponseTrait
     protected $cookieStore;
 
     /**
-     * Set a cookie name prefix if you need to avoid collisions
+     * Set a cookie name prefix if you need to avoid collcontentons
      *
      * @var string
      *

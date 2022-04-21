@@ -2,34 +2,37 @@
 
 namespace App\Controllers;
 
-use App\Models\Berita_model;
+use App\Models\news_model;
 use App\Models\Client_model;
-use App\Models\Galeri_model;
-use App\Models\Konfigurasi_model;
+use App\Models\Gallery_model;
+use App\Models\Config_model;
 
 class Home extends BaseController
 {
     // Homepage
     public function index()
     {
-        $m_konfigurasi = new Konfigurasi_model();
-        $m_galeri      = new Galeri_model();
+        $m_config = new config_model();
+        $m_Gallery      = new Gallery_model();
         $m_client      = new Client_model();
-        $m_berita      = new Berita_model();
-        $konfigurasi   = $m_konfigurasi->listing();
-        $slider        = $m_galeri->slider();
+        $m_news      = new news_model();
+        $config   = $m_config->listing();
+        $slider        = $m_Gallery->slider();
         $client        = $m_client->testimoni();
-        $berita2       = $m_berita->beranda();
-        $project       = $m_berita->beranda_project();
-
-        $data = ['title'  => $konfigurasi['namaweb'] . ' | ' . $konfigurasi['tagline'],
-            'description' => $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
+        $news2       = $m_news->beranda();
+        $project       = $m_news->beranda_project();
+       
+        $client       = $m_news->client();
+        
+        $data = ['title'  => $config['nameweb'] . ' | ' . $config['tagline'],
+            'description' => $config['nameweb'] . ', ' . $config['shorthand'],
+            'keywords'    => $config['nameweb'] . ', ' . $config['keywords'],
             'slider'      => $slider,
-            'konfigurasi' => $konfigurasi,
+            'config' => $config,
             'client'      => $client,
-            'berita2'     => $berita2,
+            'news2'     => $news2,
             'project'     => $project,
+            'client' => $client,
             'content'     => 'home/index',
         ];
         echo view('layout/wrapper', $data);

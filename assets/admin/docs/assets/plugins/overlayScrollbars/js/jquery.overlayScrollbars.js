@@ -125,14 +125,14 @@
                     cssCache[name] = result;
                     return result;
                 },
-                _jsAPI: function (name, isInterface, fallback) {
+                _jsAPI: function (name, contentnterface, fallback) {
                     var i = 0;
                     var result = jsCache[name];
 
                     if (!jsCache[LEXICON.hOP](name)) {
                         result = window[name];
                         for (; i < jsPrefixes[LEXICON.l]; i++)
-                            result = result || window[(isInterface ? jsPrefixes[i] : jsPrefixes[i].toLowerCase()) + firstLetterToUpper(name)];
+                            result = result || window[(contentnterface ? jsPrefixes[i] : jsPrefixes[i].toLowerCase()) + firstLetterToUpper(name)];
                         jsCache[name] = result;
                     }
                     return result || fallback;
@@ -418,8 +418,8 @@
                 var updateOnLoadTemplate = [['img'], [TYPES.s, TYPES.a, TYPES.z]];
                 var inheritedAttrsTemplate = [['style', 'class'], [TYPES.s, TYPES.a, TYPES.z]];
                 var resizeAllowedValues = 'n:none b:both h:horizontal v:vertical';
-                var overflowBehaviorAllowedValues = 'v-h:visible-hidden v-s:visible-scroll s:scroll h:hidden';
-                var scrollbarsVisibilityAllowedValues = 'v:visible h:hidden a:auto';
+                var overflowBehaviorAllowedValues = 'v-h:vcontentble-hidden v-s:vcontentble-scroll s:scroll h:hidden';
+                var scrollbarsVcontentbilityAllowedValues = 'v:vcontentble h:hidden a:auto';
                 var scrollbarsAutoHideAllowedValues = 'n:never s:scroll l:leave m:move';
                 var optionsDefaultsAndTemplate = {
                     className: ['os-theme-dark', classNameAllowedValues],                //null || string
@@ -436,11 +436,11 @@
                         initialize: booleanTrueTemplate                                  //true || false
                     },
                     overflowBehavior: {
-                        x: ['scroll', overflowBehaviorAllowedValues],                    //visible-hidden  || visible-scroll || hidden || scroll || v-h || v-s || h || s
-                        y: ['scroll', overflowBehaviorAllowedValues]                     //visible-hidden  || visible-scroll || hidden || scroll || v-h || v-s || h || s
+                        x: ['scroll', overflowBehaviorAllowedValues],                    //vcontentble-hidden  || vcontentble-scroll || hidden || scroll || v-h || v-s || h || s
+                        y: ['scroll', overflowBehaviorAllowedValues]                     //vcontentble-hidden  || vcontentble-scroll || hidden || scroll || v-h || v-s || h || s
                     },
                     scrollbars: {
-                        visibility: ['auto', scrollbarsVisibilityAllowedValues],         //visible || hidden || auto || v || h || a
+                        vcontentbility: ['auto', scrollbarsVcontentbilityAllowedValues],         //vcontentble || hidden || auto || v || h || a
                         autoHide: ['never', scrollbarsAutoHideAllowedValues],            //never || scroll || leave || move || n || s || l || m
                         autoHideDelay: [800, numberAllowedValues],                       //number
                         dragScrolling: booleanTrueTemplate,                              //true || false
@@ -691,7 +691,7 @@
                     nativeScrollbarIsOverlaid: nativeScrollbarIsOverlaid,
                     nativeScrollbarStyling: (function () {
                         var result = false;
-                        scrollbarDummyElement.addClass('os-viewport-native-scrollbars-invisible');
+                        scrollbarDummyElement.addClass('os-viewport-native-scrollbars-invcontentble');
                         try {
                             result = (scrollbarDummyElement.css('scrollbar-width') === 'none' && (msie > 9 || !msie)) || window.getComputedStyle(scrollbarDummyElement0, '::-webkit-scrollbar').getPropertyValue('display') === 'none';
                         } catch (ex) { }
@@ -713,7 +713,7 @@
                             w: scrollbarDummyElement0[LEXICON.sW],
                             h: scrollbarDummyElement0[LEXICON.sH]
                         };
-                        scrollbarDummyElement.css(strOverflow, 'visible');
+                        scrollbarDummyElement.css(strOverflow, 'vcontentble');
                         var scrollSize2 = {
                             w: scrollbarDummyElement0[LEXICON.sW],
                             h: scrollbarDummyElement0[LEXICON.sH]
@@ -938,7 +938,7 @@
             }
 
             /**
-             * A object which manages the scrollbars visibility of the target element.
+             * A object which manages the scrollbars vcontentbility of the target element.
              * @param pluginTargetElement The element from which the scrollbars shall be hidden.
              * @param options The custom options.
              * @param extensions The custom extensions.
@@ -1068,7 +1068,7 @@
                 var _classNameTextareaCoverElement = _classNameTextareaElement + '-cover';
                 var _classNamePaddingElement = _cassNamesPrefix + 'padding';
                 var _classNameViewportElement = _cassNamesPrefix + 'viewport';
-                var _classNameViewportNativeScrollbarsInvisible = _classNameViewportElement + '-native-scrollbars-invisible';
+                var _classNameViewportNativeScrollbarsInvcontentble = _classNameViewportElement + '-native-scrollbars-invcontentble';
                 var _classNameViewportNativeScrollbarsOverlaid = _classNameViewportElement + '-native-scrollbars-overlaid';
                 var _classNameContentElement = _cassNamesPrefix + 'content';
                 var _classNameContentArrangeElement = _cassNamesPrefix + 'content-arrange';
@@ -1095,7 +1095,7 @@
                 var _classNameDragging = _cassNamesPrefix + 'dragging';
                 var _classNameThemeNone = _cassNamesPrefix + 'theme-none';
                 var _classNamesDynamicDestroy = [
-                    _classNameViewportNativeScrollbarsInvisible,
+                    _classNameViewportNativeScrollbarsInvcontentble,
                     _classNameViewportNativeScrollbarsOverlaid,
                     _classNameScrollbarTrackOff,
                     _classNameScrollbarHandleOff,
@@ -1186,7 +1186,7 @@
                 var _sizeAutoCapableCache;
                 var _contentElementScrollSizeChangeDetectedCache;
                 var _hostElementSizeChangeDetectedCache;
-                var _scrollbarsVisibilityCache;
+                var _scrollbarsVcontentbilityCache;
                 var _scrollbarsAutoHideCache;
                 var _scrollbarsClickScrollingCache;
                 var _scrollbarsDragScrollingCache;
@@ -1402,7 +1402,7 @@
                                 }
                                 else {
                                     var attachEvent = _documentElementNative.attachEvent;
-                                    var isIE = _msieVersion !== undefined;
+                                    var contentE = _msieVersion !== undefined;
                                     if (attachEvent) {
                                         targetElement.prepend(generateDiv(_classNameResizeObserverElement));
                                         findFirst(targetElement, _strDot + _classNameResizeObserverElement)[0].attachEvent('onresize', callback);
@@ -1417,10 +1417,10 @@
                                             wnd.document.documentElement.style.display = 'none';
                                         };
                                         obj.type = 'text/html';
-                                        if (isIE)
+                                        if (contentE)
                                             targetElement.prepend(obj);
                                         obj.data = 'about:blank';
-                                        if (!isIE)
+                                        if (!contentE)
                                             targetElement.prepend(obj);
                                         targetElement.on(strAnimationStartEvent, callback);
                                     }
@@ -1755,7 +1755,7 @@
                         [hostOnMouseEnter, hostOnMouseLeave],
                         (!_scrollbarsAutoHideLeave || destroy), true);
 
-                    //if the plugin is initialized and the mouse is over the host element, make the scrollbars visible
+                    //if the plugin is initialized and the mouse is over the host element, make the scrollbars vcontentble
                     if (!_initialized && !destroy)
                         _hostElement.one('mouseover', hostOnMouseEnter);
                 }
@@ -1894,7 +1894,7 @@
                     var checks = [
                         {
                             _elem: _hostElement,
-                            _attrs: _mutationObserverAttrsHost.concat(':visible')
+                            _attrs: _mutationObserverAttrsHost.concat(':vcontentble')
                         },
                         {
                             _elem: _isTextarea ? _targetElement : undefined,
@@ -2158,9 +2158,9 @@
                     var currentPreparedOptionsScrollbars = _currentPreparedOptions.scrollbars;
                     var currentPreparedOptionsTextarea = _currentPreparedOptions.textarea;
 
-                    //scrollbars visibility:
-                    var scrollbarsVisibility = currentPreparedOptionsScrollbars.visibility;
-                    var scrollbarsVisibilityChanged = checkCacheAutoForce(scrollbarsVisibility, _scrollbarsVisibilityCache);
+                    //scrollbars vcontentbility:
+                    var scrollbarsVcontentbility = currentPreparedOptionsScrollbars.vcontentbility;
+                    var scrollbarsVcontentbilityChanged = checkCacheAutoForce(scrollbarsVcontentbility, _scrollbarsVcontentbilityCache);
 
                     //scrollbars autoHide:
                     var scrollbarsAutoHide = currentPreparedOptionsScrollbars.autoHide;
@@ -2214,7 +2214,7 @@
                     var textareaDynHeight = currentPreparedOptionsTextarea.dynHeight;
                     var textareaDynHeightChanged = checkCacheAutoForce(_textareaDynHeightCache, textareaDynHeight);
 
-                    //scrollbars visibility
+                    //scrollbars vcontentbility
                     _scrollbarsAutoHideNever = scrollbarsAutoHide === 'n';
                     _scrollbarsAutoHideScroll = scrollbarsAutoHide === 's';
                     _scrollbarsAutoHideMove = scrollbarsAutoHide === 'm';
@@ -2239,7 +2239,7 @@
                     ignoreOverlayScrollbarHiding = ignoreOverlayScrollbarHiding && (_nativeScrollbarIsOverlaid.x && _nativeScrollbarIsOverlaid.y);
 
                     //refresh options cache
-                    _scrollbarsVisibilityCache = scrollbarsVisibility;
+                    _scrollbarsVcontentbilityCache = scrollbarsVcontentbility;
                     _scrollbarsAutoHideCache = scrollbarsAutoHide;
                     _scrollbarsClickScrollingCache = scrollbarsClickScrolling;
                     _scrollbarsDragScrollingCache = scrollbarsDragScrolling;
@@ -2524,12 +2524,12 @@
                     contentGlueElementCSS = {};
 
                     //if [content(host) client / scroll size, or target element direction, or content(host) max-sizes] changed, or force is true
-                    if (hostSizeChanged || contentSizeChanged || textareaSizeChanged || cssDirectionChanged || boxSizingChanged || paddingAbsoluteChanged || widthAutoChanged || widthAuto || heightAutoChanged || heightAuto || ignoreOverlayScrollbarHidingChanged || overflowBehaviorChanged || clipAlwaysChanged || resizeChanged || scrollbarsVisibilityChanged || scrollbarsAutoHideChanged || scrollbarsDragScrollingChanged || scrollbarsClickScrollingChanged || textareaDynWidthChanged || textareaDynHeightChanged || textareaAutoWrappingChanged) {
+                    if (hostSizeChanged || contentSizeChanged || textareaSizeChanged || cssDirectionChanged || boxSizingChanged || paddingAbsoluteChanged || widthAutoChanged || widthAuto || heightAutoChanged || heightAuto || ignoreOverlayScrollbarHidingChanged || overflowBehaviorChanged || clipAlwaysChanged || resizeChanged || scrollbarsVcontentbilityChanged || scrollbarsAutoHideChanged || scrollbarsDragScrollingChanged || scrollbarsClickScrollingChanged || textareaDynWidthChanged || textareaDynHeightChanged || textareaAutoWrappingChanged) {
                         var strOverflow = 'overflow';
                         var strOverflowX = strOverflow + '-x';
                         var strOverflowY = strOverflow + '-y';
                         var strHidden = 'hidden';
-                        var strVisible = 'visible';
+                        var strVcontentble = 'vcontentble';
 
                         //Reset the viewport (very important for natively overlaid scrollbars and zoom change
                         //don't change the overflow prop as it is very expensive and affects performance !A LOT!
@@ -2732,7 +2732,7 @@
                                 };
 
                                 if (_nativeScrollbarStyling) {
-                                    addRemoveClass(_viewportElement, _classNameViewportNativeScrollbarsInvisible, !ignoreOverlayScrollbarHiding)
+                                    addRemoveClass(_viewportElement, _classNameViewportNativeScrollbarsInvcontentble, !ignoreOverlayScrollbarHiding)
                                 }
                                 else {
                                     setContentElementCSS(true);
@@ -2812,7 +2812,7 @@
                             viewportElementCSS[_strPaddingMinus + isRTLLeft] =
                                 viewportElementCSS[_strMarginMinus + isRTLLeft] = _strEmpty;
 
-                            //if there is any overflow (x OR y axis) and this overflow shall be hidden, make overflow hidden, else overflow visible
+                            //if there is any overflow (x OR y axis) and this overflow shall be hidden, make overflow hidden, else overflow vcontentble
                             if ((hasOverflow.x && hideOverflow.x) || (hasOverflow.y && hideOverflow.y) || hideOverflowForceTextarea) {
                                 //only hide if is Textarea
                                 if (_isTextarea && hideOverflowForceTextarea) {
@@ -2828,7 +2828,7 @@
                                             paddingElementCSS[strOverflowY] = _strEmpty;
                                     }
                                     viewportElementCSS[strOverflowX] =
-                                        viewportElementCSS[strOverflowY] = strVisible;
+                                        viewportElementCSS[strOverflowY] = strVcontentble;
                                 }
                             }
 
@@ -2906,10 +2906,10 @@
                         _viewportElement[_strScrollLeft](currScroll.x)[_strScrollTop](currScroll.y);
 
                         //scrollbars management:
-                        var scrollbarsVisibilityVisible = scrollbarsVisibility === 'v';
-                        var scrollbarsVisibilityHidden = scrollbarsVisibility === 'h';
-                        var scrollbarsVisibilityAuto = scrollbarsVisibility === 'a';
-                        var refreshScrollbarsVisibility = function (showX, showY) {
+                        var scrollbarsVcontentbilityVcontentble = scrollbarsVcontentbility === 'v';
+                        var scrollbarsVcontentbilityHidden = scrollbarsVcontentbility === 'h';
+                        var scrollbarsVcontentbilityAuto = scrollbarsVcontentbility === 'a';
+                        var refreshScrollbarsVcontentbility = function (showX, showY) {
                             showY = showY === undefined ? showX : showY;
                             refreshScrollbarAppearance(true, showX, canScroll.x)
                             refreshScrollbarAppearance(false, showY, canScroll.y)
@@ -2936,24 +2936,24 @@
                             addRemoveClass(_scrollbarCornerElement, _classNameScrollbarCornerResizeV, _resizeVertical);
                         }
 
-                        //manage the scrollbars general visibility + the scrollbar interactivity (unusable class name)
-                        if (scrollbarsVisibilityChanged || overflowBehaviorChanged || hideOverflow.c || hasOverflow.c || ignoreOverlayScrollbarHidingChanged) {
+                        //manage the scrollbars general vcontentbility + the scrollbar interactivity (unusable class name)
+                        if (scrollbarsVcontentbilityChanged || overflowBehaviorChanged || hideOverflow.c || hasOverflow.c || ignoreOverlayScrollbarHidingChanged) {
                             if (ignoreOverlayScrollbarHiding) {
                                 if (ignoreOverlayScrollbarHidingChanged) {
                                     removeClass(_hostElement, _classNameHostScrolling);
                                     if (ignoreOverlayScrollbarHiding) {
-                                        refreshScrollbarsVisibility(false);
+                                        refreshScrollbarsVcontentbility(false);
                                     }
                                 }
                             }
-                            else if (scrollbarsVisibilityAuto) {
-                                refreshScrollbarsVisibility(canScroll.x, canScroll.y);
+                            else if (scrollbarsVcontentbilityAuto) {
+                                refreshScrollbarsVcontentbility(canScroll.x, canScroll.y);
                             }
-                            else if (scrollbarsVisibilityVisible) {
-                                refreshScrollbarsVisibility(true);
+                            else if (scrollbarsVcontentbilityVcontentble) {
+                                refreshScrollbarsVcontentbility(true);
                             }
-                            else if (scrollbarsVisibilityHidden) {
-                                refreshScrollbarsVisibility(false);
+                            else if (scrollbarsVcontentbilityHidden) {
+                                refreshScrollbarsVcontentbility(false);
                             }
                         }
 
@@ -3171,7 +3171,7 @@
                         }
 
                         if (_nativeScrollbarStyling)
-                            addClass(_viewportElement, _classNameViewportNativeScrollbarsInvisible);
+                            addClass(_viewportElement, _classNameViewportNativeScrollbarsInvcontentble);
                         if (_nativeScrollbarIsOverlaid.x && _nativeScrollbarIsOverlaid.y)
                             addClass(_viewportElement, _classNameViewportNativeScrollbarsOverlaid);
                         if (_isBody)
@@ -3692,7 +3692,7 @@
                         }
                     }
                     function onTrackMouseTouchEnter(event) {
-                        //make sure both scrollbars will stay visible if one scrollbar is hovered if autoHide is "scroll" or "move".
+                        //make sure both scrollbars will stay vcontentble if one scrollbar is hovered if autoHide is "scroll" or "move".
                         _scrollbarsHandleHovered = true;
                         if (_scrollbarsAutoHideScroll || _scrollbarsAutoHideMove)
                             refreshScrollbarsAutoHide(true);
@@ -3729,25 +3729,25 @@
                 /**
                  * Shows or hides the given scrollbar and applied a class name which indicates if the scrollbar is scrollable or not.
                  * @param isHorizontal True if the horizontal scrollbar is the target, false if the vertical scrollbar is the target.
-                 * @param shallBeVisible True if the scrollbar shall be shown, false if hidden.
+                 * @param shallBeVcontentble True if the scrollbar shall be shown, false if hidden.
                  * @param canScroll True if the scrollbar is scrollable, false otherwise.
                  */
-                function refreshScrollbarAppearance(isHorizontal, shallBeVisible, canScroll) {
+                function refreshScrollbarAppearance(isHorizontal, shallBeVcontentble, canScroll) {
                     var scrollbarHiddenClassName = isHorizontal ? _classNameHostScrollbarHorizontalHidden : _classNameHostScrollbarVerticalHidden;
                     var scrollbarElement = isHorizontal ? _scrollbarHorizontalElement : _scrollbarVerticalElement;
 
-                    addRemoveClass(_hostElement, scrollbarHiddenClassName, !shallBeVisible);
+                    addRemoveClass(_hostElement, scrollbarHiddenClassName, !shallBeVcontentble);
                     addRemoveClass(scrollbarElement, _classNameScrollbarUnusable, !canScroll);
                 }
 
                 /**
                  * Autoshows / autohides both scrollbars with.
-                 * @param shallBeVisible True if the scrollbars shall be autoshown (only the case if they are hidden by a autohide), false if the shall be auto hidden.
+                 * @param shallBeVcontentble True if the scrollbars shall be autoshown (only the case if they are hidden by a autohide), false if the shall be auto hidden.
                  * @param delayfree True if the scrollbars shall be hidden without a delay, false or undefined otherwise.
                  */
-                function refreshScrollbarsAutoHide(shallBeVisible, delayfree) {
+                function refreshScrollbarsAutoHide(shallBeVcontentble, delayfree) {
                     clearTimeout(_scrollbarsAutoHideTimeoutId);
-                    if (shallBeVisible) {
+                    if (shallBeVcontentble) {
                         //if(_hasOverflowCache.x && _hideOverflowCache.xs)
                         removeClass(_scrollbarHorizontalElement, _classNameScrollbarAutoHidden);
                         //if(_hasOverflowCache.y && _hideOverflowCache.ys)
@@ -5001,7 +5001,7 @@
                                     var divide = blockIsCenter ? 2 : 1;
                                     var elementCenterOffset = elOffset + (elSize / 2);
                                     var viewportCenterOffset = vpOffset + (vpSize / 2);
-                                    var isInView =
+                                    var contentnView =
                                         elSize <= vpSize
                                         && elOffset >= vpOffset
                                         && elOffset + elSize <= vpOffset + vpSize;
@@ -5010,7 +5010,7 @@
                                         doNotScroll[xy] = true;
                                     else if (!doNotScroll[xy]) {
                                         if (blockIsNearest || scrollIfNeeded) {
-                                            doNotScroll[xy] = scrollIfNeeded ? isInView : false;
+                                            doNotScroll[xy] = scrollIfNeeded ? contentnView : false;
                                             blockIsEnd = elSize < vpSize ? elementCenterOffset > viewportCenterOffset : elementCenterOffset < viewportCenterOffset;
                                         }
                                         elementScrollCoordinates[xy] -= blockIsEnd || blockIsCenter ? ((vpSize / divide) - (elSize / divide)) * (isX && _isRTL && normalizeRTL ? -1 : 1) : 0;

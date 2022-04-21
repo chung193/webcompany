@@ -63,7 +63,7 @@ class Forge extends BaseForge
         'BIGINT',
         'REAL',
         'DOUBLE',
-        'DOUBLE PRECISION',
+        'DOUBLE PRECcontentON',
         'FLOAT',
         'DECIMAL',
         'NUMERIC',

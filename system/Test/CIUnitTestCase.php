@@ -307,7 +307,7 @@ abstract class CIUnitTestCase extends TestCase
     }
 
     /**
-     * Injects the mock Cache driver to prevent filesystem collisions
+     * Injects the mock Cache driver to prevent filesystem collcontentons
      */
     protected function mockCache()
     {

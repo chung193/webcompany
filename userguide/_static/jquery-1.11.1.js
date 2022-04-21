@@ -267,7 +267,7 @@ jQuery.extend({
 
 	isNumeric: function( obj ) {
 		// parseFloat NaNs numeric-cast false positives (null|true|false|"")
-		// ...but misinterprets leading-number strings, particularly hex literals ("0x...")
+		// ...but mcontentnterprets leading-number strings, particularly hex literals ("0x...")
 		// subtraction forces infinities to NaN
 		return !jQuery.isArray( obj ) && obj - parseFloat( obj ) >= 0;
 	},
@@ -889,7 +889,7 @@ function createCache() {
 	var keys = [];
 
 	function cache( key, value ) {
-		// Use (key + " ") to avoid collision with native prototype properties (see Issue #157)
+		// Use (key + " ") to avoid collcontenton with native prototype properties (see Issue #157)
 		if ( keys.push( key + " " ) > Expr.cacheLength ) {
 			// Only keep the most recent entries
 			delete cache[ keys.shift() ];
@@ -3733,7 +3733,7 @@ function internalData( elem, name, data, pvt /* Internal Use Only */ ) {
 	thisCache = cache[ id ];
 
 	// jQuery data() is stored in a separate object inside the object's internal data
-	// cache in order to avoid key collisions between internal data and user-defined
+	// cache in order to avoid key collcontentons between internal data and user-defined
 	// data.
 	if ( !pvt ) {
 		if ( !thisCache.data ) {
@@ -3860,7 +3860,7 @@ function internalRemoveData( elem, name, pvt ) {
 jQuery.extend({
 	cache: {},
 
-	// The following elements (space-suffixed to avoid Object.prototype collisions)
+	// The following elements (space-suffixed to avoid Object.prototype collcontentons)
 	// throw uncatchable exceptions if you attempt to set expando properties
 	noData: {
 		"applet ": true,
@@ -4628,7 +4628,7 @@ jQuery.event = {
 			event.currentTarget = matched.elem;
 
 			j = 0;
-			while ( (handleObj = matched.handlers[ j++ ]) && !event.isImmediatePropagationStopped() ) {
+			while ( (handleObj = matched.handlers[ j++ ]) && !event.contentmmediatePropagationStopped() ) {
 
 				// Triggered event must either 1) have no namespace, or
 				// 2) have namespace(s) a subset or equal to those in the bound event (both can have no namespace).
@@ -4947,7 +4947,7 @@ jQuery.Event = function( src, props ) {
 jQuery.Event.prototype = {
 	isDefaultPrevented: returnFalse,
 	isPropagationStopped: returnFalse,
-	isImmediatePropagationStopped: returnFalse,
+	contentmmediatePropagationStopped: returnFalse,
 
 	preventDefault: function() {
 		var e = this.originalEvent;
@@ -4986,7 +4986,7 @@ jQuery.Event.prototype = {
 	stopImmediatePropagation: function() {
 		var e = this.originalEvent;
 
-		this.isImmediatePropagationStopped = returnTrue;
+		this.contentmmediatePropagationStopped = returnTrue;
 
 		if ( e && e.stopImmediatePropagation ) {
 			e.stopImmediatePropagation();
@@ -6367,7 +6367,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 
 		// Support: IE8
 		// Check if table cells still have offsetWidth/Height when they are set
-		// to display:none and there are still other visible table cells in a
+		// to display:none and there are still other vcontentble table cells in a
 		// table row; if so, offsetWidth/Height are not reliable for use when
 		// determining if an element has been hidden directly using
 		// display:none (it is still safe to use offsets if a parent element is
@@ -6420,7 +6420,7 @@ var
 	rnumsplit = new RegExp( "^(" + pnum + ")(.*)$", "i" ),
 	rrelNum = new RegExp( "^([+-])=(" + pnum + ")", "i" ),
 
-	cssShow = { position: "absolute", visibility: "hidden", display: "block" },
+	cssShow = { position: "absolute", vcontentbility: "hidden", display: "block" },
 	cssNormalTransform = {
 		letterSpacing: "0",
 		fontWeight: "400"
@@ -6736,7 +6736,7 @@ jQuery.each([ "height", "width" ], function( i, name ) {
 	jQuery.cssHooks[ name ] = {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
-				// certain elements can have dimension info if we invisibly show them
+				// certain elements can have dimension info if we invcontentbly show them
 				// however, it must have a current display style that would benefit from this
 				return rdisplayswap.test( jQuery.css( elem, "display" ) ) && elem.offsetWidth === 0 ?
 					jQuery.swap( elem, cssShow, function() {
@@ -9425,7 +9425,7 @@ jQuery.expr.filters.hidden = function( elem ) {
 			((elem.style && elem.style.display) || jQuery.css( elem, "display" )) === "none");
 };
 
-jQuery.expr.filters.visible = function( elem ) {
+jQuery.expr.filters.vcontentble = function( elem ) {
 	return !jQuery.expr.filters.hidden( elem );
 };
 

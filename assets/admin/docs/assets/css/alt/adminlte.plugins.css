@@ -8780,7 +8780,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
   opacity: 0;
   position: absolute;
   top: 0;
-  visibility: hidden;
+  vcontentbility: hidden;
   z-index: -1;
 }
 

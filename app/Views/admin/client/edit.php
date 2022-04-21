@@ -4,36 +4,36 @@
 <div class="form-group row">
 	<label class="col-3">Tên Client</label>
 	<div class="col-9">
-		<input type="text" name="nama" class="form-control" placeholder="Nama client" value="<?= $client['nama'] ?>" required>
+		<input type="text" name="name" class="form-control" placeholder="name client" value="<?= $client['name'] ?>" required>
 	</div>
 </div>
 
 <div class="form-group row">
 	<label class="col-3">Tên lãnh đạo / Cuộc gọi</label>
 	<div class="col-9">
-		<input type="text" name="pimpinan" class="form-control" placeholder="Nama Pimpinan/Panggilan" value="<?= $client['pimpinan'] ?>">
+		<input type="text" name="leader" class="form-control" placeholder="name leader" value="<?= $client['leader'] ?>">
 	</div>
 </div>
 
 <div class="form-group row">
 	<label class="col-3">Nơi sinh và ngày sinh</label>
 	<div class="col-3">
-		<input type="text" name="tempat_lahir" class="form-control" placeholder="Nơi sinh" value="<?= $client['tempat_lahir'] ?>">
+		<input type="text" name="country" class="form-control" placeholder="Nơi sinh" value="<?= $client['country'] ?>">
 	</div>
 	<div class="col-3">
-		<input type="text" name="tanggal_lahir" class="form-control" placeholder="dd-mm-yyyy" value="<?= tanggal_id($client['tanggal_lahir']) ?>">
+		<input type="text" name="date_of_birth" class="form-control" placeholder="dd-mm-yyyy" value="<?= date_id($client['date_of_birth']) ?>">
 	</div>
 </div>
 
 <div class="form-group row">
 	<label class="col-3">Loại , Trạng thái Client</label>
 	<div class="col-3">
-		<select name="jenis_client" class="form-control">
-			<option value="Perorangan">Cá nhân</option>
-			<option value="Perusahaan" <?php if ($client['jenis_client'] === 'Perusahaan') {
+		<select name="type_client" class="form-control">
+			<option value="Personal">Cá nhân</option>
+			<option value="Company" <?php if ($client['type_client'] === 'Company') {
     echo 'selected';
 } ?>>Công ty</option>
-			<option value="Organisasi" <?php if ($client['jenis_client'] === 'Organisasi') {
+			<option value="Organization" <?php if ($client['type_client'] === 'Organization') {
     echo 'selected';
 } ?>>Cơ quan</option>
 		</select>
@@ -56,7 +56,7 @@
 		<input type="text" name="email" class="form-control" placeholder="Email client" value="<?= $client['email'] ?>">
 	</div>
 	<div class="col-4">
-		<input type="text" name="telepon" class="form-control" placeholder="Điện thoai" value="<?= $client['telepon'] ?>">
+		<input type="text" name="phone" class="form-control" placeholder="Điện thoai" value="<?= $client['phone'] ?>">
 	</div>
 </div>
 
@@ -66,21 +66,21 @@
 		<input type="text" name="website" class="form-control" placeholder="Website" value="<?= $client['website'] ?>">
 	</div>
 	<div class="col-5">
-		<input type="file" name="gambar" class="form-control" placeholder="Hình ảnh" value="<?= $client['gambar'] ?>">
+		<input type="file" name="picture" class="form-control" placeholder="Hình ảnh" value="<?= $client['picture'] ?>">
 	</div>
 </div>
 
 <div class="form-group row">
 	<label class="col-3">Địa chỉ nhà</label>
 	<div class="col-9">
-		<textarea name="alamat" placeholder="Địa chỉ nhà" class="form-control"><?= $client['alamat'] ?></textarea>
+		<textarea name="address" placeholder="Địa chỉ nhà" class="form-control"><?= $client['address'] ?></textarea>
 	</div>
 </div>
 
 <div class="form-group row">
 	<label class="col-3">Lời chứng thực</label>
 	<div class="col-9">
-		<textarea name="isi_testimoni" placeholder="Lời chứng thực" class="form-control"><?= $client['isi_testimoni'] ?></textarea>
+		<textarea name="testimonial" placeholder="Lời chứng thực" class="form-control"><?= $client['testimonial'] ?></textarea>
 	</div>
 </div>
 

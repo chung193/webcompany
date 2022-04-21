@@ -19,7 +19,7 @@
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARcontentNG FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
@@ -56,7 +56,7 @@ class MethodObject extends BasicObject
         $this->filename = $method->getFileName();
         $this->startline = $method->getStartLine();
         $this->endline = $method->getEndLine();
-        $this->internal = $method->isInternal();
+        $this->internal = $method->Isinternal();
         $this->docstring = $method->getDocComment();
         $this->return_reference = $method->returnsReference();
 

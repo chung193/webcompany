@@ -75,7 +75,7 @@ class Cache extends BaseConfig
      * Key Prefix
      * --------------------------------------------------------------------------
      *
-     * This string is added to all cache item names to help avoid collisions
+     * This string is added to all cache item names to help avoid collcontentons
      * if you run multiple applications with the same cache engine.
      *
      * @var string

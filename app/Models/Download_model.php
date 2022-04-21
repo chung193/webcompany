@@ -14,8 +14,8 @@ class Download_model extends Model
     public function listing()
     {
         $builder = $this->db->table('download');
-        $builder->select('download.*, kategori_download.nama_kategori_download, kategori_download.slug_kategori_download, users.nama');
-        $builder->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $builder->select('download.*, category_download.name_category_download, category_download.slug_category_download, users.name');
+        $builder->join('category_download', 'category_download.id_category_download = download.id_category_download', 'LEFT');
         $builder->join('users', 'users.id_user = download.id_user', 'LEFT');
         $builder->orderBy('download.id_download', 'DESC');
         $query = $builder->get();
@@ -24,13 +24,13 @@ class Download_model extends Model
     }
 
     // Listing
-    public function jenis_download($jenis_download)
+    public function type_download($type_download)
     {
         $builder = $this->db->table('download');
-        $builder->select('download.*, kategori_download.nama_kategori_download, kategori_download.slug_kategori_download, users.nama');
-        $builder->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $builder->select('download.*, category_download.name_category_download, category_download.slug_category_download, users.name');
+        $builder->join('category_download', 'category_download.id_category_download = download.id_category_download', 'LEFT');
         $builder->join('users', 'users.id_user = download.id_user', 'LEFT');
-        $builder->where('download.jenis_download', $jenis_download);
+        $builder->where('download.type_download', $type_download);
         $builder->orderBy('download.id_download', 'DESC');
         $query = $builder->get();
 
@@ -50,8 +50,8 @@ class Download_model extends Model
     public function detail($id_download)
     {
         $builder = $this->db->table('download');
-        $builder->select('download.*, kategori_download.nama_kategori_download, kategori_download.slug_kategori_download, users.nama');
-        $builder->join('kategori_download', 'kategori_download.id_kategori_download = download.id_kategori_download', 'LEFT');
+        $builder->select('download.*, category_download.name_category_download, category_download.slug_category_download, users.name');
+        $builder->join('category_download', 'category_download.id_category_download = download.id_category_download', 'LEFT');
         $builder->join('users', 'users.id_user = download.id_user', 'LEFT');
         $builder->where('download.id_download', $id_download);
         $builder->orderBy('download.id_download', 'DESC');
@@ -60,14 +60,14 @@ class Download_model extends Model
         return $query->getRowArray();
     }
 
-    // tambah
-    public function tambah($data)
+    // add
+    public function add($data)
     {
         $builder = $this->db->table('download');
         $builder->insert($data);
     }
 
-    // tambah
+    // add
     public function edit($data)
     {
         $builder = $this->db->table('download');
@@ -79,7 +79,7 @@ class Download_model extends Model
     public function slider()
     {
         $builder = $this->db->table('download');
-        $builder->where('jenis_download', 'Homepage');
+        $builder->where('type_download', 'Homepage');
         $builder->orderBy('download.id_download', 'DESC');
         $query = $builder->get();
 

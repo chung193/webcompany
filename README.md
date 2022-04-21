@@ -15,11 +15,11 @@ Website ini dikembangkan dengan beberapa spesifikasi:
 
 1. Halaman Beranda/Homepage
 2. Banner slider
-3. Halaman berita dan detailnya
-4. Halaman layanan
+3. Halaman news dan detailnya
+4. Halaman Dịch vụ
 5. Halaman profile
 6. Halaman staff dan team
-7. Halaman galeri gambar
+7. Halaman galeri picture
 8. Halaman galeri video
 9. Halaman client
 10. Halaman file download
@@ -29,12 +29,12 @@ Website ini dikembangkan dengan beberapa spesifikasi:
 1. Login dan logout
 2. Halaman update profile dan ganti password
 3. Halaman Dashboard
-4. Halaman kelola berita dan kategorinya
-5. Halaman kelola layanan dan profil
+4. Halaman kelola news dan categorynya
+5. Halaman kelola Dịch vụ dan profil
 6. Halaman kelola staff and team
 7. Halaman kelola client
-8. Halaman kelola galeri gambar dan kategorinya
-9. Halaman kelola upload/download file dan kategorinya
+8. Halaman kelola galeri picture dan categorynya
+9. Halaman kelola upload/download file dan categorynya
 10. Halaman kelola video youtube
 11. Halaman kelola pengguna
 12. Halaman kelola konfigurasi website, logo dan icon

@@ -28,27 +28,27 @@
             <div class="card-body">
                       <div class="row justify-content-center">
 
-          <?php foreach ($kategori as $kategori) {
-    $id_kategori_staff = $kategori['id_kategori_staff'];
-    $staff             = $m_staff->kategori_staff($id_kategori_staff);
+          <?php foreach ($category as $category) {
+    $id_category_staff = $category['id_category_staff'];
+    $staff             = $m_staff->category_staff($id_category_staff);
 
     if ($staff) {
         ?>
-            <h3 class="text-center"><?= $kategori['nama_kategori_staff'] ?></h3>
+            <h3 class="text-center"><?= $category['name_category_staff'] ?></h3>
             <hr>
             <br>
             <?php foreach ($staff as $staff) { ?>
                 <div class="col-lg-3 col-md-6">
                   <div class="member" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-img">
-                      <?php if ($staff['gambar'] === '') {  ?>
-                        <img src="<?= icon() ?>" class="img-fluid" alt="<?= $staff['nama'] ?>">
+                      <?php if ($staff['picture'] === '') {  ?>
+                        <img src="<?= icon() ?>" class="img-fluid" alt="<?= $staff['name'] ?>">
                       <?php } else { ?>
-                        <img src="<?= base_url('assets/upload/staff/' . $staff['gambar']) ?>" class="img-fluid" alt="<?= $staff['nama'] ?>">
+                        <img src="<?= base_url('assets/upload/staff/' . $staff['picture']) ?>" class="img-fluid" alt="<?= $staff['name'] ?>">
                       <?php } ?>
                     </div>
                     <div class="member-info">
-                      <h4><?= $staff['nama'] ?></h4>
+                      <h4><?= $staff['name'] ?></h4>
                       <span><?= $staff['jabatan'] ?></span>
                     </div>
                   </div>

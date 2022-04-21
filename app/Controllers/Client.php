@@ -16,8 +16,8 @@ class Client extends BaseController
         $client        = $m_client->home();
 
         $data = ['title'  => 'Client Kami',
-            'description' => 'Client Kami ' . $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => 'Client Kami ' . $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
+            'description' => 'Client Kami ' . $konfigurasi['nameweb'] . ', ' . $konfigurasi['tentang'],
+            'keywords'    => 'Client Kami ' . $konfigurasi['nameweb'] . ', ' . $konfigurasi['keywords'],
             'client'      => $client,
             'konfigurasi' => $konfigurasi,
             'content'     => 'client/index',

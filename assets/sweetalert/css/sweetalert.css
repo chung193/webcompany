@@ -168,7 +168,7 @@ body.stop-scrolling {
     margin-left: -27px;
     margin-top: 4px;
     opacity: 0;
-    visibility: hidden; }
+    vcontentbility: hidden; }
   .sweet-alert button {
     background-color: #8CD4F5;
     color: white;
@@ -203,7 +203,7 @@ body.stop-scrolling {
       color: transparent; }
       .sweet-alert button.confirm[disabled] ~ .la-ball-fall {
         opacity: 1;
-        visibility: visible;
+        vcontentbility: vcontentble;
         transition-delay: 0s; }
     .sweet-alert button::-moz-focus-inner {
       border: 0; }

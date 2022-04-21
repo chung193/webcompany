@@ -69,7 +69,7 @@ declare type EditorEvent<T> = T & {
     stopPropagation: () => void;
     isPropagationStopped: () => boolean;
     stopImmediatePropagation: () => void;
-    isImmediatePropagationStopped: () => boolean;
+    contentmmediatePropagationStopped: () => boolean;
 };
 interface EventDispatcherSettings {
     scope?: any;
@@ -160,7 +160,7 @@ declare type EventUtilsEvent<T> = T & {
     preventDefault: () => void;
     isPropagationStopped: () => boolean;
     stopPropagation: () => void;
-    isImmediatePropagationStopped: () => boolean;
+    contentmmediatePropagationStopped: () => boolean;
     stopImmediatePropagation: () => void;
 };
 interface EventUtilsConstructor {
@@ -2406,7 +2406,7 @@ declare class Editor implements EditorObservable {
     initialized: boolean;
     notificationManager: NotificationManager;
     orgDisplay: string;
-    orgVisibility: string;
+    orgVcontentbility: string;
     parser: DomParser;
     quirks: Quirks;
     readonly: boolean;
@@ -2607,7 +2607,7 @@ interface Env {
         version: Version;
         isEdge: () => boolean;
         isChrome: () => boolean;
-        isIE: () => boolean;
+        contentE: () => boolean;
         isOpera: () => boolean;
         isFirefox: () => boolean;
         isSafari: () => boolean;
@@ -2616,7 +2616,7 @@ interface Env {
         current: string | undefined;
         version: Version;
         isWindows: () => boolean;
-        isiOS: () => boolean;
+        contentOS: () => boolean;
         isAndroid: () => boolean;
         isOSX: () => boolean;
         isLinux: () => boolean;
@@ -2625,8 +2625,8 @@ interface Env {
         isChromeOS: () => boolean;
     };
     deviceType: {
-        isiPad: () => boolean;
-        isiPhone: () => boolean;
+        contentPad: () => boolean;
+        contentPhone: () => boolean;
         isTablet: () => boolean;
         isPhone: () => boolean;
         isTouch: () => boolean;
@@ -2949,7 +2949,7 @@ interface TinyMCE extends EditorManager {
     _addCacheSuffix: Tools['_addCacheSuffix'];
     isOpera: boolean;
     isWebKit: boolean;
-    isIE: false | number;
+    contentE: false | number;
     isGecko: boolean;
     isMac: boolean;
 }

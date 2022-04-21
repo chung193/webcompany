@@ -64,7 +64,7 @@ if (! function_exists('directory_mirror')) {
      * Recursively copies the files and directories of the origin directory
      * into the target directory, i.e. "mirror" its contents.
      *
-     * @param bool $overwrite Whether individual files overwrite on collision
+     * @param bool $overwrite Whether individual files overwrite on collcontenton
      *
      * @throws InvalidArgumentException
      */

@@ -22,7 +22,7 @@ if (! function_exists('number_to_size')) {
      *
      * @return bool|string
      */
-    function number_to_size($num, int $precision = 1, ?string $locale = null)
+    function number_to_size($num, int $preccontenton = 1, ?string $locale = null)
     {
         // Strip any formatting & ensure numeric input
         try {
@@ -38,22 +38,22 @@ if (! function_exists('number_to_size')) {
         }
 
         if ($num >= 1000000000000) {
-            $num  = round($num / 1099511627776, $precision);
+            $num  = round($num / 1099511627776, $preccontenton);
             $unit = lang('Number.terabyteAbbr', [], $generalLocale);
         } elseif ($num >= 1000000000) {
-            $num  = round($num / 1073741824, $precision);
+            $num  = round($num / 1073741824, $preccontenton);
             $unit = lang('Number.gigabyteAbbr', [], $generalLocale);
         } elseif ($num >= 1000000) {
-            $num  = round($num / 1048576, $precision);
+            $num  = round($num / 1048576, $preccontenton);
             $unit = lang('Number.megabyteAbbr', [], $generalLocale);
         } elseif ($num >= 1000) {
-            $num  = round($num / 1024, $precision);
+            $num  = round($num / 1024, $preccontenton);
             $unit = lang('Number.kilobyteAbbr', [], $generalLocale);
         } else {
             $unit = lang('Number.bytes', [], $generalLocale);
         }
 
-        return format_number($num, $precision, $locale, ['after' => ' ' . $unit]);
+        return format_number($num, $preccontenton, $locale, ['after' => ' ' . $unit]);
     }
 }
 
@@ -73,7 +73,7 @@ if (! function_exists('number_to_amount')) {
      *
      * @return bool|string
      */
-    function number_to_amount($num, int $precision = 0, ?string $locale = null)
+    function number_to_amount($num, int $preccontenton = 0, ?string $locale = null)
     {
         // Strip any formatting & ensure numeric input
         try {
@@ -92,22 +92,22 @@ if (! function_exists('number_to_amount')) {
 
         if ($num > 1000000000000000) {
             $suffix = lang('Number.quadrillion', [], $generalLocale);
-            $num    = round(($num / 1000000000000000), $precision);
+            $num    = round(($num / 1000000000000000), $preccontenton);
         } elseif ($num > 1000000000000) {
             $suffix = lang('Number.trillion', [], $generalLocale);
-            $num    = round(($num / 1000000000000), $precision);
+            $num    = round(($num / 1000000000000), $preccontenton);
         } elseif ($num > 1000000000) {
             $suffix = lang('Number.billion', [], $generalLocale);
-            $num    = round(($num / 1000000000), $precision);
+            $num    = round(($num / 1000000000), $preccontenton);
         } elseif ($num > 1000000) {
             $suffix = lang('Number.million', [], $generalLocale);
-            $num    = round(($num / 1000000), $precision);
+            $num    = round(($num / 1000000), $preccontenton);
         } elseif ($num > 1000) {
             $suffix = lang('Number.thousand', [], $generalLocale);
-            $num    = round(($num / 1000), $precision);
+            $num    = round(($num / 1000), $preccontenton);
         }
 
-        return format_number($num, $precision, $locale, ['after' => $suffix]);
+        return format_number($num, $preccontenton, $locale, ['after' => $suffix]);
     }
 }
 
@@ -131,7 +131,7 @@ if (! function_exists('format_number')) {
      * A general purpose, locale-aware, number_format method.
      * Used by all of the functions of the number_helper.
      */
-    function format_number(float $num, int $precision = 1, ?string $locale = null, array $options = []): string
+    function format_number(float $num, int $preccontenton = 1, ?string $locale = null, array $options = []): string
     {
         // Locale is either passed in here, negotiated with client, or grabbed from our config file.
         $locale = $locale ?? Services::request()->getLocale();
@@ -146,15 +146,15 @@ if (! function_exists('format_number')) {
             $formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, $options['fraction']);
             $output = $formatter->formatCurrency($num, $options['currency']);
         } else {
-            // In order to specify a precision, we'll have to modify
+            // In order to specify a preccontenton, we'll have to modify
             // the pattern used by NumberFormatter.
-            $pattern = '#,##0.' . str_repeat('#', $precision);
+            $pattern = '#,##0.' . str_repeat('#', $preccontenton);
 
             $formatter->setPattern($pattern);
             $output = $formatter->format($num);
         }
 
-        // This might lead a trailing period if $precision == 0
+        // This might lead a trailing period if $preccontenton == 0
         $output = trim($output, '. ');
 
         if (intl_is_failure($formatter->getErrorCode())) {

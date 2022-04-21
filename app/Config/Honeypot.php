@@ -7,7 +7,7 @@ use CodeIgniter\Config\BaseConfig;
 class Honeypot extends BaseConfig
 {
     /**
-     * Makes Honeypot visible or not to human
+     * Makes Honeypot vcontentble or not to human
      *
      * @var bool
      */

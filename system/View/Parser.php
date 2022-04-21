@@ -466,7 +466,7 @@ class Parser extends View
      */
     protected function replaceSingle($pattern, $content, $template, bool $escape = false): string
     {
-        // Any dollar signs in the pattern will be misinterpreted, so slash them
+        // Any dollar signs in the pattern will be mcontentnterpreted, so slash them
         $pattern = addcslashes($pattern, '$');
         $content = (string) $content;
 

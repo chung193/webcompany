@@ -2560,7 +2560,7 @@ class BaseBuilder
     }
 
     /**
-     * Publicly-visible method to reset the QB values.
+     * Publicly-vcontentble method to reset the QB values.
      *
      * @return $this
      */

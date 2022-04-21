@@ -46,7 +46,7 @@ The expandable table plugin provides simple functionality to create expandable t
 
 
 > ##### Tip!
-> You can control the default visibility with ` aria-expanded="false"`/` aria-expanded="true"` via the expandable table header.
+> You can control the default vcontentbility with ` aria-expanded="false"`/` aria-expanded="true"` via the expandable table header.
 {: .quote-info}
 
 
@@ -75,7 +75,7 @@ Add `data-widget="expandable-table"` to a table row to activate the plugin and p
 
 ###### jQuery
 {: .text-bold }
-The jQuery API provides more customizable options that allows the developer to toggle the visibilty state of one table row. 
+The jQuery API provides more customizable options that allows the developer to toggle the vcontentbilty state of one table row. 
 ```js
 $('#expandable-table-header-row').ExpandableTable('toggleRow')
 ```
@@ -87,7 +87,7 @@ $('#expandable-table-header-row').ExpandableTable('toggleRow')
 |---
 | Method | Description
 |-|-
-|toggleRow | Toggles the state of the expandable table body between hidden and visible.
+|toggleRow | Toggles the state of the expandable table body between hidden and vcontentble.
 {: .table .table-bordered .bg-light}
 
 Example: `$('#expandable-table-header-row').ExpandableTable('toggleRow')`

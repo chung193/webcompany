@@ -432,7 +432,7 @@ class Security implements SecurityInterface
             $bad[] = '/';
         }
 
-        $str = remove_invisible_characters($str, false);
+        $str = remove_invcontentble_characters($str, false);
 
         do {
             $old = $str;

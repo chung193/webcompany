@@ -19,7 +19,7 @@
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
- * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARcontentNG FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
@@ -31,7 +31,7 @@ use Kint\Object\InstanceObject;
 abstract class Renderer
 {
     const SORT_NONE = 0;
-    const SORT_VISIBILITY = 1;
+    const SORT_VcontentBILITY = 1;
     const SORT_FULL = 2;
 
     protected $call_info = array();
@@ -161,7 +161,7 @@ abstract class Renderer
     public static function sortProperties(array $contents, $sort)
     {
         switch ($sort) {
-            case self::SORT_VISIBILITY:
+            case self::SORT_VcontentBILITY:
                 /** @var array<array-key, BasicObject[]> Containers to quickly stable sort by type */
                 $containers = array(
                     BasicObject::ACCESS_PUBLIC => array(),

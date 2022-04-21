@@ -26,9 +26,9 @@ class PublisherException extends FrameworkException
      * @param string $from The source file
      * @param string $to   The destination file
      */
-    public static function forCollision(string $from, string $to)
+    public static function forCollcontenton(string $from, string $to)
     {
-        return new static(lang('Publisher.collision', [filetype($to), $from, $to]));
+        return new static(lang('Publisher.collcontenton', [filetype($to), $from, $to]));
     }
 
     /**

@@ -203,7 +203,7 @@ class Escaper
     /**
      * Escape a string for the Javascript context. This does not use json_encode(). An extended
      * set of characters are escaped beyond ECMAScript's rules for Javascript literal string
-     * escaping in order to prevent misinterpretation of Javascript as HTML leading to the
+     * escaping in order to prevent mcontentnterpretation of Javascript as HTML leading to the
      * injection of special characters and entities. The escaping used should be tolerant
      * of cases where HTML escaping was not applied on top of Javascript escaping correctly.
      * Backslash escaping is not used as it still leaves the escaped character as-is and so

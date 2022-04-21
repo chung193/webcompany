@@ -2,25 +2,25 @@
 
 namespace App\Controllers;
 
-use App\Models\Galeri_model;
+use App\Models\Gallery_model;
 use App\Models\Konfigurasi_model;
 
-class Galeri extends BaseController
+class Gallery extends BaseController
 {
-    // Galeri
+    // Gallery
     public function index()
     {
         $m_konfigurasi = new Konfigurasi_model();
-        $m_galeri      = new Galeri_model();
+        $m_Gallery      = new Gallery_model();
         $konfigurasi   = $m_konfigurasi->listing();
-        $galeri        = $m_galeri->galeri();
+        $Gallery        = $m_Gallery->Gallery();
 
-        $data = ['title'  => 'Galeri Gambar',
-            'description' => 'Galeri Gambar ' . $konfigurasi['namaweb'] . ', ' . $konfigurasi['tentang'],
-            'keywords'    => 'Galeri Gambar ' . $konfigurasi['namaweb'] . ', ' . $konfigurasi['keywords'],
-            'galeri'      => $galeri,
+        $data = ['title'  => 'Gallery picture',
+            'description' => 'Gallery picture ' . $konfigurasi['nameweb'] . ', ' . $konfigurasi['tentang'],
+            'keywords'    => 'Gallery picture ' . $konfigurasi['nameweb'] . ', ' . $konfigurasi['keywords'],
+            'Gallery'      => $Gallery,
             'konfigurasi' => $konfigurasi,
-            'content'     => 'galeri/index',
+            'content'     => 'Gallery/index',
         ];
         echo view('layout/wrapper', $data);
     }

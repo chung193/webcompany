@@ -2,94 +2,91 @@
 <?= csrf_field();
 ?>
 <div class="form-group row">
-	<label class="col-3">Nama Staff</label>
+	<label class="col-3">Tên nhân viên</label>
 	<div class="col-9">
-		<input type="text" name="nama" class="form-control" placeholder="Nama staff" value="<?= $staff['nama'] ?>" required>
+		<input type="text" name="name" class="form-control" placeholder="name staff" value="<?= $staff['name'] ?>" required>
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Jabatan &amp; No Urut Tampil</label>
+	<label class="col-3">Vị trí chức vụ</label>
 	<div class="col-6">
-		<input type="text" name="jabatan" class="form-control" placeholder="Jabatan" value="<?= $staff['jabatan'] ?>">
-	</div>
-	<div class="col-3">
-		<input type="number" name="urutan" class="form-control" placeholder="No Urut tampil" value="<?= $staff['urutan'] ?>">
+		<input type="text" name="position" class="form-control" placeholder="vị trí" value="<?= $staff['position'] ?>">
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Tempat, tanggal lahir</label>
+	<label class="col-3">Quê quán và ngày sinh</label>
 	<div class="col-3">
-		<input type="text" name="tempat_lahir" class="form-control" placeholder="Tempat lahir" value="<?= $staff['tempat_lahir'] ?>">
+		<input type="text" name="country" class="form-control" placeholder="Quê quán" value="<?= $staff['country'] ?>">
 	</div>
 	<div class="col-3">
-		<input type="text" name="tanggal_lahir" class="form-control" placeholder="dd-mm-yyyy" value="<?= tanggal_id($staff['tanggal_lahir']) ?>">
+		<input type="text" name="date_of_birth" class="form-control" placeholder="dd-mm-yyyy" value="<?= date_id($staff['date_of_birth']) ?>">
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Jenis, Status Staff</label>
+	<label class="col-3"> Loại nhân viên và trạng thái</label></label>
 	<div class="col-3">
-		<select name="id_kategori_staff" class="form-control">
-			<?php foreach ($kategori_staff as $kategori_staff) { ?>
-			<option value="<?= $kategori_staff['id_kategori_staff'] ?>" <?php if ($staff['id_kategori_staff'] === $kategori_staff['id_kategori_staff']) {
+		<select name="id_category_staff" class="form-control">
+			<?php foreach ($category_staff as $category_staff) { ?>
+			<option value="<?= $category_staff['id_category_staff'] ?>" <?php if ($staff['id_category_staff'] === $category_staff['id_category_staff']) {
     echo 'selected';
-} ?>><?= $kategori_staff['nama_kategori_staff'] ?></option>
+} ?>><?= $category_staff['name_category_staff'] ?></option>
 			<?php } ?>
 		</select>
-		<small class="text-secondary">Jenis Staff</small>
+		<small class="text-secondary">Loại nhân viên</small>
 	</div>
 	<div class="col-3">
 		<select name="status_staff" class="form-control">
-			<option value="Publish">Publish</option>
-			<option value="Draft"  <?php if ($staff['status_staff'] === 'Draft') {
+			<option value="Publish">Công khai</option>
+			<option value="Draft"  <?php if ($staff['status_staff'] === 'Nháp') {
     echo 'selected';
 } ?>>Draft</option>
 		</select>
-		<small class="text-secondary">Status Staff</small>
+		<small class="text-secondary">Trạng thái nhân viên</small>
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Upload Foto dan Website</label>
+	<label class="col-3">Thông tin liên hệ</label>
 	<div class="col-4">
-		<input type="text" name="telepon" class="form-control" placeholder="Telepon" value="<?= $staff['telepon'] ?>">
+		<input type="text" name="phone" class="form-control" placeholder="Điện thoại" value="<?= $staff['phone'] ?>">
 	</div>
 	<div class="col-5">
-		<input type="text" name="email" class="form-control" placeholder="Email staff" value="<?= $staff['email'] ?>">
+		<input type="text" name="email" class="form-control" placeholder="Email nhân viên" value="<?= $staff['email'] ?>">
 	</div>
 
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Website dan logo</label>
+	<label class="col-3">Website và ảnh nhân viên</label>
 	<div class="col-4">
 		<input type="text" name="website" class="form-control" placeholder="Website" value="<?= $staff['website'] ?>">
 	</div>
 	<div class="col-5">
-		<input type="file" name="gambar" class="form-control" placeholder="gambar" value="<?= $staff['gambar'] ?>">
+		<input type="file" name="picture" class="form-control" placeholder="picture" value="<?= $staff['picture'] ?>">
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Alamat</label>
+	<label class="col-3">Địa chỉ</label>
 	<div class="col-9">
-		<textarea name="alamat" placeholder="Alamat" class="form-control"><?= $staff['alamat'] ?></textarea>
+		<textarea name="address" placeholder="address" class="form-control"><?= $staff['address'] ?></textarea>
 	</div>
 </div>
 
 <div class="form-group row">
-	<label class="col-3">Keahlian</label>
+	<label class="col-3">Kỹ năng</label>
 	<div class="col-9">
-		<textarea name="keahlian" placeholder="Keahlian" class="form-control"><?= $staff['keahlian'] ?></textarea>
+		<textarea name="skill" placeholder="skill" class="form-control"><?= $staff['skill'] ?></textarea>
 	</div>
 </div>
 
 <div class="form-group row">
 	<label class="col-3"></label>
 	<div class="col-9">
-		<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
+		<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Lưu thay đổi</button>
 	</div>
 </div>
 
